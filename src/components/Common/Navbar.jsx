@@ -1,0 +1,39 @@
+import logo from "../../assests/smartImmigrantLogo.png"; // Ensure the path is correct
+import CheckVisibilityBtn from "./CheckVisibilityBtn";
+const Navbar = () => {
+  return (
+    <nav className="w-full flex justify-center py-4 bg-transparent">
+      <div className="flex items-center justify-between w-full  bg-white shadow-md px-5 py-3 rounded-full">
+        <div className="flex items-center gap-12">
+          <img
+            src={logo}
+            alt="Smart Immigrant Logo"
+            width={150}
+            height={50}
+            className="h-auto"
+          />
+       <ul className="hidden md:flex items-center gap-8 text-[16px] text-[#2C2C2C] font-jakarta-sans font-medium">
+          <li>
+            <a href="/" className="hover:text-blue-600 transition">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/service" className="hover:text-blue-600 transition">
+              Service
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className="hover:text-blue-600 transition">
+              Contact us
+            </a>
+          </li>
+        </ul>
+    </div>
+         <CheckVisibilityBtn/>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
