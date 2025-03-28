@@ -12,6 +12,7 @@ import SimpleSteps2 from "../LandingPage/SimpleSteps2.jsx";
 import AssessmentModal from "../Common/AssessmentForm.jsx";
 import { toggleForm } from "../../store/slices/formSlice.js";
 import { useDispatch, useSelector } from "react-redux";
+import SimpleStepsMobile from "../LandingPage/SimpleStepsMobile.jsx";
 
 const LandingPage = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,12 @@ const LandingPage = () => {
       </div>
       <div className="temp2 pb-8">
         <WhySucceed />
-        <SimpleSteps2 />
+        <div className="hidden md:block">
+          <SimpleSteps2 />
+        </div>
+        <div className="block md:hidden">
+          <SimpleStepsMobile />
+        </div>
         <div className={`${accepted !== null && 'landingPageFooterWithoutDisc'}`}>
           <FAQ />
           <Footer />
