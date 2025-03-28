@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
+import { setAnswersStore } from "../../store/slices/formSlice";
+import { useDispatch , useSelector } from "react-redux";
+
 const questions = [
     {
       id: 1,
@@ -56,7 +59,7 @@ const ProgressBar = ({ currentStep, totalSteps }) => {
           <div key={index} className="flex items-center">
             <div
               className={`w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all duration-300 
-                ${index <= currentStep ? "bg-blue-600 text-white" : "bg-gray-300 text-gray-500"}`}
+                ${index <= currentStep ? "bg-[#153feb] text-white" : "bg-[#d7d7d7] text-gray-500"}`}
             >
               <FaCheck size={12} />
             </div>
@@ -70,9 +73,11 @@ const ProgressBar = ({ currentStep, totalSteps }) => {
   };
 
 const AssessmentModal = ({ onClose }) => {
+  const dispatch = useDispatch();
+  const StoredAnswers = useSelector((state) => state.form.answers);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState(StoredAnswers);
   const [step, setStep] = useState(0);
   const totalSteps = 7;
   
@@ -82,10 +87,19 @@ const AssessmentModal = ({ onClose }) => {
     if (selectedOption !== null) {
       setStep(prev => prev + 1);
       setAnswers({ ...answers, [questions[currentQuestion].id]: selectedOption });
-      setSelectedOption(null);
+      dispatch(
+        setAnswersStore({
+          questionId: questions[currentQuestion].id,
+          selectedOption,
+        }));
+      setSelectedOption(answers[questions[currentQuestion + 1].id] || null);
       setCurrentQuestion(prev => prev + 1);
     }
   };
+
+  useEffect(() => {
+     setSelectedOption(answers[questions[currentQuestion].id] || null)
+  } , [currentQuestion])
 
   const handlePrev = () => {
     setCurrentQuestion(prev => prev - 1);
@@ -93,7 +107,7 @@ const AssessmentModal = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center h-[100vh] w-[100vw] z-[1000]" onClick={onClose}>
+    <div className="fixed inset-0 bg-[#000000]  bg-opacity-60 backdrop-blur-[15px] flex items-center justify-center h-[100vh] w-[100vw] z-[1000]" onClick={onClose}>
       <motion.div 
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

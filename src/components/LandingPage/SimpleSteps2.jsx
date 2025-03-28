@@ -1,5 +1,5 @@
 import usaFlag from "../../assests/LandingPage/USAFLAG.png"
-import { useEffect , useRef , useState } from "react";
+import React , { useEffect , useRef , useState } from "react";
 import CommonHeading from "./commonHeading";
 const SimpleSteps2 = () => {
 
@@ -8,6 +8,23 @@ const SimpleSteps2 = () => {
     const totalDuration = 10;
 
 
+    useEffect(() => {
+      const animElement = animationRef.current;
+      if (!animElement) return;
+
+      const handleRepeat = () => {
+          setCount(prev => prev + 1);
+      };
+
+
+      animElement.addEventListener('repeatEvent', handleRepeat);
+      animElement.addEventListener('endEvent', handleRepeat);
+
+      return () => {
+          animElement.removeEventListener('repeatEvent', handleRepeat);
+          animElement.removeEventListener('endEvent', handleRepeat);
+      };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -123,6 +140,8 @@ const SimpleSteps2 = () => {
           >
             <animateMotion 
               id="mainAnim"
+              ref={animationRef}
+
               path="M -175.77 338.951 L -112.27 338.951
                     L -112.27 414.951 
                     L 139.616 414.951 
@@ -200,7 +219,6 @@ const SimpleSteps2 = () => {
                 keyTimes="0;0.5;1"
                 begin={`mainAnim.begin+${point.showAt + (count -1 )* 10}s`}
                 dur="0.5s"
-                ref={animationRef}
               />
             </image>
           ))}
@@ -210,4 +228,4 @@ const SimpleSteps2 = () => {
     );
   };
   
-  export default SimpleSteps2;
+  export default React.memo(SimpleSteps2)
