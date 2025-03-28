@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import LandingPage from './components/pages/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RootLayout from './components/Common/RootLayout';
+import RootLayout from './components/Layout/RootLayout';
 
 function App() {
 

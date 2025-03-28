@@ -101,11 +101,16 @@
   left: -33px !important;
 }
 
-.landingPageFooter {
+.landingPageFooter , .landingPageFooterWithoutDisc {
   background-image: url('../src/assests/FooterFlag.png');
   background-position: right -147px bottom -481px;
   background-repeat: no-repeat;
   background-size: 35% 71%;
+}
+
+.landingPageFooterWithoutDisc {
+  background-position: right -145px bottom 61px;
+  background-size: 36% 37%
 }
 
 /* media query */
@@ -122,6 +127,11 @@
     background-position: top 0px left -145px;
     background-size: 60%;
   }
+  .landingPageFooterWithoutDisc{
+    background-position: right -105px bottom 207px;
+    background-size: 71% 35%
+  }
+ 
 }
 
 
@@ -134,5 +144,16 @@
     background-position:center bottom 41px;
     background-size: 100%;
   }
+
+  
+.landingPageFooter {
+  background-position: right -30px bottom -127px;
+  background-size: 37% 35%;
+}
+
+.landingPageFooterWithoutDisc {
+  background-position: right -69px bottom 97px;
+  background-size: 71% 35%;
+}
 
 }

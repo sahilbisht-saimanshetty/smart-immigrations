@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../Common/Navbar";
+import Footer from "../Common/Footer";
+import MobileNavbar from "../Common/MobileSideBar";
 function RootLayout({ children }) {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -23,6 +24,9 @@ function RootLayout({ children }) {
         }`}
       >
         <Navbar />
+      </div>
+      <div className="block md:hidden">
+           <MobileNavbar/>
       </div>
       <main className="flex-grow">{children}</main>
     </div>

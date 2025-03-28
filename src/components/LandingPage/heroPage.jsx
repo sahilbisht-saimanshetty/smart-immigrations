@@ -5,7 +5,7 @@ import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
     return (
-        <div className="relative group bg-gradient-to-b from-[rgba(200,16,46,0.294)] to-[rgba(37,60,123,0.354)] md:pt-8 lg:pt-16 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[110vh] overflow-hidden">
+        <div className="relative group bg-gradient-to-b from-[rgba(200,16,46,0.294)] to-[rgba(37,60,123,0.354)] md:pt-8 lg:pt-16 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[110vh] 3xl:h-[80vh] 4xl:h-[100vh] overflow-hidden">
             <img
                 src={flag}
                 alt="Top Right Image"
