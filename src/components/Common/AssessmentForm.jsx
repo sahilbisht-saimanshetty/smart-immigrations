@@ -111,7 +111,7 @@ const AssessmentModal = ({ onClose }) => {
       <motion.div 
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="bg-white rounded-lg shadow-xl w-[70%]  py-8 px-12 relative"
+        className="bg-white rounded-lg shadow-xl md:w-[90%] lg:w-[70%]  py-8 md:px-6 lg:px-12 relative"
         onClick={(e) => e.stopPropagation()}
       >
         <h1 className="text-[32px] font-jakarata-sans font-bold text-[#2C2C2C] text-center">Start the Assessment</h1>
@@ -125,7 +125,7 @@ const AssessmentModal = ({ onClose }) => {
 
         {/* Question */}
         <motion.div key={currentQuestion} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-4">
-          <h3 className="text-lg font-jakarata-sans font-medium text-left  mb-4">Q{currentQuestion + 1}. {questions[currentQuestion].question}</h3>
+          <h3 className="md:text-[14px] lg:text-lg font-jakarata-sans font-medium text-left  mb-4">Q{currentQuestion + 1}. {questions[currentQuestion].question}</h3>
           {questions[currentQuestion].options.map((option, index) => (
             <label key={index} className="flex items-center p-3 cursor-pointer transition-all duration-200 mb-2">
               <input
@@ -137,7 +137,7 @@ const AssessmentModal = ({ onClose }) => {
               <span className={`w-5 h-5 border-2 rounded-full flex items-center justify-center ${selectedOption === index ? 'border-blue-500' : 'border-gray-300'}`}>
                 {selectedOption === index && <div className="w-3 h-3 bg-blue-500 rounded-full"></div>}
               </span>
-              <span className="ml-3 text-[16px] font-jakarata-sans text-[#202020]">{option}</span>
+              <span className="ml-3 text-[12px] text-left lg:text-[16px] font-jakarata-sans text-[#202020]">{option}</span>
             </label>
           ))}
         </motion.div>

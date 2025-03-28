@@ -6,7 +6,7 @@ const CheckVisibilityBtn = () => {
 
     return (
       <>
-        <button onClick={() => dispatch(toggleForm())} className="relative text-[16px] w-[256px] h-[56px] text-center font-semibold text-[#E8ECFE] bg-[#1641F1] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.3)] rounded-full overflow-hidden group/button">
+        <button onClick={() => dispatch(toggleForm())} className="relative md:text-[14px] lg:text-[16px] w-[189px] h-[42px] md:w-[200px] md:h-[48px]  lg:w-[256px] lg:h-[56px] text-center font-semibold text-[#E8ECFE] bg-[#1641F1] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.3)] rounded-full overflow-hidden group/button">
           <span className="absolute inset-[-3px] bg-[#E8ECFE] translate-x-full skew-x-[20deg] transition-transform duration-300 ease-in-out group-hover/button:translate-x-0"></span>
   
           <span className="relative block h-full w-full overflow-hidden">

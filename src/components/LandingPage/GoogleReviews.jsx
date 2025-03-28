@@ -56,22 +56,22 @@ const ReviewCard = ({ name, date, review }) => {
   <div className="relative flex flex-col z-10 h-full">
     <div className="flex text-yellow-400 gap-2 mb-5">
       {[...Array(5)].map((_, i) => (
-        <FaStar key={i} />
+        <FaStar className="text-[10px] md:text-[14px" key={i} />
       ))}
     </div>
 
-    <div className="flex flex-1 flex-col justify-between min-h-[110px]">
-      <p className="text-[#2C2C2C] text-[14px] font-jakarta-sans font-normal leading-[20px] text-left">
+    <div className="flex flex-1 flex-col justify-between min-h-[156px] md:min-h-[110px]">
+      <p className="text-[#2C2C2C] text-[10px] md:text-[14px] font-jakarta-sans font-normal leading-[20px] text-left">
         {review}
       </p>
 
-      <div className="flex justify-between items-center mt-auto">
-        <span className="text-[#1641F1] text-[14px] font-jakarta-sans font-medium">{name}</span>
+      <div className="flex md:flex-row flex-col justify-between items-start md:items-center mt-auto">
+        <span className="text-[#1641F1] text-[10px] md:text-[14px] font-jakarta-sans font-medium">{name}</span>
         <div className="flex items-center h-[20px] gap-2 text-gray-500">
-          <p className="text-[14px] font-medium font-jakarta-sans m-0 text-[#8D8D8D] text-center">
+          <p className="text-[10px] md:text-[14px] font-medium font-jakarta-sans m-0 text-[#8D8D8D] text-center">
             {date}
           </p>
-          <img src={google} alt="google" className="w-[56px]" />
+          <img src={google} alt="google" className="w-[40px] md:w-[56px]" />
         </div>
       </div>
     </div>
@@ -83,13 +83,13 @@ const ReviewCard = ({ name, date, review }) => {
 
 const GoogleReviews = () => {
   return (
-    <div className="w-full pt-12 relative h-fit md:h-[105vh] overflow-auto flex flex-col items-center googleReviewContainer">
-      <div>
+    <div className="w-full pt-12 relative h-auto pb-48 md:pb-0 md:h-[90vh] lg:h-[105vh] overflow-auto flex flex-col items-center googleReviewContainer">
+      <div className="px-6 md:px-0">
          <CommonHeading title="Google Review" description="Helping exceptional talent fast-track their UK visa process with expert  guidance." />    
       </div>
 
       {/* Review Cards Grid */}
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 lg:px-16">
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-6 lg:px-16">
         {reviews.map((review) => (
           <ReviewCard
             key={review.id}

@@ -20,7 +20,7 @@ const WhySucceed = () => {
         description="Helping exceptional talent fast-track their UK visa process with expert guidance."
       />
 
-      <div className="space-y-20 mt-24">
+      <div className="md:space-y-10 lg:space-y-20 md:mt-16 lg:mt-24">
         {/* Top Marquee (Moves Left) */}
         <MarqueeSwiper direction="left" items={strategies} />
 
@@ -49,12 +49,12 @@ const MarqueeSwiper = ({ direction, items }) => {
       {items.concat(items).map((item, index) => (
         <SwiperSlide key={index} className="!w-auto">
           <div
-            className={`flex items-center flex-col justify-center gap-6 px-6 py-2 w-[204px] h-[192px] rounded-lg text-center font-semibold ${
+            className={`flex items-center flex-col justify-center md:gap-3 lg:gap-6 md:px-4 lg:px-6 py-2 md:h-[150px] md:w-[160px] lg:w-[204px] lg:h-[192px] rounded-lg text-center font-semibold ${
               index % 2 === 0 ? "bg-blue-500 text-white" : "bg-white text-blue-600"
             }`}
           >
-            <RiGeminiLine className="text-[56px]" />
-            <div className="font-jakarta-sans text-[20px] leading-[100%] font-semibold">
+            <RiGeminiLine className="md:text-[48px] lg:text-[56px]" />
+            <div className="font-jakarta-sans md:text-[16px] lg:text-[20px] leading-[100%] font-semibold">
               {item}
             </div>
           </div>

@@ -9,11 +9,11 @@ import { Navigation, Mousewheel, FreeMode } from 'swiper/modules';
 import { useState, useEffect } from 'react';
 
 const keyElements = [
-    { id: 1, title: "Fast-track to UK residency", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 2, title: "No job offer needed", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 3, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 4, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 5, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
+    { id: 1, title: "Fast-track to UK residency", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
+    { id: 2, title: "No job offer needed", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
+    { id: 3, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance" },
+    { id: 4, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
+    { id: 5, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
     { id: 6, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
 ];
 
@@ -44,11 +44,11 @@ const KeyElementsCarousel = () => {
 
     return (
         <div className="w-full flex flex-col items-center py-12 bg-gradient-to-b to-[#EFF8FF] from-[#E1E8F3]">
-            <div className="mt-16">
+            <div className="mt-16 px-6 md:px-0 md:mt-10 lg:mt-16">
                 <CommonHeading title="Key Elements" description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
             </div>
 
-            <div className="relative w-[100%] mt-16">
+            <div className="relative w-[100%] mt-8 md:mt-16">
                 <Swiper
                     modules={[Navigation, Mousewheel, FreeMode]}
                     slidesPerView={4}
@@ -73,21 +73,21 @@ const KeyElementsCarousel = () => {
                     resistanceRatio={0.85}
                     watchSlidesProgress={true}
                     breakpoints={{
-                        320: { slidesOffsetBefore: 20 }, // Extra space on mobile
-                        768: { slidesOffsetBefore: 40 }, // More space on tablet
+                        320: { slidesOffsetBefore: 60 , slidesPerView: 2 }, // Extra space on mobile
+                        768: { slidesOffsetBefore: 80 , slidesPerView : 3}, // More space on tablet
                         1024: { slidesOffsetBefore: 120 }, // Even more on desktop
                     }}
                     className=""
                 >
                     {keyElements.map((item) => (
-                        <SwiperSlide key={item.id} className="w-[340px] p-6 text-center">
+                        <SwiperSlide key={item.id} className="w-[340px] md:p-2 lg:p-6 text-center">
                             <div className="flex justify-center">
-                                <div className="w-[80px] h-[80px] bg-[#1641F1] flex items-center justify-center rounded-full">
-                                    <RiGeminiLine size={40} className="text-white font-bold" />
+                                <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] lg:w-[80px] lg:h-[80px] bg-[#1641F1] flex items-center justify-center rounded-full">
+                                    <RiGeminiLine  className="text-white font-bold text-[20px] md:text-[30px] lg:text-[40px]" />
                                 </div>
                             </div>
-                            <h3 className="text-[#2C2C2C] font-medium font-jakarta-sans text-[18px] mt-6">{item.title}</h3>    
-                            <p className="text-[#8D8D8D] font-jakarta-sans font-medium text-[14px] mt-1">{item.description}</p>    
+                            <h3 className="text-[#2C2C2C] font-medium font-jakarta-sans text-[14px] md:text-[16px] lg:text-[18px] mt-4 md:mt-6">{item.title}</h3>    
+                            <p className="text-[#8D8D8D] font-jakarta-sans font-medium text-[12px] md:text-[12px] lg:text-[14px] mt-1">{item.description}</p>    
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -99,14 +99,14 @@ const KeyElementsCarousel = () => {
                     onClick={() => swiperInstance?.slidePrev()}
                     disabled={isBeginning}
                 >
-                    <FaChevronLeft className="w-5 h-5" />
+                    <FaChevronLeft className="h-4 w-4 md:w-5 md:h-5" />
                 </button>
                 <button 
                     className={`next-btn p-3 ${isEnd ? 'text-gray-400 cursor-not-allowed' : 'text-[#1641F1] hover:bg-[#1641F1] hover:text-white'} rounded-full transition-colors`}
                     onClick={() => !isEnd && swiperInstance?.slideNext()}
                     disabled={isEnd}
                 >
-                    <FaChevronRight className="w-5 h-5" />
+                    <FaChevronRight className="h-4 w-4 md:w-5 md:h-5" />
                 </button>
             </div>
         </div>

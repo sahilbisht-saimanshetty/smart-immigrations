@@ -3,6 +3,7 @@ import upArrow from "../../assests/up-arrow.png";
 import downArrow from "../../assests/down-arrow.png";
 import { AnimatePresence, motion } from "framer-motion";
 import CommonHeading from "../LandingPage/commonHeading";
+import { useSelector } from "react-redux";
 
 const FAQData = [
   {
@@ -119,6 +120,7 @@ export const FAQ = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState("");
 
+  const accepted = useSelector(state => state.disc.accepted);
 
   const toggleItem = (id, videoUrl) => {
     if (openItemId === id) {
@@ -130,24 +132,24 @@ export const FAQ = () => {
   };
 
   return (
-    <div className="w-full my-[54px] md:my-[80px] lg:my-[100px] min-[100vh] py-8 ">
+    <div className={`w-full pt-[54px] md:min-h-[70vh] lg:min-h-[140vh] ${accepted === null && 'landingPageFooter'} `}>
           <div className="">
              <CommonHeading title={"Frequently Asked Questions"} description={"Helping exceptional talent fast-track their UK visa process with expert guidance."} />
           </div>
 
       {/* FAQ Box */}
-      <div className="mt-16">
+      <div className=" md:mt-8 lg:mt-16">
         {FAQData.map((item) => (
           <div key={item.id} className="w-full  flex justify-center">
             {/* Main Div */}
             <div
               onClick={() => toggleItem(item.id, item.videoUrl)}
-              className={`bg-white lg:w-[77%] w-[90%] mt-[30px] mx-[12px] flex justify-between items-center lg:rounded-[14px] rounded-none pb-3 relative lg:p-4   sm:border-b-[#E8E8E8] border-b-[1px] cursor-pointer ${openItemId === item.id ? "h-auto" : "min-h-[56px]"
+              className={`bg-white lg:w-[65%] w-[85%] mt-[30px] mx-[12px] flex justify-between items-center md:rounded-md lg:rounded-[14px] rounded-none pb-3 relative lg:p-4   sm:border-b-[#E8E8E8] border-b-[1px] cursor-pointer ${openItemId === item.id ? "h-auto" : "md:min-h-[30px] lg:min-h-[56px]"
                 }`}
             >
               <div className="flex flex-col justify-center lg:w-[85%] xs:w-[95%] w-full ">
-                <div className=" flex w-full xs:text-[12px] text-[10px] md:text-[18px]  font-medium h-auto text-[#2C2C2C]">
-                  <div className="lg:w-full w-[90%] leading-[20px] font-semibold md:leading-[24px] lg:leading-[30px] font-jakarta-sans">
+                <div className=" flex w-full xs:text-[12px] text-[10px] md:text-[16px] lg:text-[18px]  font-medium h-auto text-[#2C2C2C]">
+                  <div className="lg:w-full w-[90%] leading-[20px] font-semibold flex justify-center items-center md:leading-[24px] lg:leading-[30px] font-jakarta-sans">
                     {item.head}
                   </div>
                   <div

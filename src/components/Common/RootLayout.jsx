@@ -18,8 +18,8 @@ function RootLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen w-full">
       <div
-        className={`fixed left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-500 ease-in-out ${
-          isSticky ? "top-[-10px] w-full lg:w-[98%]" : "top-[40px] w-[90%]"
+        className={`fixed hidden md:block left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-500 ease-in-out ${
+          isSticky ? "top-[-10px] w-full md:w-[95%] lg:w-[98%]" : "top-[40px] w-[90%]"
         }`}
       >
         <Navbar />
