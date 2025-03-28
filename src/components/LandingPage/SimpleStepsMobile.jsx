@@ -88,13 +88,13 @@ const SimpleStepsMobile = () => {
 
     return (
 
-        <div className="md:mx-6 lg:mx-12 rounded-md z-10 bg-white pt-12 pb-36 min-h-[110vh] simpleSteps">
+        <div className="mx-6  rounded-md z-10 bg-white pt-16 pb-36 min-h-[100vh] simpleSteps">
             <CommonHeading
                 title={"5 Simple Steps"}
                 description="Helping exceptional talent fast-track their UK visa process with expert guidance."
             />
 
-            <div className="relative scale-[2] mt-80 rotate-90" aria-label="Animated steps visualization">
+            <div className="relative scale-[2] mt-60 rotate-90" aria-label="Animated steps visualization">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="-175 50 1368.287 550.75"
