@@ -1,6 +1,9 @@
 import tower from "../../assests/LandingPage/tower.png";
 import flag from "../../assests/LandingPage/landingPageFlag.png"
+import { useDispatch } from "react-redux";
+import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
+    const dispatch = useDispatch();
     return (
         <div className="relative group bg-gradient-to-b from-[rgba(200,16,46,0.294)] to-[rgba(37,60,123,0.354)] pt-16 h-[110vh] overflow-hidden">
             <img
@@ -8,6 +11,7 @@ const HeroPage = () => {
                 alt="Top Right Image"
                 className="absolute top-0 right-0 w-[900px] h-[300px] transition-transform duration-300 group-hover:scale-110 "
             />
+
             {/* Content Section */}
             <div className="flex justify-between pt-16 ps-20 pe-12">
                 <div className="pt-[150px] group-hover:scale-110 group-hover:origin-left transition-transform duration-500 ease-in-out">
@@ -22,7 +26,7 @@ const HeroPage = () => {
                     </div>
                     {/* Buttons */}
                     <div className="flex gap-2 items-center h-[56px] mt-10">
-                        <button className="relative  text-[16px] w-[256px]   h-full text-center font-semibold text-[#1641F1] bg-[#D9D9D9] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.5)]   rounded-full overflow-hidden group/button">
+                        <button onClick ={() => dispatch(toggleForm())} className="relative  text-[16px] w-[256px]   h-full text-center font-semibold text-[#1641F1] bg-[#D9D9D9] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.5)]   rounded-full overflow-hidden group/button">
                             <span className="absolute inset-[-3px] bg-[#1641F1] scale-x-0 origin-left skew-x-[20deg] transition-transform duration-300 ease-in-out group-hover/button:scale-x-100"></span>
 
                             <span className="relative block h-full w-full overflow-hidden">

@@ -9,10 +9,18 @@ import SimpleSteps from "../LandingPage/SimpleSteps.jsx";
 import {FAQ} from "../Common/FAQ.jsx"
 import Footer from "../Common/Footer.jsx";
 import SimpleSteps2 from "../LandingPage/SimpleSteps2.jsx";
+import AssessmentModal from "../Common/AssessmentForm.jsx";
+import { toggleForm } from "../../store/slices/formSlice.js";
+import { useDispatch , useSelector } from "react-redux";
 
 const LandingPage = () => {
+  const dispatch = useDispatch();
+  const showForm = useSelector((state) => state.form.showForm);
   return (
     <div>
+        {
+          showForm && <AssessmentModal onClose={() => dispatch(toggleForm())}/>
+        }
          <HeroPage/>
          <AttorneySection/>
          <KeyElementsCarousel/>
@@ -20,7 +28,6 @@ const LandingPage = () => {
          <GoogleReviews/>
          <GlobalTalentVisa/>
          </div>
-
          <div className="temp2 pb-8">
          <WhySucceed/>
          <SimpleSteps2/>

@@ -5,27 +5,20 @@ const SimpleSteps2 = () => {
 
     const [count , setCount] = useState(1);
     const animationRef = useRef(null);
+    const totalDuration = 10;
 
 
-    useEffect(() => {
-        const animElement = animationRef.current;
-        if (!animElement) return;
-    
-        const handleRepeat = () => {
-          handleAnimationIteration();
-        };
 
-        animElement.addEventListener('endEvent', handleRepeat);
-    
-        return () => {
-          animElement.removeEventListener('endEvent', handleRepeat);
-        };
-      }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+        setCount(prev => prev + 1);
+    }, totalDuration * 1000);
 
-    const handleAnimationIteration = () => {
-      console.log('Animation completed one iteration');
-      setCount(prevCount => prevCount + 1);
-    };
+    return () => clearInterval(interval);
+}, [totalDuration]);
+
+
+
 
     const steps = [
       {
@@ -61,7 +54,6 @@ const SimpleSteps2 = () => {
     ];
 
     // Total duration for the animation (in seconds)
-    const totalDuration = 10;
     
     // Calculate the total path length for accurate timing
     const pathSegments = [
