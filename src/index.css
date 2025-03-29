@@ -80,7 +80,7 @@
 .heroPageGradient {
   border-radius: 50%;
   background-image: linear-gradient(to bottom,
-      rgba(200, 16, 46, 0.49) 0%,
+      rgba(200, 16, 46, 0.39) 0%,
       rgba(37, 60, 123, 0.59) 100%);
   filter: blur(257px);
   position: absolute;
@@ -181,7 +181,6 @@
     width: 600px;
     height: 600px;
   }
-
 
   .footerGradient {
     bottom: -59%;
