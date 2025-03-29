@@ -43,7 +43,7 @@ const KeyElementsCarousel = () => {
     }, [swiperInstance]);
 
     return (
-        <div className="w-full flex flex-col bg-[#eff8ff] md:bg-[#ecf2fa] items-center py-12">
+        <div className="w-full flex flex-col bg-[#eff8ff]   items-center pt-6 pb-12 md:pt-20 md:pb-24">
             <div className="mt-16 px-6 md:px-0 md:mt-10 lg:mt-16">
                 <CommonHeading title="Key Elements" description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
             </div>
