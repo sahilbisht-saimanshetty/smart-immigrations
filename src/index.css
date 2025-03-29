@@ -141,14 +141,14 @@
 .landingPageFooter,
 .landingPageFooterWithoutDisc {
   background-image: url('../src/assests/FooterFlag.png');
-  background-position: right -147px bottom -481px;
+  background-position: right -147px bottom -443px;
   background-repeat: no-repeat;
-  background-size: 35% 71%;
+  background-size: 35% 74%
 }
 
 .landingPageFooterWithoutDisc {
-  background-position: right -145px bottom 61px;
-  background-size: 36% 37%
+  background-position: right -145px bottom 101px;
+  background-size: 36% 42%
 }
 
 /* media query */
@@ -177,7 +177,7 @@
   }
 
   .landingPageFooterWithoutDisc {
-    background-position: right -69px bottom 97px;
+    background-position: right -69px bottom 167px;
     background-size: 71% 35%;
   }
 

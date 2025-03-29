@@ -132,7 +132,7 @@ export const FAQ = () => {
   };
 
   return (
-    <div className={`w-full pt-[54px] pb-20 md:pb-36 lg:pb-52 md:mt-10 lg:mt-24   ${accepted === null && 'landingPageFooter'} `}>
+    <div className={`w-full pt-[54px]   md:mt-10 lg:mt-24   ${accepted === null ? 'landingPageFooter pb-20  md:pb-44' : 'pb-24 md:pb-52 '} `}>
           <div className="px-6 md:px-0">
              <CommonHeading title={"Frequently Asked Questions"} description={"Helping exceptional talent fast-track their UK visa process with expert guidance."} />
           </div>
