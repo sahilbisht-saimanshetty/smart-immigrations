@@ -83,7 +83,7 @@ const ReviewCard = ({ name, date, review }) => {
 
 const GoogleReviews = () => {
   return (
-    <div className="w-full pt-28 relative h-auto pb-48   flex flex-col items-center googleReviewContainer">
+    <div className="w-full pt-12 pb-36 md:pt-28 relative h-auto md:pb-48   flex flex-col items-center googleReviewContainer">
       <div className="px-6 md:px-0">
          <CommonHeading title="Google Review" description="Helping exceptional talent fast-track their UK visa process with expert  guidance." />    
       </div>

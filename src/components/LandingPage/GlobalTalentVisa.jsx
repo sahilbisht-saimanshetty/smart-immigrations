@@ -49,10 +49,10 @@ const GlobalTalentVisa = () => {
                     </p>
                 </div>
                 {
-                    reverse ? <div className="bg-white p-6 shadow-xl min-w-[320px] h-[200px] md:w-[350px] md:h-[200px] lg:w-[403px] lg:h-[261px] rounded-lg relative">
+                    reverse ? <div className="bg-white p-6 box-shadow-border min-w-[320px] h-[200px] md:w-[350px] md:h-[200px] lg:w-[403px] lg:h-[261px] rounded-lg relative">
                         <div className="absolute inset-0 rounded-xl border-b-4 md:border-r-4  border-[#E52D37]"></div>
                         <div className="absolute inset-0 rounded-xl shadow-[0px_4px_0px_0px_#294286]  md:shadow-[4px_0px_0px_0px_#294286]"></div>
-                    </div> : <div className="bg-white p-6 shadow-xl  min-w-[320px] h-[200px] md:w-[350px] md:h-[200px]  lg:w-[403px] lg:h-[261px] rounded-lg relative">
+                    </div> : <div className="bg-white p-6 box-shadow-border  min-w-[320px] h-[200px] md:w-[350px] md:h-[200px]  lg:w-[403px] lg:h-[261px] rounded-lg relative">
                         <div className="absolute inset-0 rounded-xl border-b-4 md:border-l-4  border-[#E52D37]"></div>
                         <div className="absolute inset-0 rounded-xl shadow-[0px_4px_0px_0px_#294286] md:shadow-[-4px_0px_0px_0px_#294286]"></div>
                     </div>
