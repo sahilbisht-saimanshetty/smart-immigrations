@@ -1,167 +1,172 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
-import { FaCheck } from "react-icons/fa";
-import { setAnswersStore } from "../../store/slices/formSlice";
-import { useDispatch , useSelector } from "react-redux";
+import { toggleForm, setAnswersStore } from "../../store/slices/formSlice";
+import { useDispatch, useSelector } from "react-redux";
+const AssessmentModal = () => {
+  const dispatch = useDispatch();
+  const isOpen = useSelector(state => state.form.showForm);
+  const StoredAnswers = useSelector((state) => state.form.answers);
 
-const questions = [
-    {
-      id: 1,
-      question: "Do you possess any awards recognizing your achievements or evidence of notable contributions within your field of expertise?",
-      options: [
-        "I hold federal or international awards, and/or I have authored inventions",
-        "I hold federal or international awards, and/or I have authored inventions with widespread implementation.",
-        "I hold federal or international awards, and/or I have authored inventions."
-      ]
-    },
-    {
-      id: 2,
-      question: "What is your highest level of education?",
-      options: ["Bachelor's degree", "Master's degree", "PhD or equivalent"]
-    },
-    {
-      id: 3,
-      question: "How many years of professional experience do you have in your field?",
-      options: ["Less than 2 years", "2-5 years", "More than 5 years"]
-    },
-    {
-      id: 4,
-      question: "Have you published any research papers, books, or articles in recognized journals or media?",
-      options: ["Yes, multiple publications", "Yes, but only a few", "No, not yet"]
-    },
-    {
-      id: 5,
-      question: "Are you currently employed in a leadership or managerial position?",
-      options: ["Yes, at a senior level", "Yes, in a mid-level role", "No, but I have previous experience"]
-    },
-    {
-      id: 6,
-      question: "Have you made any significant contributions to the growth or success of a company, organization, or industry?",
-      options: [
-        "Yes, I have made notable contributions with measurable impact",
-        "Yes, but my contributions were on a smaller scale",
-        "Not yet, but I am working towards it"
-      ]
-    },
-    {
-      id: 7,
-      question: "Have you received invitations to speak at conferences, panels, or industry events?",
-      options: ["Yes, frequently", "Occasionally", "No, but I plan to in the future"]
-    }
-  ];
-  
-
-const ProgressBar = ({ currentStep, totalSteps }) => {
-    return (
-      <div className="flex items-center justify-center w-full my-4">
-        {Array.from({ length: totalSteps }).map((_, index) => (
-          <div key={index} className="flex items-center">
-            <div
-              className={`w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all duration-300 
-                ${index <= currentStep ? "bg-[#153feb] text-white" : "bg-[#d7d7d7] text-gray-500"}`}
-            >
-              <FaCheck size={12} />
-            </div>
-            {index !== totalSteps - 1 && (
-              <div className="w-12 h-1 bg-gray-300"></div>
-            )}
-          </div>
-        ))}
-      </div>
-    );
+  const onClose = () => {
+    dispatch(toggleForm());
   };
 
-const AssessmentModal = ({ onClose }) => {
-  const dispatch = useDispatch();
-  const StoredAnswers = useSelector((state) => state.form.answers);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [answers, setAnswers] = useState(StoredAnswers);
-  const [step, setStep] = useState(0);
-  const totalSteps = 7;
-  
-  const progress = ((currentQuestion + 1) / questions.length) * 100;
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    linkedin: "",
+    service: [],
+  });
+  const [errors, setErrors] = useState({});
 
-  const handleNext = () => {
-    if (selectedOption !== null) {
-      setStep(prev => prev + 1);
-      setAnswers({ ...answers, [questions[currentQuestion].id]: selectedOption });
-      dispatch(
-        setAnswersStore({
-          questionId: questions[currentQuestion].id,
-          selectedOption,
-        }));
-      setSelectedOption(answers[questions[currentQuestion + 1].id] || null);
-      setCurrentQuestion(prev => prev + 1);
+  const validate = () => {
+    let newErrors = {};
+    if (!formData.name) newErrors.name = "Name is required";
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits";
+    }
+    if (!formData.linkedin) newErrors.linkedin = "LinkedIn is required";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox") {
+      const updatedValue = {...formData ,   service: checked
+        ? [...formData.service, value]
+        : formData.service.filter((s) => s !== value) }
+      
+      setFormData(updatedValue);
+      dispatch(setAnswersStore({data : updatedValue }))
+    } else {
+      setFormData({ ...formData, [name]: value });
+      dispatch(setAnswersStore({data : {...formData , [name]: value }}))
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert("Form submitted successfully");
     }
   };
 
   useEffect(() => {
-     setSelectedOption(answers[questions[currentQuestion].id] || null)
-  } , [currentQuestion])
+    if(StoredAnswers) {
+      setFormData(StoredAnswers)
+    }
+  } , [StoredAnswers])
 
-  const handlePrev = () => {
-    setCurrentQuestion(prev => prev - 1);
-    setSelectedOption(answers[questions[currentQuestion - 1]?.id] || null);
-  };
+  const checkBoxName = ["Fully Automated", "Semi Automated", "Hand-ons Automated"]
+
+
 
   return (
     <div className="fixed inset-0 bg-[#000000]  bg-opacity-60 backdrop-blur-[15px] flex items-center justify-center h-[100vh] w-[100vw] z-[1000]" onClick={onClose}>
-      <motion.div 
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        className="bg-white rounded-lg shadow-xl md:w-[90%] lg:w-[70%]  py-8 md:px-6 lg:px-12 relative"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <h1 className="text-[32px] font-jakarata-sans font-bold text-[#2C2C2C] text-center">Start the Assessment</h1>
-        <p className="text-[#2C2C2C] font-jakarata-sans text-[18px] font-medium text-center mt-2">Evaluate your profile by answering a few simple questions.</p>
-
-        {/* Progress Bar */}
-        <div className="flex items-center justify-between mt-6 mb-6">
-            <ProgressBar currentStep={step} totalSteps={totalSteps} />
-
-        </div>
-
-        {/* Question */}
-        <motion.div key={currentQuestion} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-4">
-          <h3 className="md:text-[14px] lg:text-lg font-jakarata-sans font-medium text-left  mb-4">Q{currentQuestion + 1}. {questions[currentQuestion].question}</h3>
-          {questions[currentQuestion].options.map((option, index) => (
-            <label key={index} className="flex items-center p-3 cursor-pointer transition-all duration-200 mb-2">
+      <div className="flex justify-center items-center rounded-lg w-[95%] md:w-[55%] bg-white px-2 md:px-10" onClick={(e) => e.stopPropagation()}>
+        <form onSubmit={handleSubmit} className="p-4 md:p-8  w-full">
+          <h2 className="text-[24px] md:text-[28px] lg:text-[32px] text-[#2C2C2C] font-jakarta-sans font-bold text-center mb-6">Please Fill the Basic Details</h2>
+          <div className="space-y-6">
+            <div className="mb-4 text-left">
+              <label className="block text-[#2C2C2C] text-[16px] md:text-[20px] font-medium mb-3 font-dm-sans">Name</label>
               <input
-                type="radio"
-                checked={selectedOption === index}
-                onChange={() => setSelectedOption(index)}
-                className="hidden"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full p-2 ps-6 text-[14px] md:text-[18px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <span className={`w-5 h-5 border-2 rounded-full flex items-center justify-center ${selectedOption === index ? 'border-blue-500' : 'border-gray-300'}`}>
-                {selectedOption === index && <div className="w-3 h-3 bg-blue-500 rounded-full"></div>}
-              </span>
-              <span className="ml-3 text-[12px] text-left lg:text-[16px] font-jakarata-sans text-[#202020]">{option}</span>
-            </label>
-          ))}
-        </motion.div>
+              {errors.name && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.name}</p>}
+            </div>
+            <div className="flex flex-col mb-4 md:flex-row justify-between w-full">
+              <div className="text-left mb-4 md:mb-0 w-[100%] md:w-[45%]">
+                <label className="block text-[#2C2C2C] text-[16px] md:text-[20px] font-medium mb-3 font-dm-sans">Email ID</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-2 ps-6 text-[14px] md:text-[18px] font-normal font-dm-sans text-[#A4A4A4]  bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                {errors.email && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.email}</p>}
+              </div>
+              <div className="text-left w-[100%] md:w-[45%]">
+                <label className="block text-[#2C2C2C] text-[16px] md:text-[20px] font-medium  mb-3 font-dm-sans">Phone Number</label>
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full p-2 ps-6  text-[14px] md:text-[18px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                {errors.phone && <p className="text-red-500  font-dm-sans ps-4 pt-2 text-sm">{errors.phone}</p>}
+              </div>
 
-        {/* Buttons */}
-        <div className="flex justify-between mt-6">
-          <button
-            onClick={handlePrev}
-            disabled={currentQuestion === 0}
-            className={`px-4 py-2 rounded-full text-white ${currentQuestion === 0 ? 'bg-gray-300 cursor-not-allowed' : 'bg-gray-500 hover:bg-gray-700'}`}
-          >
-            Previous Question
-          </button>
-          <button
-            onClick={handleNext}
-            disabled={selectedOption === null || currentQuestion === questions.length - 1}
-            className={`px-4 py-2 rounded-full text-white ${selectedOption === null || currentQuestion === questions.length - 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-[#1641F1]'}`}
-          >
-            {currentQuestion === questions.length - 1 ? 'Complete Assessment' : 'Next Question'}
-          </button>
-        </div>
-      </motion.div>
+            </div>
+
+            <div className="mb-4 text-left">
+              <label className="block text-[#2C2C2C] text-[16px] md:text-[20px] font-medium mb-3 font-dm-sans">LinkedIn</label>
+              <input
+                type="text"
+                name="linkedin"
+                placeholder="Eg. Alexa/ LinkedInprofile.com"
+                value={formData.linkedin}
+                onChange={handleChange}
+                className="w-full p-2 ps-6 text-[14px] md:text-[18px] font-normal font-dm-sans text-[#A4A4A4]  bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              {errors.linkedin && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.linkedin}</p>}
+            </div>
+            <div className="mb-4 text-left">
+              <label className="block text-[#2C2C2C] text-[16px] md:text-[20px] font-medium mb-3 font-dm-sans">Types of service</label>
+              <div className="flex flex-col md:flex-row gap-4">
+                {
+
+                  checkBoxName?.map((item, index) => <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="service"
+                      value={item}
+                      key={index}
+                      checked={formData.service.includes(item)}
+                      onChange={handleChange}
+                      className="mr-2 border-[#007EE8]"
+                    />
+                    <span className="text-[#8D8D8D] md:text-[18px] font-dm-sans">{item}</span>
+
+                  </label>)
+                }
+              </div>
+            </div>
+
+
+            <button
+              type="submit"
+              className="w-fit font-dm-sans bg-[#1641F1] text-white py-2 px-6  rounded-full hover:scale-110 transition"
+            >
+              Submit
+            </button>
+
+
+          </div>
+
+        </form>
+      </div>
     </div>
   );
 };
 
 export default AssessmentModal;
+
+
+

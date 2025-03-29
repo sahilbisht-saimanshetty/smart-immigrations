@@ -21,7 +21,7 @@ const LandingPage = () => {
   return (
     <div>
       {
-        showForm && <AssessmentModal onClose={() => dispatch(toggleForm())} />
+        showForm && <AssessmentModal />
       }
       <div className="relative overflow-hidden">
         <div className="heroPageGradient"></div>

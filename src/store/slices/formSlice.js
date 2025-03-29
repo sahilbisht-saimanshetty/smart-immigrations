@@ -2,14 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const formSlice = createSlice({
   name: "form",
-  initialState: { showForm: false, answers: {} },
+  initialState: { showForm: false, answers: null },
   reducers: {
     toggleForm: (state) => {
       state.showForm = !state.showForm;
     },   
      setAnswersStore: (state, action) => {
-      const { questionId, selectedOption } = action.payload;
-      state.answers = { ...state.answers, [questionId]: selectedOption }; // Ensure immutability
+      const { data} = action.payload;
+      state.answers = { ...state.answers, ...data };
     },
   },
 });
