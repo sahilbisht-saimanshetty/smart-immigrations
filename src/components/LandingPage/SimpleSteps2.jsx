@@ -1,31 +1,29 @@
-import usaFlag from "../../assests/LandingPage/USAFLAG.png"
-import React , { useEffect , useRef , useState } from "react";
+import usaFlag from "../../assests/LandingPage/USAFLAG.png";
+import React, { useEffect, useRef, useState } from "react";
 import CommonHeading from "./commonHeading";
+
 const SimpleSteps2 = () => {
+  const [count, setCount] = useState(1);
+  const animationRef = useRef(null);
+  const totalDuration = 13; // 10s movement + 5s pauses (1s at each of 5 steps)
 
-    const [count , setCount] = useState(1);
-    const animationRef = useRef(null);
-    const totalDuration = 10;
+  useEffect(() => {
+    const animElement = animationRef.current;
+    if (!animElement) return;
 
+    const handleRepeat = () => {
+      setCount((prev) => prev + 1);
+    };
 
-    useEffect(() => {
-      const animElement = animationRef.current;
-      if (!animElement) return;
+    animElement.addEventListener("repeatEvent", handleRepeat);
+    animElement.addEventListener("endEvent", handleRepeat);
 
-      const handleRepeat = () => {
-          setCount(prev => prev + 1);
-      };
-
-
-      animElement.addEventListener('repeatEvent', handleRepeat);
-      animElement.addEventListener('endEvent', handleRepeat);
-
-      return () => {
-          animElement.removeEventListener('repeatEvent', handleRepeat);
-          animElement.removeEventListener('endEvent', handleRepeat);
-      };
+    return () => {
+      animElement.removeEventListener("repeatEvent", handleRepeat);
+      animElement.removeEventListener("endEvent", handleRepeat);
+    };
   }, []);
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
         setCount(prev => prev + 1);
@@ -34,79 +32,74 @@ const SimpleSteps2 = () => {
     return () => clearInterval(interval);
 }, [totalDuration]);
 
+  const steps = [
+    {
+      x: 411.162156,
+      y: 507.621036,
+      title: "Spot Your Expertise",
+      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+    },
+    {
+      x: 663.615156,
+      y: 353.416036,
+      title: "Build a Profile",
+      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+    },
+    {
+      x: 920.381156,
+      y: 503.860036,
+      title: "Gain Recognition",
+      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+    },
+    {
+      x: 1168.070658,
+      y: 348.078666,
+      title: "Attorney Collaboration",
+      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+    },
+    {
+      x: 1424.522931,
+      y: 504.206521,
+      title: "Approved",
+      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+    }
+  ];
 
+  const pathSegments = [
+    { d: "M -175.77 338.951 L -112.27 338.951", length: 63.5 },
+    { d: "M -112.27 338.951 L -112.27 414.951", length: 76 },
+    { d: "M -112.27 414.951 L 139.616 414.951", length: 251.886 },
+    { d: "M 139.616 414.951 L 139.616 262.951", length: 152 },
+    { d: "M 139.616 262.951 L 391.506 262.951", length: 251.89 },
+    { d: "M 391.506 262.951 L 391.506 414.951", length: 152 },
+    { d: "M 391.506 414.951 L 645.697 414.951", length: 254.191 },
+    { d: "M 645.697 414.951 L 645.697 262.451", length: 152.5 },
+    { d: "M 645.697 262.451 L 889.586 262.451", length: 243.889 },
+    { d: "M 889.586 262.451 L 889.586 414.951", length: 152.5 },
+    { d: "M 889.586 414.951 C 889.586 414.951 977.226 414.951 1031.73 414.951", length: 142.144 }
+  ];
 
+  const totalPathLength = pathSegments.reduce((sum, segment) => sum + segment.length, 0);
 
-    const steps = [
-      {
-        x: 411.162156,
-        y: 507.621036,
-        title: "Spot Your Expertise",
-        description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
-      },
-      {
-        x: 663.615156,
-        y: 353.416036,
-        title: "Build a Profile",
-        description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
-      },
-      {
-        x: 920.381156,
-        y: 503.860036,
-        title: "Gain Recognition",
-        description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
-      },
-      {
-        x: 1168.070658,
-        y: 348.078666,
-        title: "Attorney Collaboration",
-        description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
-      },
-      {
-        x: 1424.522931,
-        y: 504.206521,
-        title: "Approved",
-        description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
-      }
-    ];
+  // Animation timing configuration
+  const keyPoints = "0;0.14;0.14;0.36;0.36;0.57;0.57;0.78;0.78;1";
+  const keyTimes = "0;0.133;0.2;0.333;0.4;0.533;0.63;0.75;0.86;1";
 
-    // Total duration for the animation (in seconds)
-    
-    // Calculate the total path length for accurate timing
-    const pathSegments = [
-        { d: "M -175.77 338.951 L -112.27 338.951", length: 63.5 }, // Segment 1
-        { d: "M -112.27 338.951 L -112.27 414.951", length: 76 },    // Segment 2
-        { d: "M -112.27 414.951 L 139.616 414.951", length: 251.886 }, // Segment 3
-        { d: "M 139.616 414.951 L 139.616 262.951", length: 152 },   // Segment 4
-        { d: "M 139.616 262.951 L 391.506 262.951", length: 251.89 }, // Segment 5
-        { d: "M 391.506 262.951 L 391.506 414.951", length: 152 },    // Segment 6
-        { d: "M 391.506 414.951 L 645.697 414.951", length: 254.191 }, // Segment 7
-        { d: "M 645.697 414.951 L 645.697 262.451", length: 152.5 },  // Segment 8
-        { d: "M 645.697 262.451 L 889.586 262.451", length: 243.889 }, // Segment 9
-        { d: "M 889.586 262.451 L 889.586 414.951", length: 152.5 },  // Segment 10
-        { d: "M 889.586 414.951 C 889.586 414.951 977.226 414.951 1031.73 414.951", length: 142.144 } // Segment 11
-    ];
-    
-    const totalPathLength = pathSegments.reduce((sum, segment) => sum + segment.length, 0);
-  
-    return (
-
-      <div className="md:mx-6 lg:mx-12 rounded-md z-10 bg-[white] overflow-hidden  pt-42 md:min-h-[50vh] lg:min-h-[90vh] simpleSteps pb-10">
+  return (
+    <div className="md:mx-6 lg:mx-12 rounded-md z-10 bg-[white] overflow-hidden pt-42 md:min-h-[50vh] lg:min-h-[90vh] simpleSteps pb-10">
       <div className="mt-24">
-      <CommonHeading
-        title={"5 Simple Steps"}
-        description="Helping exceptional talent fast-track their UK visa process with expert guidance."
-      />
+        <CommonHeading
+          title={"5 Simple Steps"}
+          description="Helping exceptional talent fast-track their UK visa process with expert guidance."
+        />
       </div>
 
-
-      <div className="relative"  aria-label="Animated steps visualization">
+      <div className="relative" aria-label="Animated steps visualization">
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="-175 100 1368.287 550.75"
           role="img"
         >
-
           {/* Gray background path */}
           <path 
             d="M -175.77 338.951 L -112.27 338.951 L -112.27 414.951 L 139.616 414.951 L 139.616 262.951 L 391.506 262.951 L 391.506 414.951 L 645.697 414.951 L 645.697 262.451 L 889.586 262.451 L 889.586 414.951 C 889.586 414.951 977.226 414.951 1031.73 414.951" 
@@ -115,6 +108,7 @@ const SimpleSteps2 = () => {
             fill="none"
           />
 
+          {/* Animated blue path */}
           <path 
             d="M -175.77 338.951 L -112.27 338.951 L -112.27 414.951 L 139.616 414.951 L 139.616 262.951 L 391.506 262.951 L 391.506 414.951 L 645.697 414.951 L 645.697 262.451 L 889.586 262.451 L 889.586 414.951 C 889.586 414.951 977.226 414.951 1031.73 414.951" 
             stroke="#004CA6" 
@@ -125,14 +119,27 @@ const SimpleSteps2 = () => {
           >
             <animate 
               attributeName="stroke-dashoffset"
-              from={totalPathLength} 
-              to="0"
-              begin="0s" 
               dur={`${totalDuration}s`}
               repeatCount="indefinite"
+              keyTimes={keyTimes}
+              // const keyPoints = "0;0.14;0.14;0.36;0.36;0.57;0.57;0.78;0.78;1";
+              values={`
+                ${totalPathLength};
+                ${totalPathLength * 0.86};
+                ${totalPathLength * 0.86};
+                ${totalPathLength * 0.64};
+                ${totalPathLength * 0.64};
+                ${totalPathLength * 0.43};
+                ${totalPathLength * 0.43};
+                ${totalPathLength * 0.22};
+                ${totalPathLength * 0.22};
+                0
+              `}
+              calcMode="linear"
             />
           </path>
 
+          {/* Animated rectangle */}
           <rect 
             x="-6px" 
             y="-7px" 
@@ -144,7 +151,6 @@ const SimpleSteps2 = () => {
             <animateMotion 
               id="mainAnim"
               ref={animationRef}
-
               path="M -175.77 338.951 L -112.27 338.951
                     L -112.27 414.951 
                     L 139.616 414.951 
@@ -157,14 +163,14 @@ const SimpleSteps2 = () => {
                     L 889.586 414.951 
                     C 889.586 414.951 977.226 414.951 1031.73 414.951"
               calcMode="linear"
-              begin="0s"
               dur={`${totalDuration}s`}
               repeatCount="indefinite"
-              keyPoints="0;0.071;0.143;0.357;0.5;0.714;0.857;0.929;1"
-              keyTimes="0;0.071;0.143;0.357;0.5;0.714;0.857;0.929;1"
+              keyPoints={keyPoints}
+              keyTimes={keyTimes}
             />
           </rect>
 
+          {/* Step circles and text */}
           {steps.map((step, index) => (
             <g key={index}>
               <g z={100} className="custom-circle">
@@ -199,12 +205,13 @@ const SimpleSteps2 = () => {
             </g>
           ))}
 
+          {/* Flag animations */}
           {[
-            { x: 0, y: 322, showAt: 1.4 },
-            { x: 250, y: 170, showAt: 3.5 },
-            { x: 510, y: 320, showAt: 5.6 },
-            { x: 755, y: 165, showAt: 7.7 },
-            { x: 1015, y: 322, showAt: 9.8 }
+            { x: 0, y: 322, showAt: 1.72 },
+            { x: 250, y: 170, showAt: 4.38 },
+            { x: 510, y: 320, showAt: 7.01 },
+            { x: 755, y: 165, showAt: 9.64 },
+            { x: 1015, y: 322, showAt: 12.76 }
           ].map((point, index) => (
             <image 
               key={index}
@@ -219,16 +226,16 @@ const SimpleSteps2 = () => {
               <animate
                 attributeName="opacity"
                 values="0;1;0"
-                keyTimes="0;0.5;1"
-                begin={`mainAnim.begin+${point.showAt + (count -1 )* 10}s`}
-                dur="0.5s"
+                keyTimes="0;0.8;1"
+                begin={`mainAnim.begin+${point.showAt + (count - 1) * totalDuration}s`}
+                dur="1s"
               />
             </image>
           ))}
         </svg>
       </div>
     </div>
-    );
-  };
-  
-  export default React.memo(SimpleSteps2)
+  );
+};
+
+export default React.memo(SimpleSteps2);
