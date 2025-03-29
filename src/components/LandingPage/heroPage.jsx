@@ -5,7 +5,7 @@ import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
     return (
-        <div className="relative group md:pt-8 lg:pt-16 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[110vh] 3xl:h-[80vh] 4xl:h-[100vh] overflow-hidden">
+        <div className="relative group md:pt-8 lg:pt-16 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[110vh] 3xl:h-[80vh] 4xl:h-auto 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
                 alt="Top Right Image"
@@ -13,7 +13,7 @@ const HeroPage = () => {
             />
 
             {/* Content Section */}
-            <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-20 lg:pe-12">
+            <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-24 lg:pe-12">
                 <div className="pt-[120px] md:pt-[150px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
                     <div className="flex flex-col text-[#012169] justify-center md:justify-start md:items-start">
                         <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] leading-[120%]">

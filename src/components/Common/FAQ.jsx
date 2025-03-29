@@ -162,12 +162,23 @@ export const FAQ = () => {
                     />
                   </div>
                 </div>
-                {openItemId === item.id && (
-                  <div className="text-[7px] xs:text-[8px] md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] font-normal text-[#525252] p-2 mt-0 md:mt-[10px] font-jakarta-sans">
-                    {item.content}
-                    <p onClick={() => setIsOpen(true)} className="text-[#0048FF] text-[7px] md:text-[10px] lg:text-[16px] underline font-semibold font-dm-sans">Learn More</p>
-                  </div>
-                )}
+
+        <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={openItemId === item.id ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="overflow-hidden"
+      >
+        <div className="text-[7px] xs:text-[8px] md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] font-normal text-[#525252] p-2 mt-0 md:mt-[10px] font-jakarta-sans">
+          {item.content}
+          <p
+            onClick={() => setIsOpen(true)}
+            className="text-[#0048FF] text-[7px] md:text-[10px] lg:text-[16px] underline font-semibold font-dm-sans"
+          >
+            Learn More
+          </p>
+        </div>
+      </motion.div>
               </div>
               <div
                 className="lg:flex justify-center items-center h-[42px] w-[42px] hidden "
