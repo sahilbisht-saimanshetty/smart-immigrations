@@ -23,22 +23,28 @@ const LandingPage = () => {
       {
         showForm && <AssessmentModal onClose={() => dispatch(toggleForm())} />
       }
+      <div className="relative overflow-hidden">
+        <div className="heroPageGradient"></div>
       <HeroPage />
       <AttorneySection />
       <KeyElementsCarousel />
-      <div className="temp">
+
+      </div>
+      <div className="relative overflow-hidden bg-[#eff8ff]">
+        <div className="gradientLandingPageEclipse"></div>
         <GoogleReviews />
         <GlobalTalentVisa />
-      </div>
-      <div className="temp2 pb-8">
         <WhySucceed />
+      </div>
+      <div className="bg-[#eff8ff]">
         <div className="hidden md:block">
           <SimpleSteps2 />
         </div>
         <div className="block md:hidden">
           <SimpleStepsMobile />
         </div>
-        <div className={`${accepted !== null && 'landingPageFooterWithoutDisc'}`}>
+        <div className={`${accepted !== null && 'landingPageFooterWithoutDisc'} relative overflow-clip pb-6 md:pb-10`}>
+          <div className="footerGradient"></div>
           <FAQ />
           <Footer />
         </div>

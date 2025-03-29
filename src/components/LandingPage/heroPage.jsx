@@ -5,19 +5,22 @@ import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
     return (
-        <div className="relative group bg-gradient-to-b from-[rgba(200,16,46,0.294)] to-[rgba(37,60,123,0.354)] md:pt-8 lg:pt-16 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[110vh] 3xl:h-[80vh] 4xl:h-[100vh] overflow-hidden">
+        <div className="relative group md:pt-8 lg:pt-16 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[110vh] 3xl:h-[80vh] 4xl:h-[100vh] overflow-hidden">
             <img
                 src={flag}
                 alt="Top Right Image"
-                className="absolute  top-0 right-0 w-[300px] h-[130px]  md:w-[400px] md:h-[150px] lg:w-[900px] lg:h-[300px] transition-transform duration-300 group-hover:scale-110 "
+                className="absolute  top-0 right-0 md:right-[-23px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] lg:w-[900px] lg:h-[372px] transition-transform duration-300 group-hover:scale-110  "
             />
 
             {/* Content Section */}
             <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-20 lg:pe-12">
                 <div className="pt-[120px] md:pt-[150px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
-                    <div className="flex flex-col text-[#012169] justify-start items-start">
-                        <h1 className="whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] leading-[120%]">
+                    <div className="flex flex-col text-[#012169] justify-center md:justify-start md:items-start">
+                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] leading-[120%]">
                             Unlock Your Potential with {"\n"} the UK Global Talent Visa
+                        </h1>
+                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] md:leading-[120%]">
+                            Unlock Your {"\n"} Potential with the UK {"\n"} Global Talent Visa
                         </h1>
                     </div>
                     <div className=" text-[14px] md:text-[18px] lg:text-[20px] font-jakarta-sans text-center md:text-start font-medium text-[#2C2C2C] mt-6">
@@ -25,8 +28,8 @@ const HeroPage = () => {
                         <p>Helping exceptional talent fast-track their UK visa.</p>
                     </div>
                     {/* Buttons */}
-                    <div className="flex gap-2 flex-col md:flex-row items-center h-auto md:h-[48px] lg:h-[56px] mt-10">
-                        <button onClick ={() => dispatch(toggleForm())} className="relative text-[14px]  md:text-[12px] lg:text-[16px] w-[288px] h-[42px]  md:w-[200px] lg:w-[256px] lg:h-[56px]    text-center font-semibold lg:text-[#1641F1] text-white bg-[#1641F1] lg:bg-[#D9D9D9] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.5)]   rounded-full overflow-hidden group/button">
+                    <div className="flex gap-4 md:gap-2 flex-col md:flex-row items-center h-auto md:h-[48px] lg:h-[56px] mt-10">
+                        <button onClick ={() => dispatch(toggleForm())} className="relative text-[14px]  md:text-[12px] lg:text-[16px] w-[288px] h-[48px]  md:w-[200px] lg:w-[256px] lg:h-[56px]    text-center font-semibold lg:text-[#1641F1] text-white bg-[#1641F1] lg:bg-[#D9D9D9] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.5)]   rounded-full overflow-hidden group/button">
                             <span className="absolute inset-[-3px] bg-[#1641F1] scale-x-0 origin-left skew-x-[20deg] transition-transform duration-300 ease-in-out group-hover/button:scale-x-100"></span>
 
                             <span className="relative block h-full w-full overflow-hidden">
@@ -39,7 +42,7 @@ const HeroPage = () => {
                             </span>
                         </button>
 
-                        <button className="px-6 py-3 text-[14px] md:text-[12px] lg:text-[16px]  w-[288px] h-[42px] md:h-[48px] lg:h-[56px] md:w-[130px] lg:w-[166px] font-semibold text-[#1641F1] border border-[#E8ECFE] hover:bg-[#1641F1] hover:border-[#1641F1] duration-300 ease-in-out hover:text-white rounded-full">
+                        <button className="px-6 py-3 text-[14px] md:text-[12px] lg:text-[16px]  w-[288px] h-[48px] md:h-[48px] lg:h-[56px] md:w-[130px] lg:w-[166px] font-semibold text-[#1641F1] border border-[#E8ECFE] hover:bg-[#1641F1] hover:border-[#1641F1] duration-300 ease-in-out hover:text-white rounded-full">
                             Learn More
                         </button>
                     </div>

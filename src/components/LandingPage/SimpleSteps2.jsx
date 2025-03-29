@@ -91,11 +91,14 @@ const SimpleSteps2 = () => {
   
     return (
 
-      <div className="md:mx-6 lg:mx-12 rounded-md z-10 bg-white pt-24 md:min-h-[50vh] lg:min-h-[90vh] simpleSteps pb-10 mt-20">
+      <div className="md:mx-6 lg:mx-12 rounded-md z-10 bg-[white] overflow-hidden  pt-42 md:min-h-[50vh] lg:min-h-[90vh] simpleSteps pb-10">
+      <div className="mt-24">
       <CommonHeading
         title={"5 Simple Steps"}
         description="Helping exceptional talent fast-track their UK visa process with expert guidance."
       />
+      </div>
+
 
       <div className="relative"  aria-label="Animated steps visualization">
         <svg 

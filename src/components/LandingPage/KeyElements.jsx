@@ -43,7 +43,7 @@ const KeyElementsCarousel = () => {
     }, [swiperInstance]);
 
     return (
-        <div className="w-full flex flex-col items-center py-12 bg-gradient-to-b to-[#EFF8FF] from-[#E1E8F3]">
+        <div className="w-full flex flex-col bg-[#eff8ff] md:bg-[#ecf2fa] items-center py-12">
             <div className="mt-16 px-6 md:px-0 md:mt-10 lg:mt-16">
                 <CommonHeading title="Key Elements" description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
             </div>
@@ -93,7 +93,7 @@ const KeyElementsCarousel = () => {
                 </Swiper>
             </div>
 
-            <div className="flex gap-4 mt-12 py-1 px-2 bg-white shadow-md rounded-full">
+            <div className="flex gap-4 mt-12 py-1 px-2 bg-white  rounded-full">
                 <button 
                     className={`prev-btn p-3 ${isBeginning ? 'text-gray-400 cursor-not-allowed' : 'text-[#1641F1] hover:bg-[#1641F1] hover:text-white'} rounded-full transition-colors`}
                     onClick={() => swiperInstance?.slidePrev()}

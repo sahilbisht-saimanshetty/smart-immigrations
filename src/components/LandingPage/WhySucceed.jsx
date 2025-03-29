@@ -15,7 +15,7 @@ const strategies = [
 const WhySucceed = () => {
 
   return (
-    <div className="relative w-full  py-10 overflow-hidden">
+    <div className="relative w-full pb-16 md:pb-32 lg:pb-44 pt-10 md:pt-24 overflow-hidden">
       <div className="px-6 md:px-0">
       <CommonHeading
         title="Why You Will Succeed with Us"
@@ -23,8 +23,7 @@ const WhySucceed = () => {
       />
       </div>
 
-
-      <div className="space-y-8 md:space-y-10 lg:space-y-20 mt-8 md:mt-16 lg:mt-24">
+      <div className="space-y-8 md:space-y-10 lg:space-y-20 mt-10 md:mt-10 lg:mt-24">
         {/* Top Marquee (Moves Left) */}
         <MarqueeSwiper direction="left" items={strategies} />
 

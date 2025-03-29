@@ -83,13 +83,13 @@ const ReviewCard = ({ name, date, review }) => {
 
 const GoogleReviews = () => {
   return (
-    <div className="w-full pt-12 relative h-auto pb-48  flex flex-col items-center googleReviewContainer">
+    <div className="w-full pt-28 relative h-auto pb-48   flex flex-col items-center googleReviewContainer">
       <div className="px-6 md:px-0">
          <CommonHeading title="Google Review" description="Helping exceptional talent fast-track their UK visa process with expert  guidance." />    
       </div>
 
       {/* Review Cards Grid */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-6 lg:px-16">
+      <div className="mt-10 lg:mt-24 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-6 lg:px-16">
         {reviews.map((review) => (
           <ReviewCard
             key={review.id}

@@ -45,8 +45,8 @@ const attorneys = [
   
   const AttorneySection = () => {
     return (
-      <section className=" bg-gradient-to-b  from-[#DADDEA] to-[#E1E8F3]  px-6 md:px-6 lg:px-12">
-        <div className="container rounded-md py-10 md:py-16 lg:py-20 bg-white mx-auto text-center landingPageAttorneySection">
+      <section className="bg-[#ecf2fa] px-6 md:px-6 lg:px-12">
+        <div className="container rounded-xl py-10 md:py-16 lg:py-20 bg-white mx-auto text-center overflow-hidden landingPageAttorneySection">
           <div className="px-6 mt-8 md:mt-0 md:px-0">
              <CommonHeading title="Attorney Section" description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
           </div>
