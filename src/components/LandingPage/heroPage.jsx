@@ -14,12 +14,12 @@ const HeroPage = () => {
 
             {/* Content Section */}
             <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-24 lg:pe-12">
-                <div className="pt-[120px] md:pt-[150px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
+                <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] 2xl:pt-[150px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
                     <div className="flex flex-col text-[#012169] justify-center md:justify-start md:items-start">
-                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] xl:text-[56px] 2xl:text-[64px] leading-[120%]">
+                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] leading-[120%]">
                             Unlock Your Potential with {"\n"} the UK Global Talent Visa
                         </h1>
-                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[56px] 2xl:text-[64px] md:leading-[120%]">
+                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] md:leading-[120%]">
                             Unlock Your {"\n"} Potential with the UK {"\n"} Global Talent Visa
                         </h1>
                     </div>

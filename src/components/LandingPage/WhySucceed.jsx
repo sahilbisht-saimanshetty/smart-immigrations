@@ -22,16 +22,17 @@ const WhySucceed = () => {
 
       <div className="space-y-8 md:space-y-10 lg:space-y-20 mt-10 md:mt-10 lg:mt-24">
         {/* Top Marquee (Moves Left) */}
-        <Marquee direction="left" items={strategies} speed={200} />
+        <Marquee direction="left" items={strategies} speed={250} />
 
         {/* Bottom Marquee (Moves Right) */}
-        <Marquee direction="right" items={strategies} speed={200} />
+        <Marquee direction="right" items={strategies} speed={250} />
       </div>
     </div>
   );
 };
+
 const Marquee = ({ direction, items, speed }) => {
-  const duplicatedItems = [...items, ...items, ...items , ...items, ...items, ...items, ...items ]; // Ensure seamless looping
+  const duplicatedItems = [...items, ...items, ...items, ...items, ...items, ...items, ...items]; // Ensure seamless looping
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -41,8 +42,6 @@ const Marquee = ({ direction, items, speed }) => {
           x: direction === "right" ? ["-100%", "0%"] : ["0%", "-100%"],
         }}
         style={{ transform: direction === "right" ? "translateX(50%)" : "translateX(0%)" }} // Pre-shift right-moving marquee
-
-        
         transition={{
           ease: "linear",
           duration: speed,
@@ -51,7 +50,7 @@ const Marquee = ({ direction, items, speed }) => {
       >
         {[...Array(3)].flatMap(() =>
           duplicatedItems.map((item, index) => (
-            <div key={index} className="marquee-item">
+            <div key={`${item}-${index}-${crypto.randomUUID()}`} className="marquee-item">
               <div
                 className={`flex items-center flex-col justify-center gap-3 md:gap-3 lg:gap-6 px-2 md:px-4 lg:px-6 py-2 h-[100px] w-[106px] md:h-[150px] md:w-[160px] lg:w-[204px] lg:h-[192px] rounded-lg text-center font-semibold ${
                   index % 2 === 0 ? "bg-blue-500 text-white" : "bg-white text-blue-600"

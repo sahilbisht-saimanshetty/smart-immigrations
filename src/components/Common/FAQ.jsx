@@ -148,7 +148,7 @@ export const FAQ = () => {
             >
               <div className="flex flex-col justify-center  w-full ">
                 <div className=" flex w-full xs:text-[12px] text-[10px] md:text-[16px] lg:text-[18px]  font-medium h-auto text-[#2C2C2C]">
-                  <div className="lg:w-full w-[90%] leading-[20px] font-semibold flex justify-start items-center md:leading-[24px] lg:leading-[30px] px-4 font-jakarta-sans">
+                  <div className="lg:w-full w-[90%] leading-[20px] font-semibold flex justify-start items-center text-left md:leading-[24px] lg:leading-[30px] px-4 font-jakarta-sans">
                     {item.head}
                   </div>
                   <div
