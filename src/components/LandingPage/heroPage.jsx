@@ -5,7 +5,7 @@ import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
     return (
-        <div className="relative group md:pt-8 lg:pt-16 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[110vh] 3xl:h-[80vh] 4xl:h-auto 4xl:pb-40 overflow-hidden">
+        <div className="relative group md:pt-8 lg:pt-16 xl:pt-10 2xl:pt-16 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[120vh] 2xl:h-[110vh] 3xl:h-[80vh] 4xl:h-auto 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
                 alt="Top Right Image"
@@ -16,10 +16,10 @@ const HeroPage = () => {
             <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-24 lg:pe-12">
                 <div className="pt-[120px] md:pt-[150px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
                     <div className="flex flex-col text-[#012169] justify-center md:justify-start md:items-start">
-                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] leading-[120%]">
+                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] xl:text-[56px] 2xl:text-[64px] leading-[120%]">
                             Unlock Your Potential with {"\n"} the UK Global Talent Visa
                         </h1>
-                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] md:leading-[120%]">
+                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[56px] 2xl:text-[64px] md:leading-[120%]">
                             Unlock Your {"\n"} Potential with the UK {"\n"} Global Talent Visa
                         </h1>
                     </div>
@@ -50,7 +50,7 @@ const HeroPage = () => {
             </div>
 
             {/* Image Section */}
-            <div className="absolute hidden md:block bottom-0 right-[80px] md:w-[200px] lg:w-[320px] transition-transform duration-500 ease-in-out group-hover:scale-110">
+            <div className="absolute hidden md:block bottom-0 right-[80px] md:w-[200px] lg:w-[320px]  xl:w-[250px] 2xl:w-[320px] transition-transform duration-500 ease-in-out group-hover:scale-110">
                 <img src={tower} className="w-full" alt="high tower image" />
             </div>
         </div>

@@ -12,13 +12,13 @@ const FAQData = [
     content: (
       <div>
         No, Smart Green Card is a legitimate platform designed to streamline and
-        simplify the <br className="lg:block hidden" /> immigration process. We
-        provide verified information, expert guidance, and trusted attorney{" "}
-        <br className="lg:block hidden" /> connections to help users navigate
+        simplify the immigration process. We
+        provide verified information, expert guidance, and trusted attorney
+        connections to help users navigate
         their journey with confidence.
       </div>
     ),
-    videoUrl : 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
+    videoUrl: 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
   },
   {
     id: 2,
@@ -26,13 +26,13 @@ const FAQData = [
     content: (
       <div>
         No, Smart Green Card is a legitimate platform designed to streamline and
-        simplify the <br className="lg:block hidden" /> immigration process. We
-        provide verified information, expert guidance, and trusted attorney{" "}
-        <br className="lg:block hidden" /> connections to help users navigate
+        simplify the  immigration process. We
+        provide verified information, expert guidance, and trusted attorney
+        connections to help users navigate
         their journey with confidence.
       </div>
     ),
-    videoUrl : 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
+    videoUrl: 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
   },
   {
     id: 3,
@@ -40,13 +40,13 @@ const FAQData = [
     content: (
       <div>
         No, Smart Green Card is a legitimate platform designed to streamline and
-        simplify the <br className="lg:block hidden" /> immigration process. We
-        provide verified information, expert guidance, and trusted attorney{" "}
-        <br className="lg:block hidden" /> connections to help users navigate
+        simplify the immigration process. We
+        provide verified information, expert guidance, and trusted attorney
+         connections to help users navigate
         their journey with confidence.
       </div>
     ),
-    videoUrl : 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
+    videoUrl: 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
   },
   {
     id: 4,
@@ -54,13 +54,13 @@ const FAQData = [
     content: (
       <div>
         No, Smart Green Card is a legitimate platform designed to streamline and
-        simplify the <br className="lg:block hidden" /> immigration process. We
-        provide verified information, expert guidance, and trusted attorney{" "}
-        <br className="lg:block hidden" /> connections to help users navigate
+        simplify the  immigration process. We
+        provide verified information, expert guidance, and trusted attorney
+        connections to help users navigate
         their journey with confidence.
       </div>
     ),
-    videoUrl : 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
+    videoUrl: 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
   },
   {
     id: 5,
@@ -68,13 +68,12 @@ const FAQData = [
     content: (
       <div>
         No, Smart Green Card is a legitimate platform designed to streamline and
-        simplify the <br className="lg:block hidden" /> immigration process. We
-        provide verified information, expert guidance, and trusted attorney{" "}
-        <br className="lg:block hidden" /> connections to help users navigate
+        simplify the immigration process. We provide verified information, expert guidance,
+         and trusted attorney connections to help users navigate
         their journey with confidence.
       </div>
     ),
-    videoUrl : 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
+    videoUrl: 'https://www.youtube.com/embed/OFTc4g02yB8?autoplay=1&rel=0',
   },
 ];
 
@@ -133,9 +132,9 @@ export const FAQ = () => {
 
   return (
     <div className={`w-full pt-[54px]   md:mt-10 lg:mt-24   ${accepted === null ? 'landingPageFooter pb-20  md:pb-44' : 'pb-24 md:pb-52 '} `}>
-          <div className="px-6 md:px-0">
-             <CommonHeading title={"Frequently Asked Questions"} description={"Helping exceptional talent fast-track their UK visa process with expert guidance."} />
-          </div>
+      <div className="px-6 md:px-0">
+        <CommonHeading title={"Frequently Asked Questions"} description={"Helping exceptional talent fast-track their UK visa process with expert guidance."} />
+      </div>
 
       {/* FAQ Box */}
       <div className=" md:mt-8 lg:mt-16">
@@ -144,16 +143,16 @@ export const FAQ = () => {
             {/* Main Div */}
             <div
               onClick={() => toggleItem(item.id, item.videoUrl)}
-              className={`bg-white lg:w-[65%] w-[85%] mt-[30px] mx-[12px] flex justify-between items-center rounded-md lg:rounded-[14px]  pb-0 md:pb-3 relative lg:p-4   sm:border-b-[#E8E8E8] border-b-[1px] cursor-pointer ${openItemId === item.id ? "h-auto" : "md:min-h-[30px] lg:min-h-[56px]"
+              className={`bg-white lg:w-[55%] w-[85%] mt-[30px] mx-[12px] flex justify-between items-center rounded-md lg:rounded-[14px]  pb-0 md:pb-3 relative lg:p-4   sm:border-b-[#E8E8E8] border-b-[1px] cursor-pointer ${openItemId === item.id ? "h-auto" : "md:min-h-[30px] lg:min-h-[56px]"
                 }`}
             >
-              <div className="flex flex-col justify-center lg:w-[85%] xs:w-[95%] w-full ">
+              <div className="flex flex-col justify-center  w-full ">
                 <div className=" flex w-full xs:text-[12px] text-[10px] md:text-[16px] lg:text-[18px]  font-medium h-auto text-[#2C2C2C]">
-                  <div className="lg:w-full w-[90%] leading-[20px] font-semibold flex justify-center items-center md:leading-[24px] lg:leading-[30px] font-jakarta-sans">
+                  <div className="lg:w-full w-[90%] leading-[20px] font-semibold flex justify-start items-center md:leading-[24px] lg:leading-[30px] px-4 font-jakarta-sans">
                     {item.head}
                   </div>
                   <div
-                    className="flex justify-center items-center h-[42px] w-[42px]  lg:hidden "
+                    className="flex justify-center items-center h-[42px] w-[42px]   "
                   >
                     <img
                       className="h-[12px] w-[12px] md:h-[22px] md:w-[22px]"
@@ -163,32 +162,24 @@ export const FAQ = () => {
                   </div>
                 </div>
 
-        <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={openItemId === item.id ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="overflow-hidden"
-      >
-        <div className="text-[7px] xs:text-[8px] md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] font-normal text-[#525252] p-2 mt-0 md:mt-[10px] font-jakarta-sans">
-          {item.content}
-          <p
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={openItemId === item.id ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="text-[7px] xs:text-[8px] md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] px-4 me-6 font-normal text-[#525252]  text-justify break-all py-2 mt-0 md:mt-[10px] font-jakarta-sans">
+                    {item.content}
+                    {/* <p
             onClick={() => setIsOpen(true)}
-            className="text-[#0048FF] text-[7px] md:text-[10px] lg:text-[16px] underline font-semibold font-dm-sans"
+            className="text-[#0048FF] text-[7px] md:text-[10px] lg:text-[16px] text-center underline font-semibold font-dm-sans"
           >
             Learn More
-          </p>
-        </div>
-      </motion.div>
+          </p> */}
+                  </div>
+                </motion.div>
               </div>
-              <div
-                className="lg:flex justify-center items-center h-[42px] w-[42px] hidden "
-              >
-                <img
-                  className="h-[22px] w-[22px]"
-                  src={openItemId === item.id ? upArrow : downArrow}
-                  alt="Toggle arrow"
-                />
-              </div>
+
             </div>
           </div>
         ))}
