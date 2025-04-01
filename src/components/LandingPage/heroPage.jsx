@@ -8,8 +8,8 @@ const HeroPage = () => {
         <div className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[120vh] 2xl:h-[110vh] 3xl:h-[80vh] 4xl:h-auto 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
-                alt="Top Right Image"s
-                className="absolute  top-0 right-0 md:right-[-23px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[600px] xl:h-[240px] 2xl:w-[800px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
+                alt="Top Right Image"
+                className="absolute  top-0 right-0 md:right-[-23px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[600px] xl:h-[240px] 2xl:w-[700px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
             />
 
             {/* Content Section */}
