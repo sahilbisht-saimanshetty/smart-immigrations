@@ -8,18 +8,18 @@ const HeroPage = () => {
         <div className="relative group md:pt-8 lg:pt-16 xl:pt-10 2xl:pt-16 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[120vh] 2xl:h-[110vh] 3xl:h-[80vh] 4xl:h-auto 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
-                alt="Top Right Image"
-                className="absolute  top-0 right-0 md:right-[-23px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] lg:w-[900px] lg:h-[372px] transition-transform duration-300 group-hover:scale-110  "
+                alt="Top Right Image"s
+                className="absolute  top-0 right-0 md:right-[-23px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[600px] xl:h-[240px] 2xl:w-[800px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
             />
 
             {/* Content Section */}
             <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-24 lg:pe-12">
                 <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] 2xl:pt-[150px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
-                    <div className="flex flex-col text-[#012169] justify-center md:justify-start md:items-start">
-                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] leading-[120%]">
+                    <div className="flex flex-col  justify-center md:justify-start md:items-start">
+                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your Potential with {"\n"} the UK Global Talent Visa
                         </h1>
-                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] md:leading-[120%]">
+                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] md:leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your {"\n"} Potential with the UK {"\n"} Global Talent Visa
                         </h1>
                     </div>
