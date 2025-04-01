@@ -5,16 +5,16 @@ import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
     return (
-        <div className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[120vh] mid-2xl:h-[100vh] 2xl:h-[110vh] 3xl:h-[80vh] 4xl:h-[110vh] 4xl:pb-40 overflow-hidden">
+        <div className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[110vh] mid-2xl:h-[80vh] 2xl:h-[105vh] 3xl:h-[80vh] 4xl:h-[110vh] 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
                 alt="Top Right Flag"
-                className="absolute  top-0 right-0 md:right-[-23px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[600px] xl:h-[240px] 2xl:w-[700px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
+                className="absolute  top-0 right-0 md:right-[0px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[550px] xl:h-[230px] 2xl:w-[650px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
             />
 
             {/* Content Section */}
             <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-24 lg:pe-12">
-                <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] 2xl:pt-[150px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
+                <div className="pt-[120px]  md:pt-[120px] xl:pt-[120px] 2xl:pt-[140px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
                     <div className="flex flex-col  justify-center md:justify-start md:items-start">
                         <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your Potential with {"\n"} the UK Global Talent Visa
@@ -28,7 +28,7 @@ const HeroPage = () => {
                         <p>Helping exceptional talent fast-track their UK visa.</p>
                     </div>
                     {/* Buttons */}
-                    <div className="flex gap-4 md:gap-2 flex-col md:flex-row items-center h-auto md:h-[48px] lg:h-[56px] mt-10">
+                    <div className="flex gap-4 md:gap-2 flex-col md:flex-row items-center h-auto md:h-[48px] lg:h-[56px] mt-10 xl:mt-12">
                         <button onClick ={() => dispatch(toggleForm())} className="relative text-[14px]  md:text-[12px] lg:text-[16px] w-[288px] h-[48px]  md:w-[200px] lg:w-[256px] lg:h-[56px]    text-center font-semibold lg:text-[#1641F1] text-white bg-[#1641F1] lg:bg-[#D9D9D9] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.5)]   rounded-full overflow-hidden group/button">
                             <span className="absolute inset-[-3px] bg-[#1641F1] scale-x-0 origin-left skew-x-[20deg] transition-transform duration-300 ease-in-out group-hover/button:scale-x-100"></span>
 
