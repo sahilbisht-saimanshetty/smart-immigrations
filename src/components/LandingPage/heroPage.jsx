@@ -13,8 +13,8 @@ const HeroPage = () => {
             />
 
             {/* Content Section */}
-            <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-20 lg:pe-12">
-                <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] mid-2xl:pt-[130px]  lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
+            <div className="flex justify-between px-4 md:px-8 lg:pe-24 lg:pt-16 lg:ps-20 lg:pe-12">
+                <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] mid-2xl:pt-[130px]  lg:group-hover:scale-110 xl:group-hover:scale-105 2xl:group-hover:scale-110 group-hover:origin-left transition-transform duration-500 ease-in-out">
                     <div className="flex flex-col  justify-center lg:justify-start lg:items-start">
                         <h1 className="hidden lg:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[58px] xl:text-[48px] 2xl:text-[58px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your UK Global Talent  Visa  {"\n"}   with AI-Powered Expert Guidance
@@ -51,7 +51,7 @@ const HeroPage = () => {
             </div>
 
             {/* Image Section */}
-            <div className="absolute hidden lg:block bottom-0 right-[80px] xl:right-[60px] mid-2xl:right-[80px] md:w-[200px] lg:w-[320px]  xl:w-[250px] 2xl:w-[320px] transition-transform duration-500 ease-in-out group-hover:scale-110">
+            <div className="absolute hidden lg:block bottom-0 right-[80px] xl:right-[40px] mid-2xl:right-[80px] md:w-[200px] lg:w-[320px]  xl:w-[250px] 2xl:w-[320px] transition-transform duration-500 ease-in-out lg:group-hover:scale-110 xl:group-hover:scale-105 2xl:group-hover:scale-110">
                 <img src={tower} className="w-full" alt="high tower" />
             </div>
         </div>

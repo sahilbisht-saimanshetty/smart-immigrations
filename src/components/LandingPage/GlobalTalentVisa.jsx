@@ -55,10 +55,10 @@ const GlobalTalentVisa = () => {
 
         return (<>
             <div className={`flex justify-between items-center gap-6 ${reverse ? 'flex-col-reverse md:flex-row-reverse' : 'flex-col-reverse md:flex-row'}`}>
-                <div className="text-center px-6 md:px-0 md:text-left w-fit md:w-[533px]">
+                <div className="text-center px-4 md:px-0 md:text-left w-fit md:w-[533px] xl:w-[500px] 2xl:w-[533px]">
                     <h3 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold font-jakarta-sans text-[#1641F1]">{title}</h3>
                     <p
-                        className="text-[#8D8D8D] text-left font-jakarta-sans font-medium text-[14px] md:text-[12px] md:leading-[18px] lg:text-[16px] lg:leading-[24px] mt-2 "
+                        className="text-[#8D8D8D]  text-justify font-jakarta-sans font-medium text-[14px] md:text-[12px] md:leading-[18px] lg:text-[16px] lg:leading-[24px] mt-2 "
                         dangerouslySetInnerHTML={{ __html: description }}
                     ></p>
 
@@ -92,7 +92,7 @@ const GlobalTalentVisa = () => {
                     <CheckVisibilityBtn />
                 </div>
 
-                <div className="mt-10 md:mt-10 mb-4 md:mb-10 px-4 lg:px-8 lg:mt-24 flex flex-col gap-16">
+                <div className="mt-10 md:mt-10 mb-4 md:mb-10 px-4 xl:px-0 2xl:px-8 lg:mt-24 flex flex-col gap-16">
                     {
                         cardData.map((card, index) => (
                             <ContentCard key={index} title={card.title} description={card.description} reverse={card.reverse} imgSrc={card.imgSrc} />
