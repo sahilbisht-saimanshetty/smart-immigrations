@@ -1,36 +1,40 @@
-import sgc from "../../assests/LandingPage/smart-green-card.png"
-import proximity from "../../assests/LandingPage/proximity.png"
-import chronicle from "../../assests/LandingPage/chroniclesPublisher.png"
 import CommonHeading from "./commonHeading";
+import wardllp from "../../assests/LandingPage/Ward-Hadaway.png"
+import cranbook from "../../assests/LandingPage/cranbookllp.png"
+import jwm from "../../assests/LandingPage/jmwllp.png"
+import sterling from "../../assests/LandingPage/sterlinglawllp.png"
+
 const attorneys = [
-    {
-      id: 1,
-      logo: sgc,
-      name: "Smart Green Card",
-      firm: "Law Firm Name",
-      description: "Helping exceptional talent fast-track their UK visa process with expert guidance."
-    },
-    {
-      id: 2,
-      logo: proximity,
-      name: "Proximity",
-      firm: "Law Firm Name",
-      description: "Helping exceptional talent fast-track their UK visa process with expert guidance."
-    },
-    {
-      id: 3,
-      logo: chronicle,
-      name: "Chronicle International",
-      firm: "Law Firm Name",
-      description: "Helping exceptional talent fast-track their UK visa process with expert guidance."
-    }
-  ];
-  
-  const AttorneyCard = ({ logo, name, firm, description }) => (
-    <div className="flex flex-col self-center items-center font-jakarta-sans text-center md:py-2 lg:py-6 px-2 w-[216px] md:w-[200px] lg:w-[271px]  rounded-xl">
-      {/* Image with shadow effect */}
+  {
+    id: 1,
+    logo: wardllp,
+    firm: "Ward Hadaway LLP",
+    description: "Ward Hadaway LLP is a leading UK law firm with offices in Newcastle, Leeds, and Manchester, providing expert legal services in corporate, employment, healthcare, and public sectors, with a focus on client success and social responsibility."
+  },
+  {
+    id: 2,
+    logo: cranbook,
+    firm: "Cranbrook Legal",
+    description: "Cranbrook Legal is a dynamic UK immigration law firm with 25+ years of experience, specializing in both business and personal immigration matters. They offer tailored legal solutions, ensuring compassionate and professional guidance throughout the UK immigration process."
+  },
+  {
+    id: 3,
+    logo: jwm,
+    firm: "JMW Solicitors LLP",
+    description: "JMW Solicitors LLP is a top 100 UK law firm with offices in Manchester, Liverpool, and London. With over 45 years of experience, they provide expert legal services to businesses and individuals, focused on achieving positive outcomes through client-centered advice."
+  },
+  {
+    id: 4,
+    logo: sterling,
+    firm: "Sterling Law",
+    description: "Sterling Law is a London-based boutique firm specializing in personal and corporate immigration, with a focus on tech businesses. They offer tailored legal solutions in investment, data protection, and employment law, prioritizing efficiency and client satisfaction."
+  }
+];
+
+  const AttorneyCard = ({ logo, firm, description }) => (
+    <div className="flex flex-col self-center items-center font-jakarta-sans text-center md:py-2 h-full lg:py-6 px-2 w-[216px] md:w-[400px] lg:w-[300px]  rounded-xl">
       <div className="relative h-[36px] md:h-[52px]  flex items-center justify-center">
-        <img src={logo} alt={name} className="w-full h-full object-contain drop-shadow-md" />
+        <img src={logo} alt={firm} className="w-full h-full object-contain drop-shadow-md" />
       </div>
 
       <div className="mt-2">
@@ -52,7 +56,7 @@ const attorneys = [
           </div>
   
           {/* Grid Layout */}
-          <div className="flex flex-col gap-10  md:flex-row justify-center mt-10 md:gap-6 lg:gap-12 md:mt-10 lg:mt-24">
+          <div className="flex flex-col gap-12 flex-wrap  md:flex-row justify-center mt-10 md:gap-2 lg:gap-8 md:mt-10 lg:mt-24">
             {attorneys.map((attorney) => (
               <AttorneyCard key={attorney.id} {...attorney} />
             ))}

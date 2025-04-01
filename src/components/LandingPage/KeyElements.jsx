@@ -9,13 +9,48 @@ import { Navigation, Mousewheel, FreeMode } from 'swiper/modules';
 import { useState, useEffect } from 'react';
 
 const keyElements = [
-    { id: 1, title: "Fast-track to UK residency", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 2, title: "No job offer needed", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 3, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance" },
-    { id: 4, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 5, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
-    { id: 6, title: "For tech, arts, and academic professionals", description: "Helping exceptional talent fast-track their UK visa process with expert guidance.Helping exceptional talent fast-track their UK visa process with expert guidance." },
+    { 
+        id: 1, 
+        title: "Fast-Track Your UK Visa", 
+        description: "Achieve quicker UK residency with expert guidance, designed to streamline the entire visa process for exceptional talent." 
+    },
+    { 
+        id: 2, 
+        title: "No Job Offer Required", 
+        description: "Access the UK Global Talent Visa without needing a job offer—empowering you to take the next step based on your skills and potential." 
+    },
+    { 
+        id: 3, 
+        title: "Tailored for Tech, Arts, and Academia", 
+        description: "Specifically crafted for professionals in the tech, arts, and academic fields, providing expert support to navigate the visa process efficiently." 
+    },
+    { 
+        id: 4, 
+        title: "AI-Powered Support", 
+        description: "Leverage cutting-edge AI technology to receive personalized, data-driven insights and recommendations throughout your visa journey." 
+    },
+    { 
+        id: 5, 
+        title: "Dedicated Immigration Experts", 
+        description: "Work with experienced immigration specialists who provide hands-on, professional advice, ensuring a smooth and stress-free application experience." 
+    },
+    { 
+        id: 6, 
+        title: "Simplified Application Process", 
+        description: "Step-by-step guidance through the paperwork, documents, and requirements, making the entire application process seamless." 
+    },
+    { 
+        id: 7, 
+        title: "Increased Approval Rates", 
+        description: "Benefit from a process designed to maximize your chances of success, with tailored strategies and support to meet UK immigration standards." 
+    },
+    { 
+        id: 8, 
+        title: "Long-Term Residency Pathways", 
+        description: "Not just about getting a visa—our service helps position you for long-term opportunities and residency in the UK." 
+    }
 ];
+
 
 const KeyElementsCarousel = () => {
     const [swiperInstance, setSwiperInstance] = useState(null);
@@ -45,7 +80,7 @@ const KeyElementsCarousel = () => {
     return (
         <div className="w-full flex flex-col bg-[#eff8ff]   items-center pt-6 pb-12 md:pt-20 md:pb-24">
             <div className="mt-16 px-6 md:px-0 md:mt-10 lg:mt-16">
-                <CommonHeading title="Key Elements" description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
+                <CommonHeading title={`Accelerate Your Path to UK Residency \n with Expert Visa Solutions`} description="AI-Enhanced Guidance and Tailored Support for Exceptional Talent in Tech, Arts, and Academia" />
             </div>
 
             <div className="relative w-[100%] mt-8 md:mt-16">

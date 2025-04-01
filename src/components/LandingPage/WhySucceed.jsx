@@ -3,42 +3,58 @@ import CommonHeading from "./commonHeading";
 import { RiGeminiLine } from "react-icons/ri";
 
 const strategies = [
-  "Personalized Strategy 1",
-  "Personalized Strategy 2",
-  "Personalized Strategy 3",
-  "Personalized Strategy 4",
-  "Personalized Strategy 5",
+  "Personalized Expert Guidance",
+  "AI-Powered Insights",
+  "No Job Offer Required",
+  "Specialized for Key Industries",
+  "Faster Approval Process",
+  "Clear Path to Residency",
+  "Comprehensive Visa Support",
+  "Dedicated Support Team",
+  "Tailored Solutions for Every Case",
+  "Global Recognition of Your Talent",
+  "Seamless Document Handling",
+  "Real-Time Status Updates",
+  "Post-Visa Support",
+  "Cost-Effective Solutions",
+  "Transparent Process",
+  "Tailored Industry Connections",
+  "Stress-Free Application Journey",
+  "Expert Legal Support",
+  "Exclusive Access to Resources",
+  "A Global Network of Opportunities"
 ];
+
 
 const WhySucceed = () => {
   return (
     <div className="relative w-full pb-16 md:pb-32 lg:pb-44 pt-10 md:pt-24 overflow-hidden">
       <div className="px-6 md:px-0">
         <CommonHeading
-          title="Why You Will Succeed with Us"
+          title="Why Choose Us?"
           description="Helping exceptional talent fast-track their UK visa process with expert guidance."
         />
       </div>
 
       <div className="space-y-8 md:space-y-10 lg:space-y-20 mt-10 md:mt-10 lg:mt-24">
         {/* Top Marquee (Moves Left) */}
-        <Marquee direction="left" items={strategies} speed={240} />
+        <Marquee direction="left" items={strategies} speed={400} />
 
         {/* Bottom Marquee (Moves Right) */}
-        <Marquee direction="right" items={strategies} speed={300} />
+        <Marquee direction="right" items={strategies} speed={460} />
       </div>
     </div>
   );
 };
 
 const Marquee = ({ direction, items, speed }) => {
-  const duplicatedItems = [...items, ...items, ...items, ...items, ...items, ...items, ...items]; 
+  const duplicatedItems = [...items, ...items, ...items, ...items]; 
 
   return (
     <div className="relative w-full overflow-hidden">
 
       <motion.div
-        className="flex w-max"
+        className="flex gap-6 w-max"
         animate={{
           x: direction === "right" ? ["0", "-100%"] : ["-80%", "0%"], // Adjust for both directions
         }}

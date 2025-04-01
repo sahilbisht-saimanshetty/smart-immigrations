@@ -31,36 +31,38 @@ const SimpleStepsMobile = () => {
     return () => clearInterval(interval);
 }, [totalDuration]);
 
+
+
   const steps = [
     {
       x: 411.162156,
       y: 507.621036,
       title: "Spot Your Expertise",
-      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+      description: "We help you uncover the niche that best aligns with the Global Talent Visa criteria, ensuring you stand out as a top candidate."
     },
     {
       x: 663.615156,
       y: 353.416036,
       title: "Build a Profile",
-      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+      description: "We assist in structuring your portfolio—showcasing achievements, skills, and impact—to make your application compelling"
     },
     {
       x: 920.381156,
       y: 503.860036,
       title: "Gain Recognition",
-      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+      description: "Enhance your credibility through publications, media features, awards, and professional memberships to strengthen your case"
     },
     {
       x: 1168.070658,
       y: 348.078666,
       title: "Attorney Collaboration",
-      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+      description: "Work with top immigration attorneys to ensure your application is polished, legally sound, and ready for submission."
     },
     {
       x: 1424.522931,
       y: 504.206521,
-      title: "Approved",
-      description: "Discover the perfect niche for your profile to align with visa requirements and stand out as a top candidate."
+      title: "Get Approved",
+      description : "Submit your application with confidence and start your journey toward career growth and permanent residence in the UK."
     }
   ];
 

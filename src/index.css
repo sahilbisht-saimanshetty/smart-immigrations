@@ -31,7 +31,7 @@
   background-image:
     url('../src/assests/LandingPage/usaFlagAttorneyTop.png'),
     url('../src/assests/LandingPage/usaFlagAttorneyTopRotate.png');
-  background-position: top 0px left -322px, bottom 0px right -445px;
+  background-position: top 0px left -322px, bottom 0px right -500px;
   background-repeat: no-repeat, no-repeat;
   background-size: 60%, 64%;
   opacity: 0.4;
@@ -221,27 +221,4 @@
   box-shadow: 
   0 2px 8px rgba(0, 0, 0, 0.15),
   0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.marquee {
-  display: flex;
-  width: max-content;
-  animation: marqueeScroll 10s linear infinite;
-}
-
-.marquee-reverse {
-  animation-direction: reverse;
-}
-
-.marquee-item {
-  margin-right: 24px; /* Adjust spacing */
-}
-
-@keyframes marqueeScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
