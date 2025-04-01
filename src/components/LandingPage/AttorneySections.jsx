@@ -32,7 +32,7 @@ const attorneys = [
 ];
 
   const AttorneyCard = ({ logo, firm, description }) => (
-    <div className="flex flex-col self-center items-center font-jakarta-sans text-center md:py-2 h-full lg:py-6 px-2 w-[216px] md:w-[400px] lg:w-[300px]  rounded-xl">
+    <div className="flex flex-col self-center items-center font-jakarta-sans text-center md:py-2 h-full lg:py-6 px-2 w-[216px] md:w-[400px] xl:w-[250px] 2xl:w-[300px]  rounded-xl">
       <div className="relative h-[36px] md:h-[52px]  flex items-center justify-center">
         <img src={logo} alt={firm} className="w-full h-full object-contain drop-shadow-md" />
       </div>
@@ -56,7 +56,7 @@ const attorneys = [
           </div>
   
           {/* Grid Layout */}
-          <div className="flex flex-col gap-12 flex-wrap  md:flex-row justify-center mt-10 md:gap-2 lg:gap-8 md:mt-10 lg:mt-24">
+          <div className="flex flex-col gap-12 flex-wrap  md:flex-row justify-center mt-10 md:gap-2 lg:gap-8 xl:gap-4 2xl:gap-8 md:mt-10 lg:mt-24">
             {attorneys.map((attorney) => (
               <AttorneyCard key={attorney.id} {...attorney} />
             ))}
