@@ -3,7 +3,7 @@ import CheckVisibilityBtn from "./CheckVisibilityBtn";
 const Navbar = () => {
   return (
     <nav className="w-full flex justify-center py-4 bg-transparent">
-      <div className="flex items-center justify-between w-full  bg-white shadow-md md:px-2 lg:px-5 py-3 rounded-full">
+      <div className="flex items-center justify-between w-full  bg-white shadow-md md:px-2 lg:px-4 py-3 rounded-full">
         <div className="flex items-center md:gap-12 lg:gap-16 p-2">
           <img
             src={logo}
