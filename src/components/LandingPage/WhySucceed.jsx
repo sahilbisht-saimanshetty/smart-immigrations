@@ -22,16 +22,16 @@ const WhySucceed = () => {
 
       <div className="space-y-8 md:space-y-10 lg:space-y-20 mt-10 md:mt-10 lg:mt-24">
         {/* Top Marquee (Moves Left) */}
-        <Marquee direction="left" items={strategies} speed={95} />
+        <Marquee direction="left" items={strategies} speed={200} />
 
         {/* Bottom Marquee (Moves Right) */}
-        <Marquee direction="right" items={strategies} speed={95} />
+        <Marquee direction="right" items={strategies} speed={200} />
       </div>
     </div>
   );
 };
 const Marquee = ({ direction, items, speed }) => {
-  const duplicatedItems = [...items, ...items, ...items]; // Ensure seamless looping
+  const duplicatedItems = [...items, ...items, ...items , ...items, ...items, ...items, ...items ]; // Ensure seamless looping
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -40,6 +40,8 @@ const Marquee = ({ direction, items, speed }) => {
         animate={{
           x: direction === "right" ? ["-100%", "0%"] : ["0%", "-100%"],
         }}
+        style={{ transform: direction === "right" ? "translateX(50%)" : "translateX(0%)" }} // Pre-shift right-moving marquee
+
         
         transition={{
           ease: "linear",
@@ -47,7 +49,6 @@ const Marquee = ({ direction, items, speed }) => {
           repeat: Infinity,
         }}
       >
-        {/* Repeat multiple times to ensure continuous flow */}
         {[...Array(3)].flatMap(() =>
           duplicatedItems.map((item, index) => (
             <div key={index} className="marquee-item">
