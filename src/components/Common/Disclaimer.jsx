@@ -5,15 +5,15 @@ const Disclaimer = () => {
     const dispatch = useDispatch();
     const disclaimerRef = useRef(null);
     const accepted = useSelector(state => state.disc.accepted)
-    const scrollToDisclaimer = () => {
-        disclaimerRef.current?.scrollIntoView({ behavior: "smooth" });
-      };
+    // const scrollToDisclaimer = () => {
+    //     disclaimerRef.current?.scrollIntoView({ behavior: "smooth" });
+    //   };
 
-      useEffect(() => {
-        if(accepted === null){
-            scrollToDisclaimer();
-        }
-      } , [])
+    //   useEffect(() => {
+    //     if(accepted === null){
+    //         scrollToDisclaimer();
+    //     }
+    //   } , [])
 
     
   return (
