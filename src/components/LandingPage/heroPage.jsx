@@ -9,12 +9,12 @@ const HeroPage = () => {
             <img
                 src={flag}
                 alt="Top Right Flag"
-                className="absolute  top-0 right-0 md:right-[0px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[550px] xl:h-[230px] 2xl:w-[650px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
+                className="absolute  top-0 right-0 md:right-[0px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[500px] xl:h-[230px] 2xl:w-[650px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
             />
 
             {/* Content Section */}
             <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-24 lg:pe-12">
-                <div className="pt-[120px]  md:pt-[120px] xl:pt-[120px] 2xl:pt-[140px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
+                <div className="pt-[120px]  md:pt-[120px] xl:pt-[100px] mid-2xl:pt-[120px] 2xl:pt-[140px] lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
                     <div className="flex flex-col  justify-center md:justify-start md:items-start">
                         <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your Potential with {"\n"} the UK Global Talent Visa
