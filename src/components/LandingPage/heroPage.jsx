@@ -14,22 +14,22 @@ const HeroPage = () => {
 
             {/* Content Section */}
             <div className="flex justify-between px-4 md:px-8 md:pe-24 lg:pt-16 lg:ps-20 lg:pe-12">
-                <div className="pt-[120px]  md:pt-[120px] xl:pt-[100px] mid-2xl:pt-[130px]  lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
-                    <div className="flex flex-col  justify-center md:justify-start md:items-start">
-                        <h1 className="hidden md:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[58px] xl:text-[48px] 2xl:text-[58px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
+                <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] mid-2xl:pt-[130px]  lg:group-hover:scale-110 lg:group-hover:origin-left transition-transform duration-500 ease-in-out">
+                    <div className="flex flex-col  justify-center lg:justify-start lg:items-start">
+                        <h1 className="hidden lg:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[58px] xl:text-[48px] 2xl:text-[58px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your UK Global Talent  Visa  {"\n"}   with AI-Powered Expert Guidance
                         </h1>
-                        <h1 className="block md:hidden  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] md:leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
+                        <h1 className="block lg:hidden  whitespace-pre-line text-center lg:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] md:leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your {"\n"} UK Global Talent Visa {"\n"}  with AI-Powered Expert Guidance
 
                         </h1>
                     </div>
-                    <div className=" text-[14px] md:text-[18px] lg:text-[20px] font-jakarta-sans text-center md:text-start font-medium text-[#2C2C2C] mt-6">
+                    <div className=" text-[14px] md:text-[18px] lg:text-[20px] font-jakarta-sans text-center lg:text-start font-medium text-[#2C2C2C] mt-6">
                         <p> Utilize advanced AI technology and expert support to streamline your UK Global Talent Visa</p>
                         <p> process, ensuring quicker approvals and a smoother experience</p>
                     </div>
                     {/* Buttons */}
-                    <div className="flex gap-4 md:gap-2 flex-col md:flex-row items-center h-auto md:h-[48px] lg:h-[56px] mt-10 xl:mt-12">
+                    <div className="flex gap-4 md:gap-2 flex-col md:flex-row md:justify-center lg:justify-start items-center h-auto md:h-[48px] lg:h-[56px] mt-10 xl:mt-12">
                         <button onClick ={() => dispatch(toggleForm())} className="relative text-[14px]  md:text-[12px] lg:text-[16px] w-[288px] h-[48px]  md:w-[200px] lg:w-[256px] lg:h-[56px]    text-center font-semibold lg:text-[#1641F1] text-white bg-[#1641F1] lg:bg-[#D9D9D9] hover:shadow-[0px_4px_20px_rgba(0,0,255,0.5)]   rounded-full overflow-hidden group/button">
                             <span className="absolute inset-[-3px] bg-[#1641F1] scale-x-0 origin-left skew-x-[20deg] transition-transform duration-300 ease-in-out group-hover/button:scale-x-100"></span>
 
@@ -51,7 +51,7 @@ const HeroPage = () => {
             </div>
 
             {/* Image Section */}
-            <div className="absolute hidden md:block bottom-0 right-[80px] xl:right-[60px] mid-2xl:right-[80px] md:w-[200px] lg:w-[320px]  xl:w-[250px] 2xl:w-[320px] transition-transform duration-500 ease-in-out group-hover:scale-110">
+            <div className="absolute hidden lg:block bottom-0 right-[80px] xl:right-[60px] mid-2xl:right-[80px] md:w-[200px] lg:w-[320px]  xl:w-[250px] 2xl:w-[320px] transition-transform duration-500 ease-in-out group-hover:scale-110">
                 <img src={tower} className="w-full" alt="high tower" />
             </div>
         </div>
