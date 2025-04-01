@@ -22,10 +22,10 @@ const WhySucceed = () => {
 
       <div className="space-y-8 md:space-y-10 lg:space-y-20 mt-10 md:mt-10 lg:mt-24">
         {/* Top Marquee (Moves Left) */}
-        <Marquee direction="left" items={strategies} speed={250} />
+        <Marquee direction="left" items={strategies} speed={240} />
 
         {/* Bottom Marquee (Moves Right) */}
-        <Marquee direction="right" items={strategies} speed={280} />
+        <Marquee direction="right" items={strategies} speed={300} />
       </div>
     </div>
   );
