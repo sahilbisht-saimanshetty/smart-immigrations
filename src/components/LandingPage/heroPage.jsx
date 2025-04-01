@@ -5,10 +5,10 @@ import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
     return (
-        <div className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[120vh] 2xl:h-[110vh] 3xl:h-[80vh] 4xl:h-auto 4xl:pb-40 overflow-hidden">
+        <div className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[120vh] mid-2xl:h-[100vh] 2xl:h-[110vh] 3xl:h-[80vh] 4xl:h-[110vh] 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
-                alt="Top Right Image"
+                alt="Top Right Flag"
                 className="absolute  top-0 right-0 md:right-[-23px] w-[300px] h-[130px]  md:w-[400px] md:h-[150px] xl:w-[600px] xl:h-[240px] 2xl:w-[700px]  2xl:h-[300px] transition-transform duration-300 group-hover:scale-110  "
             />
 
@@ -51,7 +51,7 @@ const HeroPage = () => {
 
             {/* Image Section */}
             <div className="absolute hidden md:block bottom-0 right-[80px] md:w-[200px] lg:w-[320px]  xl:w-[250px] 2xl:w-[320px] transition-transform duration-500 ease-in-out group-hover:scale-110">
-                <img src={tower} className="w-full" alt="high tower image" />
+                <img src={tower} className="w-full" alt="high tower" />
             </div>
         </div>
     );
