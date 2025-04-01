@@ -25,27 +25,30 @@ const WhySucceed = () => {
         <Marquee direction="left" items={strategies} speed={250} />
 
         {/* Bottom Marquee (Moves Right) */}
-        <Marquee direction="right" items={strategies} speed={250} />
+        <Marquee direction="right" items={strategies} speed={280} />
       </div>
     </div>
   );
 };
 
 const Marquee = ({ direction, items, speed }) => {
-  const duplicatedItems = [...items, ...items, ...items, ...items, ...items, ...items, ...items]; // Ensure seamless looping
+  const duplicatedItems = [...items, ...items, ...items, ...items, ...items, ...items, ...items]; 
 
   return (
     <div className="relative w-full overflow-hidden">
+
       <motion.div
         className="flex w-max"
         animate={{
-          x: direction === "right" ? ["-100%", "0%"] : ["0%", "-100%"],
+          x: direction === "right" ? ["0", "-100%"] : ["-80%", "0%"], // Adjust for both directions
         }}
-        style={{ transform: direction === "right" ? "translateX(50%)" : "translateX(0%)" }} // Pre-shift right-moving marquee
+        style={{
+          transform: direction === "right" ? "translateX(100%)" : "translateX(0%)", // Set initial position for seamless loop
+        }}
         transition={{
           ease: "linear",
-          duration: speed,
-          repeat: Infinity,
+          duration: speed, // Control speed of animation
+          repeat: Infinity, // Infinite loop
         }}
       >
         {[...Array(3)].flatMap(() =>
@@ -68,5 +71,6 @@ const Marquee = ({ direction, items, speed }) => {
     </div>
   );
 };
+
 
 export default WhySucceed;
