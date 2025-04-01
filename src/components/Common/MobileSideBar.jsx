@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import logo from "../../assests/smartImmigrantLogo.png"; // Ensure the path is correct
+import logo from "../../assests/smartImmigrantLogo.webp"; // Ensure the path is correct
 
 
 const MobileNavbar = () => {
