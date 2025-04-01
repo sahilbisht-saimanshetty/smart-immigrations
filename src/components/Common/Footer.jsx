@@ -1,7 +1,7 @@
 import { FaLinkedinIn, FaYoutube} from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 
-import logo from "../../assests/smartImmigrantLogo.png";
+import logo from "../../assests/smartImmigrantLogo.webp";
 import flag from "../../assests/flag.png"
 import Disclaimer from "./Disclaimer";
 import { useSelector } from "react-redux";

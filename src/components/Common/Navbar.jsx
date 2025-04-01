@@ -1,4 +1,4 @@
-import logo from "../../assests/smartImmigrantLogo.png"; // Ensure the path is correct
+import logo from "../../assests/smartImmigrantLogo.webp"; // Ensure the path is correct
 import CheckVisibilityBtn from "./CheckVisibilityBtn";
 const Navbar = () => {
   return (
