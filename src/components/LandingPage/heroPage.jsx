@@ -42,7 +42,7 @@ const HeroPage = () => {
                             </span>
                         </button>
 
-                        <button className="px-6 py-3 text-[14px] md:text-[12px] lg:text-[16px]  w-[288px] h-[48px] md:h-[48px] lg:h-[56px] md:w-[130px] lg:w-[166px] font-semibold text-[#1641F1] border border-[#E8ECFE] hover:bg-[#1641F1] hover:border-[#1641F1] duration-300 ease-in-out hover:text-white rounded-full">
+                        <button className="px-6 py-3 text-[14px] md:text-[12px] lg:text-[16px]  w-[288px] h-[48px] md:h-[48px] lg:h-[56px] md:w-[130px] lg:w-[166px] font-semibold text-[#1641F1] border border-[#E8ECFE] bg-[#FFFFFF33] backdrop-blur-2 hover:bg-[#1641F1] hover:border-[#1641F1] duration-300 ease-in-out hover:text-white rounded-full">
                             Learn More
                         </button>
                     </div>
