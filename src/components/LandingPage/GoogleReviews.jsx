@@ -8,7 +8,7 @@ const reviews = [
     name: "Bob Rose",
     date: "6 days ago",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Great experience! The team was super helpful and guided me through every step of the process.",
   },
   {
     id: 2,
@@ -46,6 +46,7 @@ const reviews = [
       "The support team was very responsive and cleared all my doubts. Great service!",
   },
 ];
+
 
 const ReviewCard = ({ name, date, review }) => {
   return (
