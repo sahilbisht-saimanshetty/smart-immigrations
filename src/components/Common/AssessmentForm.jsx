@@ -71,7 +71,7 @@ const AssessmentModal = () => {
 
   return (
     <div className="fixed inset-0 bg-[#000000]  bg-opacity-60 backdrop-blur-[15px] flex items-center justify-center h-[100vh] w-[100vw] z-[1000]" onClick={onClose}>
-      <div className="flex justify-center items-center rounded-lg w-[95%] md:w-[55%] bg-white px-2 md:px-10" onClick={(e) => e.stopPropagation()}>
+      <div className="flex justify-center items-center rounded-lg w-[95%] md:w-[85%] lg:w-[55%] bg-white px-2 md:px-4 lg:px-10" onClick={(e) => e.stopPropagation()}>
         <form onSubmit={handleSubmit} className="p-4 md:p-8  w-full">
           <h2 className="text-[24px] md:text-[28px] lg:text-[32px] text-[#2C2C2C] font-jakarta-sans font-bold text-center mb-6">Please Fill the Basic Details</h2>
           <div className="space-y-6">
