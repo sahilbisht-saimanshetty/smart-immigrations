@@ -7,6 +7,14 @@ import logo from "../../assests/smartImmigrantLogo.webp"; // Ensure the path is 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleNavigateTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <nav className="relative bg-white shadow-md p-4 flex justify-between items-center z-[1000]">
       <div className="text-blue-600 font-bold text-xl flex items-center">
@@ -32,10 +40,26 @@ const MobileNavbar = () => {
         </button>
 
         <ul className="mt-10 space-y-4 text-lg font-medium">
-          <li><a href="#" className="block p-2 hover:text-blue-600">Home</a></li>
-          <li><a href="#" className="block p-2 hover:text-blue-600">About</a></li>
-          <li><a href="#" className="block p-2 hover:text-blue-600">Services</a></li>
-          <li><a href="#" className="block p-2 hover:text-blue-600">Contact</a></li>
+        <li>
+            <a href="/" className="hover:text-blue-600 transition cursor-pointer">
+              Home
+            </a>
+          </li>
+          <li>
+            <a onClick={() => handleNavigateTo('whyChooseUs')} className="hover:text-blue-600 transition cursor-pointer">
+              Service
+            </a>
+          </li>
+          <li>
+            <a onClick={() => handleNavigateTo('contactUs')} className="hover:text-blue-600 transition cursor-pointer">
+              Contact us
+            </a>
+          </li>
+          <li>
+            <a onClick={() => handleNavigateTo('learnMore')} className="hover:text-blue-600 transition cursor-pointer">
+              Learn More
+            </a>
+          </li>
         </ul>
       </motion.div>
     </nav>

@@ -28,7 +28,7 @@ const strategies = [
 
 const WhySucceed = () => {
   return (
-    <div className="relative w-full pb-16 md:pb-32 lg:pb-44 pt-10 md:pt-24 overflow-hidden">
+    <div id="whyChooseUs"  className="relative w-full pb-16 md:pb-32 lg:pb-44 pt-10 md:pt-24 overflow-hidden">
       <div className="px-6 md:px-0">
         <CommonHeading
           title="Why Choose Us?"

@@ -18,11 +18,11 @@ export default function Footer() {
         <div className="flex flex-col gap-3 md:gap-4 lg:gap-6 md:justify-center lg:justify-start font-jakarta-sans font-medium text-start">
           <img src={logo} alt="Smart Immigrant" className="h-[32px] w-[117px] md:h-[47px] md:w-[147px] mb-4" />
           <p className="text-[#2C2C2C] text-[12px] md:text-[16px]">
-            2E/4, Block E2, Jhandewalan Extension,
+             Chapman  Road  254
             <br />
-            Jhandewalan, New Delhi, Delhi 110055
+            Newark , Delaware , USA 19702
           </p>
-          <p className="text-[#2C2C2C] mt-2 text-[12px] md:text-[16px]">SiUk@gmail.com</p>
+          <p className="text-[#2C2C2C] mt-2 text-[12px] md:text-[16px]">Connectuk@smartimmigrant.com</p>
           <div className="flex items-center mt-2">
             <img src={flag} alt="UK Flag" className="h-4 w-6 mr-2" />
             <p className="text-[#2C2C2C] text-[12px] md:text-[16px]">+1 (650)-404–6152</p>
@@ -31,7 +31,7 @@ export default function Footer() {
 
         {/* Middle Section (Subscribe) */}
         <div className="block md:hidden h-[2px] mt-4 w-full bg-[#D7D7D7]"></div>
-        <div className="flex flex-col self-center lg:self-end h-full">
+        <div id="contactUs" className="flex flex-col self-center lg:self-end h-full">
           <div className="flex flex-col flex-1 justify-center lg:justify-end">
             <div className="flex mt-4 md:mt-8  lg:mt-6  h-[40px] md:h-[56px] w-[265px] md:w-[373px] p-1 md:p-2 rounded-md bg-[#F3F3F3]">
               <input

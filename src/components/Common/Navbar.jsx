@@ -1,6 +1,14 @@
 import logo from "../../assests/smartImmigrantLogo.webp"; // Ensure the path is correct
 import CheckVisibilityBtn from "./CheckVisibilityBtn";
 const Navbar = () => {
+
+  const handleNavigateTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+  
   return (
     <nav className="w-full flex justify-center py-4 bg-transparent">
       <div className="flex items-center justify-between w-full  bg-white shadow-md md:px-2 lg:px-4 py-3 rounded-full">
@@ -12,18 +20,23 @@ const Navbar = () => {
           />
        <ul className="hidden md:flex items-center md:gap-6 lg:gap-12 md:text-[14px] lg:text-[16px] text-[#2C2C2C] font-jakarta-sans font-medium">
           <li>
-            <a href="/" className="hover:text-blue-600 transition">
+            <a href="/" className="hover:text-blue-600 transition cursor-pointer">
               Home
             </a>
           </li>
           <li>
-            <a href="/service" className="hover:text-blue-600 transition">
+            <a onClick={() => handleNavigateTo('whyChooseUs')} className="hover:text-blue-600 transition cursor-pointer">
               Service
             </a>
           </li>
           <li>
-            <a href="/contact" className="hover:text-blue-600 transition">
+            <a onClick={() => handleNavigateTo('contactUs')} className="hover:text-blue-600 transition cursor-pointer">
               Contact us
+            </a>
+          </li>
+          <li>
+            <a onClick={() => handleNavigateTo('learnMore')} className="hover:text-blue-600 transition cursor-pointer">
+              Learn More
             </a>
           </li>
         </ul>
