@@ -29,7 +29,7 @@ const SimpleStepsMobile = () => {
     }, totalDuration * 1000);
 
     return () => clearInterval(interval);
-}, [totalDuration]);
+}, []);
 
 
 
@@ -225,7 +225,7 @@ const SimpleStepsMobile = () => {
               height="70"
               opacity="0"
               preserveAspectRatio="xMidYMid meet"
-              transform={index % 2 === 0 ? `rotate(180, ${point.x + 12}, ${point.y + 95})` : ''}
+              transform={index % 2 === 0 ? `rotate(270, ${point.x + 12}, ${point.y + 95})` : `rotate(270, ${point.x + 12}, ${point.y + 95})`}
             >
               <animate
                 attributeName="opacity"
