@@ -1,7 +1,7 @@
 import React from "react";
 import CommonHeading from "./commonHeading";
 import CheckVisibilityBtn from "../Common/CheckVisibilityBtn";
-import globalTalent from "../../assests/LandingPage/globalTalentVisa.jpg"
+import globalTalent from "../../assests/LandingPage/globalTalentVisa.webp"
 import eligble from "../../assests/LandingPage/ukTalentVisaElig.webp"
 import ukVisa from "../../assests/LandingPage/uk-visa.webp"
 
@@ -48,15 +48,15 @@ const cardData = [
 const GlobalTalentVisa = () => {
 
 
-    const subheading = "The UK Global Talent Visa provides a fast-tracked path to residency for exceptional individuals in tech, arts, and academia. \n With expert guidance, we help you navigate the application process and secure your future in the UK"
+    const subheading = "The UK Global Talent Visa provides a fast-tracked path to residency for exceptional individuals in tech, arts, and academia. \n With expert guidance, we help you navigate the application process and secure your future in the UK."
 
 
     const ContentCard = ({ title, description, reverse = false , imgSrc }) => {
 
         return (<>
             <div className={`flex justify-between items-center gap-6 ${reverse ? 'flex-col-reverse md:flex-row-reverse' : 'flex-col-reverse md:flex-row'}`}>
-                <div className="text-center px-4 md:px-0 md:text-left w-fit md:w-[533px] xl:w-[500px] 2xl:w-[533px]">
-                    <h3 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold font-jakarta-sans text-[#1641F1]">{title}</h3>
+                <div className="text-right px-4 md:px-0 md:text-left w-fit md:w-[533px] xl:w-[500px] 2xl:w-[533px]">
+                    <h3 className="text-[20px] md:text-[24px] lg:text-[28px] text-left font-semibold font-jakarta-sans text-[#1641F1]">{title}</h3>
                     <p
                         className="text-[#8D8D8D]  text-justify font-jakarta-sans font-medium text-[14px] md:text-[12px] md:leading-[18px] lg:text-[16px] lg:leading-[24px] mt-2 "
                         dangerouslySetInnerHTML={{ __html: description }}

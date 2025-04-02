@@ -20,8 +20,8 @@ const Disclaimer = () => {
     <div ref={disclaimerRef} className="bg-[#007EE8] font-jakarta-sans text-white   flex flex-col md:flex-row justify-between items-center   py-8 px-8 md:py-12 md:px-20">
       {/* Left Section: Title & Text */}
       <div className="text-left">
-        <h2 className="md:text-2xl text-[18px] font-jakarta-sans font-bold mb-4">Disclaimer</h2>
-        <p className="text-[12px] md:text-[18px] pe-7 text-justify font-medium font-jakarta-sans leading-[140%]">
+        <h2 className="md:text-2xl text-[20px] font-jakarta-sans font-bold mb-4">Disclaimer</h2>
+        <p className="text-[14px] md:text-[20px] pe-7 text-justify font-medium font-jakarta-sans leading-[140%]">
 
           Smart Immigrant UK provides informational and educational services, including AI-powered tools, to assist individuals in understanding the UK immigration process. We are not attorneys, do not provide legal representation, and do not act on behalf of any government agency, including UK immigration authorities. The information shared on our platform should not be considered legal advice.
          <br/>  While we strive to ensure the accuracy and relevance of our content, we make no guarantees regarding its completeness or reliability.Any reliance on AI-generated responses or other materials is at your own discretion.<br/>

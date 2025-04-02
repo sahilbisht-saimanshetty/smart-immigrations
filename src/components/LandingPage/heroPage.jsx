@@ -17,16 +17,15 @@ const HeroPage = () => {
                 <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] mid-2xl:pt-[130px]  lg:group-hover:scale-110 xl:group-hover:scale-105 2xl:group-hover:scale-110 group-hover:origin-left transition-transform duration-500 ease-in-out">
                     <div className="flex flex-col  justify-center lg:justify-start lg:items-start">
                         <h1 className="hidden lg:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[58px] xl:text-[48px] 2xl:text-[58px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
-                            Unlock Your UK Global Talent  Visa  {"\n"}   with AI-Powered Expert Guidance
+                            Unlock Your UK Global Talent {"\n"} Visa with AI Expertise
                         </h1>
                         <h1 className="block lg:hidden  whitespace-pre-line text-center lg:text-start font-extrabold font-jakarta-sans text-[28px] leading-[130%] md:text-[48px] lg:text-[64px] xl:text-[52px] 2xl:text-[64px] md:leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
-                            Unlock Your {"\n"} UK Global Talent Visa {"\n"}  with AI-Powered Expert Guidance
+                            Unlock Your {"\n"} UK Global Talent Visa {"\n"} with AI Expertise
 
                         </h1>
                     </div>
                     <div className=" text-[14px] md:text-[18px] lg:text-[20px] font-jakarta-sans text-center lg:text-start font-medium text-[#2C2C2C] mt-6">
-                        <p> Utilize advanced AI technology and expert support to streamline your UK Global Talent Visa</p>
-                        <p> process, ensuring quicker approvals and a smoother experience</p>
+                        <p>Streamline your visa journey with AI-driven guidance and expert support.</p>
                     </div>
                     {/* Buttons */}
                     <div className="flex gap-4 md:gap-2 flex-col md:flex-row md:justify-center lg:justify-start items-center h-auto md:h-[48px] lg:h-[56px] mt-10 xl:mt-12">

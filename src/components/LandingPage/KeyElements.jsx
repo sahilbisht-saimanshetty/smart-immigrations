@@ -80,7 +80,7 @@ const KeyElementsCarousel = () => {
     return (
         <div className="w-full flex flex-col bg-[#eff8ff]   items-center pt-6 pb-12 md:pt-20 md:pb-24">
             <div className="mt-16 px-6 md:px-0 md:mt-10 lg:mt-16">
-                <CommonHeading title={`Accelerate Your Path to UK Residency \n with Expert Visa Solutions`} description="AI-Enhanced Guidance and Tailored Support for Exceptional Talent in Tech, Arts, and Academia" />
+                <CommonHeading title={`Accelerate Your Path to UK Residency \n with Expert Visa Solutions`} description="AI-Enhanced Guidance and Tailored Support for Exceptional Talent in Tech, Arts, and Academia." />
             </div>
 
             <div className="relative w-[100%] mt-8 md:mt-16">

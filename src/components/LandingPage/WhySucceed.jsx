@@ -76,7 +76,7 @@ const Marquee = ({ direction, items, speed }) => {
                 }`}
               >
                 <RiGeminiLine className="text-[30px] md:text-[48px] lg:text-[56px]" />
-                <div className="font-jakarta-sans text-[10.42px] md:text-[16px] lg:text-[20px] leading-[130%] font-semibold">
+                <div className="font-jakarta-sans text-[10.42px] md:text-[14px] lg:text-[18px] leading-[120%] font-semibold">
                   {item}
                 </div>
               </div>

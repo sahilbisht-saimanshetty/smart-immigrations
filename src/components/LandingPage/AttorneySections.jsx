@@ -9,27 +9,28 @@ const attorneys = [
     id: 1,
     logo: wardllp,
     firm: "Ward Hadaway LLP",
-    description: "Ward Hadaway LLP is a leading UK law firm with offices in Newcastle, Leeds, and Manchester, providing expert legal services in corporate, employment, healthcare, and public sectors, with a focus on client success and social responsibility."
+    description : "A leading UK law firm with offices in Newcastle, Leeds, and Manchester, specializing in corporate, employment, healthcare, and public sector law."
   },
   {
     id: 2,
     logo: cranbook,
     firm: "Cranbrook Legal",
-    description: "Cranbrook Legal is a dynamic UK immigration law firm with 25+ years of experience, specializing in both business and personal immigration matters. They offer tailored legal solutions, ensuring compassionate and professional guidance throughout the UK immigration process."
+    description : "A UK immigration law firm with 25+ years of expertise, specializing in business and personal immigration with tailored, professional guidance."
   },
   {
     id: 3,
     logo: jwm,
     firm: "JMW Solicitors LLP",
-    description: "JMW Solicitors LLP is a top 100 UK law firm with offices in Manchester, Liverpool, and London. With over 45 years of experience, they provide expert legal services to businesses and individuals, focused on achieving positive outcomes through client-centered advice."
+    description : "A top 100 UK law firm with 45+ years of expertise, serving businesses and individuals from Manchester, Liverpool, and London."
   },
   {
     id: 4,
     logo: sterling,
     firm: "Sterling Law",
-    description: "Sterling Law is a London-based boutique firm specializing in personal and corporate immigration, with a focus on tech businesses. They offer tailored legal solutions in investment, data protection, and employment law, prioritizing efficiency and client satisfaction."
+    description : "A London-based boutique firm specializing in immigration, tech, investment, data protection, and employment law with a client-focused approach"
   }
 ];
+
 
   const AttorneyCard = ({ logo, firm, description }) => (
     <div className="flex flex-col self-center items-center font-jakarta-sans text-center md:py-2 h-full lg:py-6 px-2 w-[216px] md:w-[400px] xl:w-[250px] 2xl:w-[300px]  rounded-xl">
@@ -40,10 +41,8 @@ const attorneys = [
       <div className="mt-2">
       <div className="oval w-[80px] md:w-[116px] h-[20px]"></div>
       </div>
-
-  
       <h3 className="text-[#1641F1] font-jakarta-sans text-[14px] md:text-[18px] font-medium  mt-4">{firm}</h3>
-      <p className="text-[#8D8D8D] font-jakarta-sans font-medium text-[12px] md:text-[14px] leading-[20px] mt-2">{description}</p>
+      <p className="text-[#8D8D8D] font-jakarta-sans font-medium text-[12px] md:text-[14px] leading-[20px] mt-2 h-auto 2xl:h-[100px]">{description}</p>
     </div>
   );
   
