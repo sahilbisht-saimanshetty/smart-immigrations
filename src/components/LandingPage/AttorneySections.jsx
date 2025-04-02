@@ -9,25 +9,25 @@ const attorneys = [
     id: 1,
     logo: wardllp,
     firm: "Ward Hadaway LLP",
-    description : "A leading UK law firm with offices in Newcastle, Leeds, and Manchester, specializing in corporate, employment, healthcare, and public sector law."
+    description : "Leading UK law firm in corporate, employment, healthcare, and public sector law."
   },
   {
     id: 2,
     logo: cranbook,
     firm: "Cranbrook Legal",
-    description : "A UK immigration law firm with 25+ years of expertise, specializing in business and personal immigration with tailored, professional guidance."
+    description : "25+ years of expertise in business and personal immigration."
   },
   {
     id: 3,
     logo: jwm,
     firm: "JMW Solicitors LLP",
-    description : "A top 100 UK law firm with 45+ years of expertise, serving businesses and individuals from Manchester, Liverpool, and London."
+    description:"Top 100 UK law firm with 45+ years serving businesses and individuals."
   },
   {
     id: 4,
     logo: sterling,
     firm: "Sterling Law",
-    description : "A London-based boutique firm specializing in immigration, tech, investment, data protection, and employment law with a client-focused approach"
+    description: "London-based boutique firm specializing in immigration and tech law."
   }
 ];
 
