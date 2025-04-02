@@ -20,7 +20,7 @@ const Navbar = () => {
           />
        <ul className="hidden md:flex items-center md:gap-6 lg:gap-12 md:text-[14px] lg:text-[16px] text-[#2C2C2C] font-jakarta-sans font-medium">
           <li>
-            <a href="/" className="hover:text-blue-600 transition cursor-pointer">
+            <a onClick={() => handleNavigateTo('heroPage')} className="hover:text-blue-600 transition cursor-pointer">
               Home
             </a>
           </li>

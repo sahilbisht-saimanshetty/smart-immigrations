@@ -5,7 +5,7 @@ import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
     return (
-        <div className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[110vh] mid-2xl:h-[80vh] 2xl:h-[105vh] 3xl:h-[80vh] 4xl:h-[110vh] 4xl:pb-40 overflow-hidden">
+        <div id="heroPage" className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[110vh] mid-2xl:h-[80vh] 2xl:h-[105vh] 3xl:h-[80vh] 4xl:h-[110vh] 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
                 alt="Top Right Flag"

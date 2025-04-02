@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e9fb2cda.css",
+    "main.js": "/static/js/main.d2d77b71.js",
+    "static/js/453.76d697a8.chunk.js": "/static/js/453.76d697a8.chunk.js",
+    "static/media/FooterFlag.png": "/static/media/FooterFlag.216ab3ac37f132985673.png",
+    "static/media/USAFLAG.png": "/static/media/USAFLAG.5ab45b1d8d9046e9f787.png",
+    "static/media/googleReviewsBackground.png": "/static/media/googleReviewsBackground.72f425910ee55465fbe2.png",
+    "static/media/tower.png": "/static/media/tower.4b2a8b8c1f0bb937839a.png",
+    "static/media/uk-visa.webp": "/static/media/uk-visa.8ce6847c226a7dcb5c15.webp",
+    "static/media/landingPageFlag.png": "/static/media/landingPageFlag.5dc81023910e0748c146.png",
+    "static/media/usaFlagAttorneyTopRotate.png": "/static/media/usaFlagAttorneyTopRotate.d68bdab2b2d1ff3f50a1.png",
+    "static/media/usaFlagAttorneyTop.png": "/static/media/usaFlagAttorneyTop.f385bb5446fe100951b7.png",
+    "static/media/globalTalentVisa.webp": "/static/media/globalTalentVisa.5ae13b0129f6ae841733.webp",
+    "static/media/Ward-Hadaway.png": "/static/media/Ward-Hadaway.0d34f871f84309233c68.png",
+    "static/media/ukTalentVisaElig.webp": "/static/media/ukTalentVisaElig.88b5624eafad6da7a3f2.webp",
+    "static/media/flag.png": "/static/media/flag.3345a17c3b34f72da61b.png",
+    "static/media/google.png": "/static/media/google.e4e0761ecc04b272d8b5.png",
+    "static/media/jmwllp.png": "/static/media/jmwllp.92ab234ca543e4ce39e7.png",
+    "static/media/cranbookllp.png": "/static/media/cranbookllp.76e355d0705e45aa10b8.png",
+    "static/media/smartImmigrantLogo.webp": "/static/media/smartImmigrantLogo.8257fbe71cbf3bbcaf28.webp",
+    "index.html": "/index.html",
+    "main.e9fb2cda.css.map": "/static/css/main.e9fb2cda.css.map",
+    "main.d2d77b71.js.map": "/static/js/main.d2d77b71.js.map",
+    "453.76d697a8.chunk.js.map": "/static/js/453.76d697a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9fb2cda.css",
+    "static/js/main.d2d77b71.js"
+  ]
+}

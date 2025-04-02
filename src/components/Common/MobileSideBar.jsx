@@ -41,7 +41,7 @@ const MobileNavbar = () => {
 
         <ul className="mt-10 space-y-4 text-lg font-medium">
         <li>
-            <a href="/" className="hover:text-blue-600 transition cursor-pointer">
+            <a onClick={() => handleNavigateTo('heroPage')} className="hover:text-blue-600 transition cursor-pointer">
               Home
             </a>
           </li>
