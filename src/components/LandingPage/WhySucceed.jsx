@@ -38,10 +38,10 @@ const WhySucceed = () => {
 
       <div className="space-y-8 md:space-y-10 lg:space-y-20 mt-10 md:mt-10 lg:mt-24">
         {/* Top Marquee (Moves Left) */}
-        <Marquee direction="left" items={strategies} speed={400} />
+        <Marquee direction="left" items={strategies} speed={450} />
 
         {/* Bottom Marquee (Moves Right) */}
-        <Marquee direction="right" items={strategies} speed={460} />
+        <Marquee direction="right" items={strategies} speed={530} />
       </div>
     </div>
   );
@@ -76,7 +76,7 @@ const Marquee = ({ direction, items, speed }) => {
                 }`}
               >
                 <RiGeminiLine className="text-[30px] md:text-[48px] lg:text-[56px]" />
-                <div className="font-jakarta-sans text-[10.42px] md:text-[16px] lg:text-[20px] leading-[100%] font-semibold">
+                <div className="font-jakarta-sans text-[10.42px] md:text-[16px] lg:text-[20px] leading-[130%] font-semibold">
                   {item}
                 </div>
               </div>
