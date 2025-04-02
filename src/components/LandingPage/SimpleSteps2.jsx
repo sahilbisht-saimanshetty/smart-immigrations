@@ -30,7 +30,7 @@ const SimpleSteps2 = () => {
     }, totalDuration * 1000);
 
     return () => clearInterval(interval);
-}, [totalDuration]);
+}, []);
 
   const steps = [
     {

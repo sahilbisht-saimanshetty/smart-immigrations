@@ -21,7 +21,7 @@ const attorneys = [
     id: 3,
     logo: jwm,
     firm: "JMW Solicitors LLP",
-    description:"Top 100 UK law firm with 45+ years serving businesses and individuals."
+    description:"JMW is a top 100, full-service UK law firm with offices in Manchester, London, and Liverpool, offering legal services to businesses and individuals."
   },
   {
     id: 4,
