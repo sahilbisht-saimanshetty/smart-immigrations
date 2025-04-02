@@ -36,7 +36,7 @@ const Navbar = () => {
           </li>
           <li>
             <a onClick={() => handleNavigateTo('learnMore')} className="hover:text-blue-600 transition cursor-pointer">
-              Learn More
+              Learn more
             </a>
           </li>
         </ul>
