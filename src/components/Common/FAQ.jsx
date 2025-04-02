@@ -150,7 +150,7 @@ export const FAQ = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="text-[7px] xs:text-[8px] md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] px-4 me-6 font-normal text-[#525252]  text-justify break-all py-2 mt-0 md:mt-[10px] font-jakarta-sans">
+                  <div className="text-[10px] md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] px-4 me-6 font-normal text-[#525252]  text-justify break-all py-2 mt-0 md:mt-[10px] font-jakarta-sans">
                     {item.content}
                     {/* <p
             onClick={() => setIsOpen(true)}
