@@ -5,42 +5,42 @@ import google from '../../assests/LandingPage/google.png'
 const reviews = [
   {
     id: 1,
-    name: "Sanjana Bisht",
+    name: "Charlotte Lewis",
     date: "6 days ago",
     review:
       "Great experience! The team was super helpful and guided me through every step of the process.",
   },
   {
     id: 2,
-    name: "Rahul Yadav",
+    name: "Attharv Sardesai",
     date: "5 days ago",
     review:
       "Excellent service! Highly recommended for anyone looking to fast-track their UK visa process.",
   },
   {
     id: 3,
-    name: "Vikram Singh",
+    name: "Benjamin Clark",
     date: "4 days ago",
     review:
       "Very professional and helpful. The process was smooth and easy to follow.",
   },
   {
     id: 4,
-    name: "Siddharth Choudhary",
+    name: "Yasmeen Taj",
     date: "3 days ago",
     review:
       "I got my visa approval much faster than expected! Highly satisfied.",
   },
   {
     id: 5,
-    name: "Ishita Malhotra",
+    name: "Amelia White",
     date: "2 days ago",
     review:
       "A seamless experience from start to finish. Thank you for the guidance!",
   },
   {
     id: 6,
-    name: "Rohan Mehta",
+    name: "Sanchit Hegde",
     date: "1 day ago",
     review:
       "The support team was very responsive and cleared all my doubts. Great service!",
