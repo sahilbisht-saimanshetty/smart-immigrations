@@ -69,7 +69,7 @@ const Marquee = ({ direction, items, speed }) => {
       >
         {[...Array(3)].flatMap(() =>
           duplicatedItems.map((item, index) => (
-            <div key={`${item}-${index}-${crypto.randomUUID()}`} className="marquee-item">
+            <div key={`${item}-${index}`} className="marquee-item">
               <div
                 className={`flex items-center flex-col justify-center gap-3 md:gap-3 lg:gap-6 px-2 md:px-4 lg:px-6 py-2 h-[100px] w-[106px] md:h-[150px] md:w-[160px] lg:w-[204px] lg:h-[192px] rounded-lg text-center font-semibold ${
                   index % 2 === 0 ? "bg-blue-500 text-white" : "bg-white text-blue-600"
