@@ -281,7 +281,7 @@ const AssessmentModal = () => {
                 placeholder="Enter your name"
                 value={basicDetails.name}
                 onChange={handleBasicDetailsChange}
-                className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2   ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               {errors.name && <p className="text-red-500 font-dm-sans   ps-2 pt-2 text-sm">{errors.name}</p>}
             </div>
@@ -296,7 +296,7 @@ const AssessmentModal = () => {
                   placeholder="Enter your email"
                   value={basicDetails.email}
                   onChange={handleBasicDetailsChange}
-                  className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.email && <p className="text-red-500 font-dm-sans   ps-2 pt-2 text-sm">{errors.email}</p>}
               </div>
@@ -308,7 +308,7 @@ const AssessmentModal = () => {
                   placeholder="Enter your phone number"
                   value={basicDetails.phone}
                   onChange={handleBasicDetailsChange}
-                  className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.phone && <p className="text-red-500 font-dm-sans   ps-2 pt-2 text-sm">{errors.phone}</p>}
               </div>
@@ -322,7 +322,7 @@ const AssessmentModal = () => {
                 placeholder="Eg. Alexa/ LinkedInprofile.com"
                 value={basicDetails.linkedin}
                 onChange={handleBasicDetailsChange}
-                className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -347,7 +347,7 @@ const AssessmentModal = () => {
                   <>
                     <input
                       type="text"
-                      className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Please specify"
                       value={generalDetails.purpose.otherText}
                       onChange={(e) => {
@@ -373,7 +373,7 @@ const AssessmentModal = () => {
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Which area best represents your field of work?</label>
               <div className="flex flex-col gap-4">
                 <select
-                  className="border p-2 rounded-md w-full text-[#A4A4A4] bg-[#F6F6F6]"
+                  className="border p-2 rounded-md w-full text-[#A4A4A4] bg-[#F6F6F6] pe-2"
                   value={generalDetails.fieldOfWork.selectedField}
                   onChange={handleFieldOfWorkChange}
                 >
@@ -387,7 +387,7 @@ const AssessmentModal = () => {
                   <>
                     <input
                       type="text"
-                      className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Please specify your field"
                       value={generalDetails.fieldOfWork.otherField}
                       onChange={(e) => {
@@ -436,7 +436,7 @@ const AssessmentModal = () => {
               {errors.selectedQualify && <p className="text-red-500 font-dm-sans   ps-2 pt-2 text-sm">{errors.selectedQualify}</p>}
               <input
                 type="text"
-                className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+                className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
                 placeholder="Add more details on why you qualify"
                 value={generalDetails.qualifications.qualifyText}
                 onChange={(e) => {
@@ -512,7 +512,7 @@ const AssessmentModal = () => {
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">What visa status are you currently on, and how much time do you have left?</label>
               <input
                 type="text"
-                className="w-full p-2 ps-6 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your visa status and time left"
                 value={generalDetails.visaInfo.visaStatus}
                 onChange={handleVisaStatusChange}
