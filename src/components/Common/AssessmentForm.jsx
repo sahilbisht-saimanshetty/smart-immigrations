@@ -468,8 +468,8 @@ const AssessmentModal = () => {
                       className="mr-2 p-2 w-4 h-4 border-[#007EE8]"
                     />
                     <div>
-                      <span className="text-[#2C2C2C] md:text-[16px] font-dm-sans">{item.title}</span>
-                      <p className="text-[#8D8D8D] md:text-[14px]">{item.subtext}</p> 
+                      <span className="text-[#2C2C2C] text-[12px] md:text-[16px] font-dm-sans">{item.title}</span>
+                      <p className="text-[#8D8D8D] text-[10px] md:text-[14px]">{item.subtext}</p> 
                     </div>
                   </label>
                 ))}
