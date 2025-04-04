@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-white  shadow-md mx-8 relative   top-[-20px] z-[100] rounded-2xl md:rounded-2xl py-8 px-4 md:py-12 md:px-28">
       <div className="container mx-auto flex flex-col  lg:flex-row justify-center md:justify-between items-start">
         <div className="flex flex-col gap-3 md:gap-4 lg:gap-6 md:justify-center lg:justify-start font-jakarta-sans font-medium text-start">
-          <img src={logo} alt="Smart Immigrant" className="h-[32px] w-[117px] md:h-[47px] md:w-[147px] mb-4" />
+          <img src={logo} alt="Smart Immigrant" className="h-[32px] w-[117px] md:h-[54px] md:w-[180px] mb-4" />
           <p className="text-[#2C2C2C] text-[12px] md:text-[16px]">
              Chapman  Road  254
             <br />

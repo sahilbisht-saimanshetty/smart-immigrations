@@ -41,42 +41,42 @@ const AssessmentModal = () => {
     let newErrors = {};
     // Name validation
     if (!formData.name) newErrors.name = "Name is required";
-    
+
     // Email validation
     if (!formData.email) {
       newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
-    
+
     // Phone validation
     if (formData.phone && !/^\d{10}$/.test(formData.phone)) {
       newErrors.phone = "Phone number must be 10 digits";
     }
-    
+
     // What brings you here validation
     if (!selectedOption) newErrors.selectedOption = "This field is required";
     if (selectedOption === "other" && !otherText.trim()) newErrors.otherText = "Please specify";
-    
+
     // Field of work validation
     if (!selectedField) newErrors.selectedField = "This field is required";
     if (selectedField === "other" && !otherField.trim()) newErrors.otherField = "Please specify your field";
-    
+
     // Qualifications validation
     if (selectedQualify.length === 0) newErrors.selectedQualify = "Please select at least one option";
-    
+
     // Service type validation
     if (formData.service.length === 0) newErrors.service = "Please select at least one service type";
-    
+
     // Visa applied validation
     if (!visaApplied) newErrors.visaApplied = "This field is required";
-    
+
     // Visa status validation
     if (!visaStatus) newErrors.visaStatus = "This field is required";
-    
+
     // How found us validation
     if (!foundUs) newErrors.foundUs = "This field is required";
-    
+
     // Consent validation
     if (!consent) newErrors.consent = "You must provide consent";
 
@@ -88,7 +88,7 @@ const AssessmentModal = () => {
     const { name, value, type, checked } = e.target;
     if (type === "checkbox") {
       const updatedValue = {
-        ...formData, 
+        ...formData,
         service: checked
           ? [...formData.service, value]
           : formData.service.filter((s) => s !== value)
@@ -114,15 +114,37 @@ const AssessmentModal = () => {
     }
   }, [StoredAnswers])
 
-  const checkBoxName = ["Fully Automated", "Semi Automated", "Hand-ons Automated"]
+  const checkBoxName = [
+    { 
+      title: "Full-Service (Human-Led, Fully Managed)", 
+      subtext: "Our team manually handles every detail, crafting and managing your profile personally." 
+    },
+    { 
+      title: "Collaborative Service (50-50 Partnership)", 
+      subtext: "Tasks and responsibilities are equally divided; our team collaborates closely with you." 
+    },
+    { 
+      title: "AI-Assisted Self-Service (Tools Provided, You Execute)", 
+      subtext: "You perform tasks independently, using AI-powered tools we provide." 
+    },
+    { 
+      title: "Self-Guided (Courses & Resources Only)", 
+      subtext: "You do everything independently, guided only by provided courses and resources." 
+    },
+    { 
+      title: "Automated Service (Fully AI-Driven)", 
+      subtext: "An autopilot solution that automatically manages your profile after initial setup, with minimal ongoing input." 
+    }
+  ];
+  
 
   return (
     <div className="fixed inset-0 bg-[#000000] bg-opacity-60 backdrop-blur-[15px] flex items-center flex-col justify-center h-[100vh] w-[100vw] z-[1000]" onClick={onClose}>
       <div className="flex flex-col justify-center items-center rounded-lg w-[95%] h-[75%] md:h-[80%] lg:h-[95%]  md:w-[85%] lg:w-[55%] bg-white" onClick={(e) => e.stopPropagation()}>
         <div className="relative text-right w-full">
-        <button className="absolute top-[5px] right-[10px] text-[20px] md:text-[24px] text-gray-600 hover:scale-110 hover:text-black" onClick={onClose}>
-              <AiOutlineClose />
-            </button>
+          <button className="absolute top-[5px] right-[10px] text-[20px] md:text-[24px] text-gray-600 hover:scale-110 hover:text-black" onClick={onClose}>
+            <AiOutlineClose />
+          </button>
         </div>
         <form onSubmit={handleSubmit} className="px-6 md:px-12 py-4 h-[100%] overflow-auto [&::-webkit-scrollbar]:hidden scrollbar-none w-full">
           <div className="flex justify-center relative">
@@ -130,7 +152,7 @@ const AssessmentModal = () => {
           </div>
           <div className="space-y-8">
             <h2 className="text-[18px] md:text-[20px] lg:text-[24px] text-gray-600 font-jakarta-sans font-bold text-center mb-6">Basic Details</h2>
-            
+
             {/* Name Field */}
             <div className="mb-2 text-left">
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Name</label>
@@ -140,11 +162,11 @@ const AssessmentModal = () => {
                 placeholder="Enter your name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-2 ps-6 ms-1 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 ps-6    text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               {errors.name && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.name}</p>}
             </div>
-            
+
             {/* Email and Phone Fields */}
             <div className="flex flex-col mb-2 md:flex-row justify-between w-full">
               <div className="text-left mb-2 md:mb-0 w-[100%] md:w-[45%]">
@@ -155,7 +177,7 @@ const AssessmentModal = () => {
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full p-2 ps-6 ms-1 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 ps-6    text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.email && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.email}</p>}
               </div>
@@ -167,7 +189,7 @@ const AssessmentModal = () => {
                   placeholder="Enter your phone number"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full p-2 ps-6 ms-1 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 ps-6    text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.phone && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.phone}</p>}
               </div>
@@ -181,7 +203,7 @@ const AssessmentModal = () => {
                 placeholder="Eg. Alexa/ LinkedInprofile.com"
                 value={formData.linkedin}
                 onChange={handleChange}
-                className="w-full p-2 ps-6 ms-1 text-[14px] md:text-[18px] font-normal font-dm-sans text-[#A4A4A4]  bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 ps-6   text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4]  bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               {errors.linkedin && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.linkedin}</p>}
             </div>
@@ -193,9 +215,9 @@ const AssessmentModal = () => {
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">What brings you here?</label>
               <div className="flex flex-col gap-4">
                 <select
-                  className="border p-2 w-full ms-1 text-[#A4A4A4] bg-[#F6F6F6] rounded-full"
+                  className="border p-2 w-full    text-[#A4A4A4] bg-[#F6F6F6]  rounded-md  "
                   value={selectedOption}
-                  
+
                   onChange={(e) => setSelectedOption(e.target.value)}
                 >
                   <option value="" disabled>Choose one</option>
@@ -209,7 +231,7 @@ const AssessmentModal = () => {
                   <>
                     <input
                       type="text"
-                      className="w-full p-2 ps-6 ms-1 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-2 ps-6    text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Please specify"
                       value={otherText}
                       onChange={(e) => setOtherText(e.target.value)}
@@ -225,7 +247,7 @@ const AssessmentModal = () => {
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Which area best represents your field of work?</label>
               <div className="flex flex-col gap-4">
                 <select
-                  className="border p-2 rounded-full ms-1 w-full text-[#A4A4A4] bg-[#F6F6F6]"
+                  className="border p-2  rounded-md      w-full text-[#A4A4A4] bg-[#F6F6F6]"
                   value={selectedField}
                   onChange={(e) => setSelectedField(e.target.value)}
                 >
@@ -240,7 +262,7 @@ const AssessmentModal = () => {
                   <>
                     <input
                       type="text"
-                      className="w-full p-2 ps-6  ms-1text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-2 ps-6  ms-1text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Please specify your field"
                       value={otherField}
                       onChange={(e) => setOtherField(e.target.value)}
@@ -277,7 +299,7 @@ const AssessmentModal = () => {
               {errors.selectedQualify && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.selectedQualify}</p>}
               <input
                 type="text"
-                className="w-full p-2 ps-6 ms-1 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+                className="w-full p-2 ps-6    text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
                 placeholder="Add more details on why you qualify"
                 value={qualifyText}
                 onChange={(e) => setQualifyText(e.target.value)}
@@ -287,18 +309,21 @@ const AssessmentModal = () => {
             {/* Service Type Field */}
             <div className="mb-2 text-left">
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Types of service</label>
-              <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col gap-4">
                 {checkBoxName?.map((item, index) => (
-                  <label key={index} className="flex items-center">
+                  <label key={index} className="flex gap-2 items-center">
                     <input
                       type="checkbox"
                       name="service"
-                      value={item}
-                      checked={formData.service.includes(item)}
-                      onChange={handleChange}
-                      className="mr-2 ms-1 border-[#007EE8]"
+                      value={item.title} // Use item.title as the value
+                      checked={formData.service.includes(item.title)} // Check based on title or unique identifier
+                      onChange={handleChange} // Ensure handleChange properly updates formData
+                      className="mr-2 border-[#007EE8]"
                     />
-                    <span className="text-[#8D8D8D] md:text-[18px] font-dm-sans">{item}</span>
+                    <div>
+                    <span className="text-[#2C2C2C] md:text-[16px] font-dm-sans">{item.title}</span>
+                    <p className="text-[#8D8D8D] md:text-[14px]">{item.subtext}</p> 
+                    </div>
                   </label>
                 ))}
               </div>
@@ -310,23 +335,23 @@ const AssessmentModal = () => {
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Have you applied for the Global Talent Visa before?</label>
               <div className="flex gap-4">
                 <label className="flex items-center gap-2">
-                  <input 
-                    type="radio" 
-                    name="visaApplied" 
-                    value="yes" 
-                    checked={visaApplied === "yes"} 
-                    onChange={() => setVisaApplied("yes")} 
-                  /> 
+                  <input
+                    type="radio"
+                    name="visaApplied"
+                    value="yes"
+                    checked={visaApplied === "yes"}
+                    onChange={() => setVisaApplied("yes")}
+                  />
                   Yes
                 </label>
                 <label className="flex items-center gap-2">
-                  <input 
-                    type="radio" 
-                    name="visaApplied" 
-                    value="no" 
-                    checked={visaApplied === "no"} 
-                    onChange={() => setVisaApplied("no")} 
-                  /> 
+                  <input
+                    type="radio"
+                    name="visaApplied"
+                    value="no"
+                    checked={visaApplied === "no"}
+                    onChange={() => setVisaApplied("no")}
+                  />
                   No
                 </label>
               </div>
@@ -338,7 +363,7 @@ const AssessmentModal = () => {
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">What visa status are you currently on, and how much time do you have left?</label>
               <input
                 type="text"
-                className="w-full p-2 ps-6 ms-1 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 ps-6    text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6]  rounded-md   focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter your visa status and time left"
                 value={visaStatus}
                 onChange={(e) => setVisaStatus(e.target.value)}
@@ -350,7 +375,7 @@ const AssessmentModal = () => {
             <div className="mb-2 text-left">
               <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">How did you find us?</label>
               <select
-                className="border p-2 ms-1 rounded-full w-full text-[#A4A4A4] bg-[#F6F6F6]"
+                className="border p-2     rounded-md   w-full text-[#A4A4A4] bg-[#F6F6F6]"
                 value={foundUs}
                 onChange={(e) => setFoundUs(e.target.value)}
               >
@@ -367,10 +392,10 @@ const AssessmentModal = () => {
             {/* Consent Field */}
             <div className="mb-2 text-left">
               <label className="flex items-center gap-2">
-                <input 
-                  type="checkbox" 
-                  checked={consent} 
-                  onChange={() => setConsent(!consent)} 
+                <input
+                  type="checkbox"
+                  checked={consent}
+                  onChange={() => setConsent(!consent)}
                 />
                 <span className="text-[12px] md:text-[16px] font-normal font-dm-sans text-[#2C2C2C]">
                   I agree to receive updates and guidance from Smart Immigrant.UK.
@@ -382,7 +407,7 @@ const AssessmentModal = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-fit font-dm-sans bg-[#1641F1] text-white py-2 px-6 rounded-full hover:scale-110 transition"
+              className="w-fit font-dm-sans bg-[#1641F1] text-white py-2 px-6 rounded-full   hover:scale-110 transition"
             >
               Check your eligibility
             </button>

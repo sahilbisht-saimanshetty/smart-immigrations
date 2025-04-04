@@ -9,7 +9,7 @@ import ukVisa from "../../assests/LandingPage/uk-visa.webp"
 const cardData = [
     {
         title: "What is the Global Talent Visa?",
-        description: `The Global Talent Visa is an immigration route for highly skilled professionals who want to work in the UK. It’s ideal for individuals with a proven track record in their field, offering the freedom to work for any employer or as a self-employed professional. This route doesn’t require a job offer—your talent and achievements are enough to qualify`,
+        description: `The Global Talent Visa is an immigration route for highly skilled professionals who want to work in the UK. It’s ideal for individuals with a proven track record in their field, offering the freedom to work for any employer or as a self-employed professional. This route doesn’t require a job offer—your talent and achievements are enough to qualify.`,
         reverse: false,
         imgSrc : globalTalent
     },
