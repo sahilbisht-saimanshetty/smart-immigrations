@@ -66,7 +66,7 @@ const AssessmentModal = () => {
     if (selectedQualify.length === 0) newErrors.selectedQualify = "Please select at least one option";
 
     // Service type validation
-    if (formData.service.length === 0) newErrors.service = "Please select at least one service type";
+    if (formData.service.length === 0) newErrors.service = "Please select service type";
 
     // Visa applied validation
     if (!visaApplied) newErrors.visaApplied = "This field is required";
