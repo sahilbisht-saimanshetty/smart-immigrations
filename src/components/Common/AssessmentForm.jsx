@@ -422,7 +422,7 @@ const AssessmentModal = () => {
                   "Strong Industry Leadership Experience",
                   "Not yet, but I want to work on this",
                 ].map((item) => (
-                  <label key={item} className="flex items-center gap-2 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#2C2C2C]">
+                  <label key={item} className="flex items-center gap-2 text-[12px] font-normal md:text-[16px]  font-dm-sans text-[#2C2C2C]">
                     <input
                       type="checkbox"
                       className="w-4 h-4 mr-2"
@@ -468,7 +468,7 @@ const AssessmentModal = () => {
                       className="mr-2 p-2 w-4 h-4 border-[#007EE8]"
                     />
                     <div>
-                      <span className="text-[#2C2C2C] text-[12px] md:text-[16px] font-dm-sans">{item.title}</span>
+                      <span className="text-[#2C2C2C] font-normal text-[12px] md:text-[16px] font-dm-sans">{item.title}</span>
                       <p className="text-[#8D8D8D] text-[10px] md:text-[14px]">{item.subtext}</p> 
                     </div>
                   </label>
