@@ -288,12 +288,12 @@ const AssessmentModal = () => {
                   <label key={item} className="flex items-center gap-2 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#2C2C2C]">
                     <input
                       type="checkbox"
-                      className="w-4 h-4"
+                      className="w-4 h-4 mr-2"
                       checked={selectedQualify.includes(item)}
                       onChange={() => handleCheckboxChange(item)}
                     />
-                    {item}
-                  </label>
+                    <span className="text-[#2C2C2C] md:text-[16px] font-dm-sans">{item}</span>
+                    </label>
                 ))}
               </div>
               {errors.selectedQualify && <p className="text-red-500 font-dm-sans ps-4 pt-2 text-sm">{errors.selectedQualify}</p>}
@@ -313,12 +313,12 @@ const AssessmentModal = () => {
                 {checkBoxName?.map((item, index) => (
                   <label key={index} className="flex gap-2 items-center">
                     <input
-                      type="checkbox"
+                      type="radio"
                       name="service"
                       value={item.title} // Use item.title as the value
                       checked={formData.service.includes(item.title)} // Check based on title or unique identifier
                       onChange={handleChange} // Ensure handleChange properly updates formData
-                      className="mr-2 border-[#007EE8]"
+                      className="mr-2 p-2 w-4 h-4 border-[#007EE8]"
                     />
                     <div>
                     <span className="text-[#2C2C2C] md:text-[16px] font-dm-sans">{item.title}</span>
@@ -338,6 +338,7 @@ const AssessmentModal = () => {
                   <input
                     type="radio"
                     name="visaApplied"
+                    className='w-4 h-4 mr-2'
                     value="yes"
                     checked={visaApplied === "yes"}
                     onChange={() => setVisaApplied("yes")}
@@ -348,6 +349,7 @@ const AssessmentModal = () => {
                   <input
                     type="radio"
                     name="visaApplied"
+                    className='w-4 h-4 mr-2'
                     value="no"
                     checked={visaApplied === "no"}
                     onChange={() => setVisaApplied("no")}
@@ -394,6 +396,7 @@ const AssessmentModal = () => {
               <label className="flex items-center gap-2">
                 <input
                   type="checkbox"
+                  className='w-4 h-4 mr-2'
                   checked={consent}
                   onChange={() => setConsent(!consent)}
                 />
