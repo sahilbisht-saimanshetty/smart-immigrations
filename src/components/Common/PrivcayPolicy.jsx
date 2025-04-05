@@ -117,7 +117,7 @@ const PrivacyPolicy = () => {
 
         <div className="text-left">
           <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">8. Children's Privacy</h2>
-          <p className="text-left font-dm-sans">Our services are intended for users aged 16 and above. We do not knowingly collect or process personal information from minors under 16. If we discover we've unintentionally collected such data, we will swiftly delete it. If you believe we may have information from a minor, please contact us immediately at <a href="mailto:privacy@smartimmigrant.com" className="text-blue-600 underline">privacy@smartimmigrant.com</a>.</p>
+          <p className="text-left font-dm-sans ">Our services are intended for users aged <strong>16 and above</strong>. We do <strong>not knowingly collect or process personal information from minors under 16</strong> . If we discover we've unintentionally collected such data, we will swiftly delete it. If you believe we may have information from a minor, please contact us immediately at <strong>privacy@smartimmigrant.com</strong>.</p>
         </div>
 
         <div className="text-left">
