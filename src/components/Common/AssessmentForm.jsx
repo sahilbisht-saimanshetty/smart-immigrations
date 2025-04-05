@@ -256,9 +256,10 @@ const AssessmentModal = () => {
             consent: generalDetails.consent
           }
         };
+        const baseUrl = 'https://api.smartimmigrant.com'
 
         const response = await axios.post(
-          `${process.env.REACT_APP_API_URL}/api/form-submit`,
+          `${baseUrl}/api/form-submit`,
           formData,
           {
             headers: {
@@ -266,8 +267,8 @@ const AssessmentModal = () => {
             }
           }
         );
+        alert("Form submitted successfully.");
         console.log('Form submitted successfully:', response.data)        
-        alert("Details submitted successfully");
         resetFormData();
         onClose();
       }
@@ -313,14 +314,14 @@ const AssessmentModal = () => {
         </div>
         <form onSubmit={handleSubmit} className="px-6 md:px-12 py-4 h-[100%] overflow-auto [&::-webkit-scrollbar]:hidden scrollbar-none w-full">
           <div className="flex justify-center relative">
-            <h2 className="text-[24px] md:text-[28px] lg:text-[32px] text-[#2C2C2C] font-jakarta-sans font-bold text-center mb-6">Please Fill the Details</h2>
+            <h2 className="text-[24px] md:text-[28px] lg:text-[32px] text-[#2C2C2C] font-jakarta-sans font-bold text-center mb-3">Please Fill the Details</h2>
           </div>
-          <div className="space-y-8">
-            <h2 className="text-[18px] md:text-[20px] lg:text-[24px] text-gray-600 font-jakarta-sans font-bold text-center mb-6">Basic Details</h2>
+          <div className="space-y-4">
+            <h2 className="text-[18px] md:text-[20px] lg:text-[24px] text-gray-600 font-jakarta-sans font-bold text-center mb-4">Basic Details</h2>
 
             {/* Name Field */}
-            <div className="mb-2 text-left">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Name</label>
+            <div className="mb-[6px] text-left">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Name</label>
               <input
                 type="text"
                 name="name"
@@ -333,9 +334,9 @@ const AssessmentModal = () => {
             </div>
 
             {/* Email and Phone Fields */}
-            <div className="flex flex-col mb-2 md:flex-row justify-between w-full">
-              <div className="text-left mb-2 md:mb-0 w-[100%] md:w-[45%]">
-                <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Email ID</label>
+            <div className="flex flex-col mb-[6px] md:flex-row justify-between w-full">
+              <div className="text-left mb-[6px] md:mb-0 w-[100%] md:w-[48%]">
+                <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Email ID</label>
                 <input
                   type="email"
                   name="email"
@@ -346,8 +347,8 @@ const AssessmentModal = () => {
                 />
                 {errors.email && <p className="text-red-500 font-dm-sans   ps-2 pt-2 text-sm">{errors.email}</p>}
               </div>
-              <div className="text-left w-[100%] md:w-[45%]">
-                <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Phone Number</label>
+              <div className="text-left w-[100%] md:w-[48%]">
+                <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Phone Number</label>
                 <input
                   type="text"
                   name="phone"
@@ -361,7 +362,7 @@ const AssessmentModal = () => {
             </div>
 
             <div className="mb-4 text-left">
-              <label className="block text-[#2C2C2C] text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">LinkedIn</label>
+              <label className="block text-[#2C2C2C] text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">LinkedIn</label>
               <input
                 type="text"
                 name="linkedin"
@@ -372,11 +373,11 @@ const AssessmentModal = () => {
               />
             </div>
 
-            <h2 className="text-[18px] md:text-[20px] lg:text-[24px] text-gray-600 font-jakarta-sans font-bold text-center mb-6">General Details</h2>
+            <h2 className="text-[18px] md:text-[20px] lg:text-[24px] text-gray-600 font-jakarta-sans font-bold text-center mt-3 mb-4">General Details</h2>
 
             {/* What brings you here Field */}
-            <div className="text-left mb-2">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">What brings you here?</label>
+            <div className="text-left mb-[6px]">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">What brings you here?</label>
               <div className="flex flex-col gap-4">
                 <select
                   className="border p-2 w-full text-[#A4A4A4] bg-[#F6F6F6] rounded-md"
@@ -415,8 +416,8 @@ const AssessmentModal = () => {
               {errors.selectedOption && <p className="text-red-500 font-dm-sans ps-2 pt-2 text-sm">{errors.selectedOption}</p>}
             </div>
             {/* Field of work Field */}
-            <div className="text-left mb-2">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Which area best represents your field of work?</label>
+            <div className="text-left mb-[6px]">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Which area best represents your field of work?</label>
               <div className="flex flex-col gap-4">
                 <select
                   className="border p-2 rounded-md w-full text-[#A4A4A4] bg-[#F6F6F6] pe-2"
@@ -457,8 +458,8 @@ const AssessmentModal = () => {
             </div>
 
             {/* Qualifications Field */}
-            <div className="mb-2 text-left">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Do you already have any of the following? (Select all that apply)</label>
+            <div className="mb-[6px] text-left">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Do you already have any of the following? (Select all that apply)</label>
               <div className="flex flex-col gap-2">
                 {[
                   "Publications (Research papers, articles, etc.)",
@@ -500,8 +501,8 @@ const AssessmentModal = () => {
             </div>
 
             {/* Service Type Field */}
-            <div className="mb-2 text-left">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Types of service</label>
+            <div className="mb-[6px] text-left">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Types of service</label>
               <div className="flex flex-col gap-4">
                 {checkBoxName?.map((item, index) => (
                   <label key={index} className="flex gap-2 items-center">
@@ -524,8 +525,8 @@ const AssessmentModal = () => {
             </div>
 
             {/* Visa Applied Field */}
-            <div className="mb-2 text-left">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">Have you applied for the Global Talent Visa before?</label>
+            <div className="mb-[6px] text-left">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Have you applied for the Global Talent Visa before?</label>
               <div className="flex gap-4">
                 <label className="flex items-center gap-2">
                   <input
@@ -554,8 +555,8 @@ const AssessmentModal = () => {
             </div>
 
             {/* Visa Status Field */}
-            <div className="mb-2 text-left">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">What visa status are you currently on, and how much time do you have left?</label>
+            <div className="mb-[6px] text-left">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">What visa status are you currently on, and how much time do you have left?</label>
               <input
                 type="text"
                 className="w-full p-2     ps-4 text-[12px] md:text-[16px] font-normal font-dm-sans text-[#A4A4A4] bg-[#F6F6F6] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -567,8 +568,8 @@ const AssessmentModal = () => {
             </div>
 
             {/* How Found Us Field */}
-            <div className="mb-2 text-left">
-              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-3 font-dm-sans">How did you find us?</label>
+            <div className="mb-[6px] text-left">
+              <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">How did you find us?</label>
               <select
                 className="border p-2 rounded-md w-full text-[#A4A4A4] bg-[#F6F6F6]"
                 value={generalDetails.foundUs}
@@ -585,7 +586,7 @@ const AssessmentModal = () => {
             </div>
 
             {/* Consent Field */}
-            <div className="mb-2 text-left">
+            <div className="mb-[6px] text-left">
               <label className="flex items-center gap-2">
                 <input
                   type="checkbox"

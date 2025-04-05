@@ -1,12 +1,17 @@
 import { FaLinkedinIn, FaYoutube} from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-
+import { useNavigate } from "react-router-dom";
 import logo from "../../assests/smartImmigrantLogo.webp";
 import flag from "../../assests/flag.png"
 import Disclaimer from "./Disclaimer";
 import { useSelector } from "react-redux";
 
 export default function Footer() {
+
+  const navigate = useNavigate();
+
+
+
   return (
   <div className="">
     <footer className="bg-white  shadow-md mx-8 relative   top-[-20px] z-[100] rounded-2xl md:rounded-2xl py-8 px-4  md:px-12 md:py-12 lg:py-12 lg:px-28">
@@ -59,9 +64,9 @@ export default function Footer() {
 
       </div>
       <div className="flex flex-row font-jakarta-sans justify-center lg:justify-end space-x-6 text-black font-jakarta-sans font-medium text-[12px] md:text-[16px] mt-4 md:mt-8 md:border-t-2 md:border-[#D7D7D7] pt-2 md:pt-8">
-        <a  className="hover:text-gray-800 cursor-pointer">About us</a>
-        <a  className="hover:text-gray-800 cursor-pointer">Privacy Policy</a>
-        <a  className="hover:text-gray-800 cursor-pointer">Terms & Condition</a>
+        <a  className="hover:text-gray-800 cursor-pointer hover:scale-105 transition-all">About us</a>
+        <a href="/uk/privacy-policy" target="_blank"  className="hover:text-gray-800 cursor-pointer hover:scale-105 transition-all">Privacy Policy</a>
+        <a  className="hover:text-gray-800 cursor-pointer hover:scale-105 transition-all">Terms & Condition</a>
       </div>
     </footer>
   </div>

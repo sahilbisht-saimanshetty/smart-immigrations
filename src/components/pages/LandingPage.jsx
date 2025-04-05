@@ -14,13 +14,16 @@ import { toggleForm } from "../../store/slices/formSlice.js";
 import { useDispatch, useSelector } from "react-redux";
 import SimpleStepsMobile from "../LandingPage/SimpleStepsMobile.jsx";
 import Disclaimer from "../Common/Disclaimer.jsx";
+import PrivacyPolicy from "../Common/PrivcayPolicy.jsx";
+import RootLayout from "../Layout/RootLayout.jsx";
 
 const LandingPage = () => {
   const dispatch = useDispatch();
   const accepted = useSelector(state => state.disc.accepted);
   const showForm = useSelector((state) => state.form.showForm);
-  return (
-    <div>
+  return (<>
+   <RootLayout>
+   <div>
       {
         accepted === null && <Disclaimer/>
       }
@@ -54,6 +57,11 @@ const LandingPage = () => {
         </div>
       </div>
     </div>
+   </RootLayout>
+
+  </>
+
+
   );
 }
 

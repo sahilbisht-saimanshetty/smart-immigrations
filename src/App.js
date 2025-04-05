@@ -2,6 +2,7 @@ import './App.css';
 import LandingPage from './components/pages/LandingPage';
 import { BrowserRouter as Router, Routes, Route , Navigate } from "react-router-dom";
 import RootLayout from './components/Layout/RootLayout';
+import PrivacyPage from './components/pages/PrivacyPage';
 
 function App() {
 
@@ -10,20 +11,22 @@ function App() {
       path: "/uk",
       component: <LandingPage />,
     },
+    {
+      path: "/uk/privacy-policy",
+      component: <PrivacyPage />,
+    },
   ];
 
 
   return (
     <div className="App">
       <Router>
-        <RootLayout>
           <Routes>
           <Route path="/" element={<Navigate to="/uk" replace />} />
             {routes.map((route, index) => (
               <Route key={index} path={route.path} element={route.component} />
             ))}
           </Routes>
-        </RootLayout>
       </Router>   
      </div>
   );
