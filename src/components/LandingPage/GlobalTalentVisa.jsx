@@ -20,7 +20,7 @@ const cardData = [
 
     <ul style="list-style-type: disc;">
         <li><strong>Tech Innovators:</strong> Engineers, software developers, and digital technology experts.</li>
-        <li><strong>World Class Artists:</strong> Professionals in visual arts, performing arts, and creative industries.</li>
+        <li><strong>World-Class Artists:</strong> Professionals in visual arts, performing arts, and creative industries.</li>
         <li><strong>Academic Leaders:</strong> Researchers, scientists, and academics who have made significant contributions to their field.</li>
     </ul>
     <br/>
@@ -35,7 +35,7 @@ const cardData = [
          description : `
         <ul style="list-style-type: disc;">
           <li><strong>No Job Offer Required:</strong> You don’t need a specific job offer to apply, giving you the freedom to pursue opportunities across the UK.</li>
-          <li><strong>Flexible Employment Options:</strong> Work for any employer, start your own business, or remain self-employed—your skills open doors to various career options.</li>
+          <li><strong>Flexible Employment Options:</strong> Work for any employer, start your own business, or remain self-employed. Your skills open doors to various career options.</li>
           <li><strong>Path to Permanent Residency:</strong> The Global Talent Visa offers a clear and straightforward route to indefinite leave to remain (ILR) in the UK, leading to permanent residency.</li>
           <li><strong>Global Recognition:</strong> The visa is designed to attract exceptional talent from around the world, enhancing your professional credibility and opening doors to global opportunities.</li>
           <li><strong>Fast-Track Processing:</strong> With our expert guidance and AI-powered insights, we ensure that your application process is as efficient and smooth as possible, giving you faster approval.</li>
