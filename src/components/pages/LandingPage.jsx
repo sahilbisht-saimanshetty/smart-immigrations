@@ -13,6 +13,7 @@ import AssessmentModal from "../Common/AssessmentForm.jsx";
 import { toggleForm } from "../../store/slices/formSlice.js";
 import { useDispatch, useSelector } from "react-redux";
 import SimpleStepsMobile from "../LandingPage/SimpleStepsMobile.jsx";
+import Disclaimer from "../Common/Disclaimer.jsx";
 
 const LandingPage = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,9 @@ const LandingPage = () => {
   const showForm = useSelector((state) => state.form.showForm);
   return (
     <div>
+      {
+        accepted === null && <Disclaimer/>
+      }
       {
         showForm && <AssessmentModal />
       }
@@ -43,7 +47,7 @@ const LandingPage = () => {
         <div className="block md:hidden">
           <SimpleStepsMobile />
         </div>
-        <div className={`${accepted !== null && 'landingPageFooterWithoutDisc'} relative overflow-clip pb-6 md:pb-10`}>
+        <div className={`landingPageFooterWithoutDisc relative overflow-clip pb-6 md:pb-10`}>
           <div className="footerGradient"></div>
           <FAQ />
           <Footer />

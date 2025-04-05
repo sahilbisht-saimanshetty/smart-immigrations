@@ -147,7 +147,7 @@
 }
 
 .landingPageFooterWithoutDisc {
-  background-position: right -145px bottom 101px;
+  background-position: right -145px bottom 73px;
   background-size: 36% 42%
 }
 
@@ -211,7 +211,7 @@
   }
 
   .landingPageFooterWithoutDisc {
-    background-position: right -105px bottom 207px;
+    background-position: right -105px bottom 244px;
     background-size: 71% 35%
   }
 
@@ -221,4 +221,10 @@
   box-shadow: 
   0 2px 8px rgba(0, 0, 0, 0.15),
   0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hyphenate {
+  hyphens: auto;
+  word-wrap: break-word;
+  word-break: break-word;
 }

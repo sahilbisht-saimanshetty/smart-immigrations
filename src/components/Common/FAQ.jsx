@@ -113,7 +113,7 @@ export const FAQ = () => {
   };
 
   return (
-    <div className={`w-full pt-[54px]   md:mt-10 lg:mt-24   ${accepted === null ? 'landingPageFooter pb-20  md:pb-44' : 'pb-24 md:pb-52 '} `}>
+    <div className={`w-full pt-[54px]   md:mt-10 lg:mt-24  pb-24 md:pb-44 lg:pb-52 `}>
       <div className="px-6 md:px-0">
         <CommonHeading title={"Frequently Asked Questions"} description={"Helping exceptional talent fast-track their UK visa process with expert guidance."} />
       </div>
@@ -150,7 +150,7 @@ export const FAQ = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="text-[10px] md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] px-4 me-6 font-normal text-[#525252]  text-justify break-all py-2 mt-0 md:mt-[10px] font-jakarta-sans">
+                  <div className="text-[10px] hyphenate  md:text-[12px] xs:leading-[14px] md:leading-[22px] lg:leading-[26px] lg:text-[18px] px-4 me-6 font-normal text-[#525252]  text-justify  py-2 mt-0 md:mt-[10px] font-jakarta-sans">
                     {item.content}
                     {/* <p
             onClick={() => setIsOpen(true)}

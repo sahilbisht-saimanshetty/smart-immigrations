@@ -4,8 +4,14 @@ import { useDispatch } from "react-redux";
 import { toggleForm } from "../../store/slices/formSlice";
 const HeroPage = () => {
     const dispatch = useDispatch();
+    const handleNavigateTo = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      };
     return (
-        <div id="heroPage" className="relative group md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-0 h-auto md:h-[70vh] lg:h-[90vh] xl:h-[110vh] mid-2xl:h-[80vh] 2xl:h-[105vh] 3xl:h-[80vh] 4xl:h-[110vh] 4xl:pb-40 overflow-hidden">
+        <div id="heroPage" className="relative group w-full md:pt-6 lg:pt-14 xl:pt-8 2xl:pt-14 4xl:pt-32 pb-10 md:pb-20 h-auto lg:h-[90vh] xl:h-[110vh] mid-2xl:h-[80vh] 2xl:h-[105vh] 3xl:h-[80vh] 4xl:h-[110vh] 4xl:pb-40 overflow-hidden">
             <img
                 src={flag}
                 alt="Top Right Flag"
@@ -14,8 +20,8 @@ const HeroPage = () => {
 
             {/* Content Section */}
             <div className="flex justify-between px-4 md:px-8 lg:pe-24 lg:pt-16 lg:ps-20 lg:pe-12">
-                <div className="pt-[120px]  md:pt-[150px] xl:pt-[100px] mid-2xl:pt-[130px]  lg:group-hover:scale-110 xl:group-hover:scale-105 2xl:group-hover:scale-110 group-hover:origin-left transition-transform duration-500 ease-in-out">
-                    <div className="flex flex-col  justify-center lg:justify-start lg:items-start">
+                <div className="pt-[120px] md:mx-auto lg:mx-0  md:pt-[150px] xl:pt-[100px] mid-2xl:pt-[130px]  lg:group-hover:scale-110 xl:group-hover:scale-105 2xl:group-hover:scale-110 group-hover:origin-left transition-transform duration-500 ease-in-out">
+                    <div className="flex flex-col   justify-center lg:justify-start lg:items-start">
                         <h1 className="hidden lg:block  whitespace-pre-line text-center md:text-start font-extrabold font-jakarta-sans text-[28px] md:text-[48px] lg:text-[58px] xl:text-[48px] 2xl:text-[58px] leading-[120%] bg-gradient-to-r from-[#012169] to-[#041233] bg-clip-text text-transparent">
                             Unlock Your UK Global Talent {"\n"} Visa with AI Expertise
                         </h1>
@@ -42,7 +48,7 @@ const HeroPage = () => {
                             </span>
                         </button>
 
-                        <button className="px-6 py-3 text-[14px] md:text-[12px] lg:text-[16px]  w-[288px] h-[48px] md:h-[48px] lg:h-[56px] md:w-[130px] lg:w-[166px] font-semibold text-[#1641F1] border border-[#E8ECFE] bg-[#FFFFFF33] backdrop-blur-2 hover:bg-[#1641F1] hover:border-[#1641F1] duration-300 ease-in-out hover:text-white rounded-full">
+                        <button onClick={() => handleNavigateTo("learnMore")} className="px-6 py-3 text-[14px] md:text-[12px] lg:text-[16px]  w-[288px] h-[48px] md:h-[48px] lg:h-[56px] md:w-[130px] lg:w-[166px] font-semibold text-[#1641F1] border border-[#E8ECFE] bg-[#FFFFFF33] backdrop-blur-2 hover:bg-[#1641F1] hover:border-[#1641F1] duration-300 ease-in-out hover:text-white rounded-full">
                             Learn More
                         </button>
                     </div>

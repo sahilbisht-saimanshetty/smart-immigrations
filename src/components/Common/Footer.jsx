@@ -7,13 +7,9 @@ import Disclaimer from "./Disclaimer";
 import { useSelector } from "react-redux";
 
 export default function Footer() {
-  const accepted = useSelector(state => state.disc.accepted);
   return (
   <div className="">
-    {
-       accepted === null && <Disclaimer/>
-    }
-    <footer className="bg-white  shadow-md mx-8 relative   top-[-20px] z-[100] rounded-2xl md:rounded-2xl py-8 px-4 md:py-12 md:px-28">
+    <footer className="bg-white  shadow-md mx-8 relative   top-[-20px] z-[100] rounded-2xl md:rounded-2xl py-8 px-4  md:px-12 md:py-12 lg:py-12 lg:px-28">
       <div className="container mx-auto flex flex-col  lg:flex-row justify-center md:justify-between items-start">
         <div className="flex flex-col gap-3 md:gap-4 lg:gap-6 md:justify-center lg:justify-start font-jakarta-sans font-medium text-start">
           <img src={logo} alt="Smart Immigrant" className="h-[32px] w-[117px] md:h-[54px] md:w-[180px] mb-4" />
@@ -63,9 +59,9 @@ export default function Footer() {
 
       </div>
       <div className="flex flex-row font-jakarta-sans justify-center lg:justify-end space-x-6 text-black font-jakarta-sans font-medium text-[12px] md:text-[16px] mt-4 md:mt-8 md:border-t-2 md:border-[#D7D7D7] pt-2 md:pt-8">
-        <a href="#" className="hover:text-gray-800">About us</a>
-        <a href="#" className="hover:text-gray-800">Privacy Policy</a>
-        <a href="#" className="hover:text-gray-800">Terms & Condition</a>
+        <a  className="hover:text-gray-800 cursor-pointer">About us</a>
+        <a  className="hover:text-gray-800 cursor-pointer">Privacy Policy</a>
+        <a  className="hover:text-gray-800 cursor-pointer">Terms & Condition</a>
       </div>
     </footer>
   </div>

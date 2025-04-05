@@ -18,7 +18,7 @@ const Navbar = () => {
             alt="Smart Immigrant Logo"
             className="md:w-[100px] md:h-[30px] lg:w-[125px] lg:h-[34px]"
           />
-       <ul className="hidden md:flex items-center md:gap-6 lg:gap-12 md:text-[14px] lg:text-[16px] text-[#2C2C2C] font-jakarta-sans font-medium">
+       <ul className="hidden md:flex items-center md:gap-3 lg:gap-12 md:text-[14px] lg:text-[16px] text-[#2C2C2C] font-jakarta-sans font-medium">
           <li>
             <a onClick={() => handleNavigateTo('heroPage')} className="hover:text-blue-600 transition cursor-pointer">
               Home
