@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { toggleForm, setBasicDetails, setGeneralDetails, resetForm } from "../../store/slices/formSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineClose } from "react-icons/ai";
+import axios from "axios";
 
 const AssessmentModal = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector(state => state.form.showForm);
   const storedBasicDetails = useSelector((state) => state.form.basicDetails);
   const storedGeneralDetails = useSelector((state) => state.form.generalDetails);
+  const [loading , setLoading] = useState(false);
 
   // Basic Details State
   const [basicDetails, setBasicDetailsState] = useState({
@@ -72,37 +74,37 @@ const AssessmentModal = () => {
     let newErrors = {};
     
     // Basic Details Validation
-    if (!basicDetails.name) newErrors.name = "Name is required";
+    if (!basicDetails.name) newErrors.name = "Name is required.";
     if (!basicDetails.email) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(basicDetails.email)) {
-      newErrors.email = "Invalid email format";
+      newErrors.email = "Invalid email format.";
     }
     if (basicDetails.phone && !/^\d{10}$/.test(basicDetails.phone)) {
-      newErrors.phone = "Phone number must be 10 digits";
+      newErrors.phone = "Phone number must be 10 digits.";
     }
 
     // General Details Validation
     if (!generalDetails.purpose.selectedOption) newErrors.selectedOption = "This field is required";
     if (generalDetails.purpose.selectedOption === "other" && !generalDetails.purpose.otherText.trim()) {
-      newErrors.otherText = "Please specify";
+      newErrors.otherText = "Please specify.";
     }
 
-    if (!generalDetails.fieldOfWork.selectedField) newErrors.selectedField = "This field is required";
+    if (!generalDetails.fieldOfWork.selectedField) newErrors.selectedField = "This field is required.";
     if (generalDetails.fieldOfWork.selectedField === "other" && !generalDetails.fieldOfWork.otherField.trim()) {
-      newErrors.otherField = "Please specify your field";
+      newErrors.otherField = "Please specify your field.";
     }
 
     if (generalDetails.qualifications.selectedQualify.length === 0) {
-      newErrors.selectedQualify = "Please select at least one option";
+      newErrors.selectedQualify = "Please select at least one option.";
     }
 
-    if (generalDetails.service.length === 0) newErrors.service = "Please select service type";
+    if (generalDetails.service.length === 0) newErrors.service = "Please select service type.";
 
-    if (!generalDetails.visaInfo.visaApplied) newErrors.visaApplied = "This field is required";
-    if (!generalDetails.visaInfo.visaStatus) newErrors.visaStatus = "This field is required";
-    if (!generalDetails.foundUs) newErrors.foundUs = "This field is required";
-    if (!generalDetails.consent) newErrors.consent = "You must provide consent";
+    if (!generalDetails.visaInfo.visaApplied) newErrors.visaApplied = "This field is required.";
+    if (!generalDetails.visaInfo.visaStatus) newErrors.visaStatus = "This field is required.";
+    if (!generalDetails.foundUs) newErrors.foundUs = "This field is required.";
+    if (!generalDetails.consent) newErrors.consent = "You must provide consent.";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -197,41 +199,85 @@ const AssessmentModal = () => {
     dispatch(setGeneralDetails(updatedDetails));
   };
 
-  const handleSubmit = (e) => {
+  const resetFormData = () => {
+    setBasicDetailsState({
+      name: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+    });
+    setGeneralDetailsState({
+      purpose: {
+        selectedOption: "",
+        otherText: ""
+      },
+      fieldOfWork: {
+        selectedField: "",
+        otherField: ""
+      },
+      qualifications: {
+        selectedQualify: [],
+        qualifyText: ""
+      },
+      service: [],
+      visaInfo: {
+        visaApplied: "",
+        visaStatus: ""
+      },
+      foundUs: "",
+      consent: false
+    });
+    dispatch(resetForm());
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      alert("Form submitted successfully");
-      // Reset form
-      setBasicDetailsState({
-        name: "",
-        email: "",
-        phone: "",
-        linkedin: "",
-      });
-      setGeneralDetailsState({
-        purpose: {
-          selectedOption: "",
-          otherText: ""
-        },
-        fieldOfWork: {
-          selectedField: "",
-          otherField: ""
-        },
-        qualifications: {
-          selectedQualify: [],
-          qualifyText: ""
-        },
-        service: [],
-        visaInfo: {
-          visaApplied: "",
-          visaStatus: ""
-        },
-        foundUs: "",
-        consent: false
-      });
-      dispatch(resetForm());
-      onClose();
+    setLoading(true);
+    try {
+      if (validate()) {
+        const formData = {
+          basicDetails: {
+            ...basicDetails
+          },
+          generalDetails: {
+            purpose: generalDetails.purpose.selectedOption === "other" 
+              ? generalDetails.purpose.otherText 
+              : generalDetails.purpose.selectedOption,
+            fieldOfWork: generalDetails.fieldOfWork.selectedField === "other"
+              ? generalDetails.fieldOfWork.otherField
+              : generalDetails.fieldOfWork.selectedField,
+            qualifications: {
+              selected: generalDetails.qualifications.selectedQualify,
+              other: generalDetails.qualifications.qualifyText
+            },
+            service: generalDetails.service,
+            visaInfo: generalDetails.visaInfo,
+            foundUs: generalDetails.foundUs,
+            consent: generalDetails.consent
+          }
+        };
+
+        const response = await axios.post(
+          `${process.env.REACT_APP_API_URL}/api/form-submit`,
+          formData,
+          {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }
+        );
+        console.log('Form submitted successfully:', response.data)        
+        alert("Details submitted successfully");
+        resetFormData();
+        onClose();
+      }
+    }catch (error) {
+      alert("Error submitting form. Please try again later.");
+      console.error("Error in form submission:", error);
+    }finally{
+      setLoading(false);
     }
+
   };
 
   const checkBoxName = [
@@ -557,7 +603,8 @@ const AssessmentModal = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-fit font-dm-sans bg-[#1641F1] text-white py-2 px-6 rounded-full hover:scale-110 transition"
+              disabled={loading}
+              className="w-fit font-dm-sans bg-[#1641F1] disabled:bg-gray-600 disabled:cursor-no-drop text-white py-2 px-6 rounded-full hover:scale-110 transition"
             >
               Check your eligibility
             </button>
