@@ -45,7 +45,7 @@ export default function Footer() {
               </button>
             </div>
 
-            <div className="flex justify-center md:justify-center lg:justify-end space-x-6 mt-6 md:mt-4 text-[#8D8D8D] text-[24px] md:text-[32px]">
+            {/* <div className="flex justify-center md:justify-center lg:justify-end space-x-6 mt-6 md:mt-4 text-[#8D8D8D] text-[24px] md:text-[32px]">
               <a href="#" className="hover:text-gray-800">
                 <FaLinkedinIn />
               </a>
@@ -55,7 +55,7 @@ export default function Footer() {
               <a href="#" className="hover:text-gray-800">
                 <RiInstagramFill />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
