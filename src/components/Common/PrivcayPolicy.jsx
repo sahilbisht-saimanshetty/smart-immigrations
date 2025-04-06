@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">1. Information We Collect</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">1. Information We Collect</h2>
           <p className="text-left font-dm-sans">We collect information to effectively provide our services and continuously enhance your user experience. The types of information collected include:</p>
           <p className="text-left font-dm-sans font-semibold mt-2">Personal Information:</p>
           <ul className="list-disc ml-6 space-y-1 text-left font-dm-sans">
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">2. How We Use Your Information</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">2. How We Use Your Information</h2>
           <p className="text-left font-dm-sans">We use your personal and usage information responsibly to:</p>
           <ul className="list-disc ml-6 space-y-1 text-left font-dm-sans">
             <li><strong>Deliver and Enhance Services:</strong> Fulfill requests, process registrations, verify your identity, and offer personalized support.</li>
@@ -63,7 +63,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">3. Information Sharing and Disclosure</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">3. Information Sharing and Disclosure</h2>
           <p className="text-left font-dm-sans">We prioritize your privacy and never sell your personal information. Information sharing is limited to:</p>
           <ul className="list-disc ml-6 space-y-1 text-left font-dm-sans">
             <li><strong>Trusted Service Providers:</strong> Third parties who support operations, including secure cloud storage, analytics providers, identity verification services, and technical support providers. All third parties are vetted and bound by confidentiality agreements.</li>
@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">4. Data Security</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">4. Data Security</h2>
           <p className="text-left font-dm-sans">SmartImmigrant.com employs robust security practices to protect your personal information against unauthorized access, misuse, alteration, or destruction. Our measures include:</p>
           <ul className="list-disc ml-6 space-y-1 text-left font-dm-sans">
             <li>Encryption of sensitive information during transmission (SSL/TLS)</li>
@@ -86,7 +86,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">5. Your Privacy Rights</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">5. Your Privacy Rights</h2>
           <p className="text-left font-dm-sans">You have control over your personal data. Depending on applicable laws (e.g., GDPR, CCPA), your rights may include:</p>
           <ul className="list-disc ml-6 space-y-1 text-left font-dm-sans">
             <li><strong>Access:</strong> Obtain details about the information we hold about you.</li>
@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">6. Data Retention</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">6. Data Retention</h2>
           <p className="text-left font-dm-sans">We retain your information only as long as necessary to fulfill the purposes outlined in this policy or as required by law. Specific retention periods depend on:</p>
           <ul className="list-disc ml-6 space-y-1 text-left font-dm-sans">
             <li>Duration of your account's activity</li>
@@ -111,24 +111,24 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">7. Third-Party Websites and Services</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">7. Third-Party Websites and Services</h2>
           <p className="text-left font-dm-sans">Our website may link to third-party platforms, such as immigration agencies, financial institutions, or other resources. We neither control nor assume responsibility for the privacy practices, security, or content of external sites. Always review third-party privacy policies before engaging with their platforms.</p>
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">8. Children's Privacy</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">8. Children's Privacy</h2>
           <p className="text-left font-dm-sans ">Our services are intended for users aged <strong>16 and above</strong>. We do <strong>not knowingly collect or process personal information from minors under 16</strong> . If we discover we've unintentionally collected such data, we will swiftly delete it. If you believe we may have information from a minor, please contact us immediately at <strong>privacy@smartimmigrant.com</strong>.</p>
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">9. Changes to This Privacy Policy</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">9. Changes to This Privacy Policy</h2>
           <p className="text-left font-dm-sans">We periodically review and update this Privacy Policy to reflect changes in law, services, or user feedback. We will inform you of any substantial changes through notifications on our website or by direct communication (email).</p>
           <p className="text-left font-dm-sans">We recommend reviewing this policy periodically to stay informed.</p>
           <p className="text-left font-dm-sans"><strong>Last updated: 5 April , 2025</strong></p>
         </div>
 
         <div className="text-left">
-          <h2 className="text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">10. Contact Information</h2>
+          <h2 className="text-lg md:text-2xl font-semibold mt-6 mb-2 text-left font-jakarta-sans">10. Contact Information</h2>
           <p className="text-left font-dm-sans">
             Your questions, feedback, and concerns are important. For any inquiries regarding your privacy or this Privacy Policy, please contact us at:
           </p>

@@ -306,7 +306,7 @@ const AssessmentModal = () => {
 
   return (
     <div className="fixed inset-0 bg-[#000000] bg-opacity-60 backdrop-blur-[15px] flex items-center flex-col justify-center h-[100vh] w-[100vw] z-[1000]" onClick={onClose}>
-      <div className="flex flex-col justify-center items-center rounded-lg w-[95%] h-[75%] md:h-[80%] lg:h-[95%]  md:w-[85%] lg:w-[55%] bg-white" onClick={(e) => e.stopPropagation()}>
+      <div className="flex flex-col justify-center items-center rounded-lg w-[95%] h-[85%] md:h-[80%] lg:h-[95%]  md:w-[85%] lg:w-[55%] bg-white" onClick={(e) => e.stopPropagation()}>
         <div className="relative text-right w-full">
           <button className="absolute top-[5px] right-[10px] text-[20px] md:text-[24px] text-gray-600 hover:scale-110 hover:text-black" onClick={onClose}>
             <AiOutlineClose />
@@ -347,7 +347,7 @@ const AssessmentModal = () => {
                 />
                 {errors.email && <p className="text-red-500 font-dm-sans   ps-2 pt-2 text-sm">{errors.email}</p>}
               </div>
-              <div className="text-left w-[100%] md:w-[48%]">
+              <div className="text-left mt-[6px] md:mt-0 w-[100%] md:w-[48%]">
                 <label className="block text-gray-800 text-[14px] md:text-[18px] font-medium mb-2 font-dm-sans">Phone Number</label>
                 <input
                   type="text"
