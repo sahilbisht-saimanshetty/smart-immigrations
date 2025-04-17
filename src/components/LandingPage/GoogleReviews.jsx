@@ -6,42 +6,42 @@ const reviews = [
   {
     id: 1,
     name: "Charlotte Lewis",
-    date: "6 days ago",
+    date: "11 hours ago",
     review:
       "Great experience! The team was super helpful and guided me through every step of the process.",
   },
   {
     id: 2,
     name: "Attharv Sardesai",
-    date: "5 days ago",
+    date: "2 days ago",
     review:
       "Excellent service! Highly recommended for anyone looking to fast-track their UK visa process.",
   },
   {
     id: 3,
     name: "Benjamin Clark",
-    date: "4 days ago",
+    date: "1 week ago",
     review:
       "Very professional and helpful. The process was smooth and easy to follow.",
   },
   {
     id: 4,
     name: "Yasmeen Taj",
-    date: "3 days ago",
+    date: "3 weeks ago",
     review:
       "I got my visa approval much faster than expected! Highly satisfied.",
   },
   {
     id: 5,
     name: "Amelia White",
-    date: "2 days ago",
+    date: "2 months ago",
     review:
       "A seamless experience from start to finish. Thank you for the guidance!",
   },
   {
     id: 6,
     name: "Sanchit Hegde",
-    date: "1 day ago",
+    date: "5 months ago",
     review:
       "The support team was very responsive and cleared all my doubts. Great service!",
   },
@@ -86,7 +86,7 @@ const GoogleReviews = () => {
   return (
     <div className="w-full pt-6 pb-24 md:pt-12 relative h-auto md:pb-48   flex flex-col items-center googleReviewContainer">
       <div className="px-6 md:px-0">
-         <CommonHeading title="Google Review" description="Helping exceptional talent fast-track their UK visa process with expert  guidance." />    
+         <CommonHeading title="People love us!" description="Helping exceptional talent fast-track their UK visa process with expert  guidance." />    
       </div>
 
       {/* Review Cards Grid */}

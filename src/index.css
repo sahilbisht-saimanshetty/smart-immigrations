@@ -228,3 +228,25 @@
   word-wrap: break-word;
   word-break: break-word;
 }
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } /* scroll half because content is duplicated */
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.marquee-scroll-left {
+  animation-name: scroll-left;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee-scroll-right {
+  animation-name: scroll-right;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

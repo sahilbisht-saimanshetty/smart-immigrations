@@ -19,13 +19,13 @@ export default function Footer() {
         <div className="flex flex-col gap-3 md:gap-4 lg:gap-6 md:justify-center lg:justify-start font-jakarta-sans font-medium text-start">
           <img src={logo} alt="Smart Immigrant" className="h-[32px] w-[117px] md:h-[54px] md:w-[180px] mb-4" />
           <p className="text-[#2C2C2C] text-[12px] md:text-[16px]">
-             Chapman  Road  254
+             254 Chapman Rd. STE 208
             <br />
-            Newark , Delaware , USA 19702
+            Newark , DE 19792
           </p>
-          <p className="text-[#2C2C2C] mt-2 text-[12px] md:text-[16px]">Connectuk@smartimmigrant.com</p>
+          <p className="text-[#2C2C2C] mt-2 text-[12px] md:text-[16px]">smartimmigrantuk@cachelabs.io</p>
           <div className="flex items-center mt-2">
-            <img src={flag} alt="UK Flag" className="h-4 w-6 mr-2" />
+            {/* <img src={flag} alt="UK Flag" className="h-4 w-6 mr-2" /> */}
             <p className="text-[#2C2C2C] text-[12px] md:text-[16px]">+1 (650)-404–6152</p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="block md:hidden h-[2px] mt-4 w-full bg-[#D7D7D7]"></div>
         <div id="contactUs" className="flex flex-col self-center lg:self-end h-full">
           <div className="flex flex-col flex-1 justify-center lg:justify-end">
-            <div className="flex mt-4 md:mt-8  lg:mt-6  h-[40px] md:h-[56px] w-[265px] md:w-[373px] p-1 md:p-2 rounded-md bg-[#F3F3F3]">
+            {/* <div className="flex mt-4 md:mt-8  lg:mt-6  h-[40px] md:h-[56px] w-[265px] md:w-[373px] p-1 md:p-2 rounded-md bg-[#F3F3F3]">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -43,7 +43,7 @@ export default function Footer() {
               <button className="bg-[#1641F1] text-[12px] md:text-base text-white text-center w-[78px] h-[32px] md:w-[89px] md:h-[44px] rounded-lg font-medium">
                 Send
               </button>
-            </div>
+            </div> */}
 
             {/* <div className="flex justify-center md:justify-center lg:justify-end space-x-6 mt-6 md:mt-4 text-[#8D8D8D] text-[24px] md:text-[32px]">
               <a href="#" className="hover:text-gray-800">
@@ -64,7 +64,6 @@ export default function Footer() {
 
       </div>
       <div className="flex flex-row font-jakarta-sans justify-center lg:justify-end space-x-6 text-black font-jakarta-sans font-medium text-[12px] md:text-[16px] mt-4 md:mt-8 md:border-t-2 md:border-[#D7D7D7] pt-2 md:pt-8">
-        <a  className="hover:text-gray-800 cursor-pointer hover:scale-105 transition-all">About us</a>
         <a href="/uk/privacy-policy" target="_blank"  className="hover:text-gray-800 cursor-pointer hover:scale-105 transition-all">Privacy Policy</a>
         <a  className="hover:text-gray-800 cursor-pointer hover:scale-105 transition-all">Terms & Condition</a>
       </div>

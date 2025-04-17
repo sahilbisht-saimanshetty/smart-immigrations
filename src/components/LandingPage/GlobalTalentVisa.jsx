@@ -67,11 +67,11 @@ const GlobalTalentVisa = () => {
                     reverse ? <div className="bg-white  box-shadow-border min-w-[320px] h-[200px] md:w-[350px] md:h-[200px] lg:w-[403px] lg:h-[261px] rounded-lg relative">
                         <div className="absolute inset-0 rounded-xl border-b-4 md:border-r-4  border-[#E52D37]"></div>
                         <div className="absolute inset-0 rounded-xl shadow-[0px_4px_0px_0px_#294286]  md:shadow-[4px_0px_0px_0px_#294286]"></div>
-                        <img src={imgSrc} className="h-full w-full  rounded-xl" />
+                        <img src={imgSrc} alt={title} className="h-full w-full  rounded-xl" />
                     </div> : <div className="bg-white  box-shadow-border  min-w-[320px] h-[200px] md:w-[350px] md:h-[200px]  lg:w-[403px] lg:h-[261px] rounded-lg relative">
                         <div className="absolute inset-0 rounded-xl border-b-4 md:border-l-4  border-[#E52D37]"></div>
                         <div className="absolute inset-0 rounded-xl shadow-[0px_4px_0px_0px_#294286] md:shadow-[-4px_0px_0px_0px_#294286]"></div>
-                        <img src={imgSrc} className="h-full w-full  rounded-xl" />
+                        <img src={imgSrc} alt={title} className="h-full w-full  rounded-xl" />
 
                     </div>
                 }
@@ -82,7 +82,7 @@ const GlobalTalentVisa = () => {
 
 
     return (
-        <div className="flex justify-center items-center min-h-screen  px-6 md:px-6 lg:px-12">
+        <div className="flex justify-center items-center min-h-screen  px-6 md:px-6 lg:px-12 5xl:px-40">
             <div className=" w-full bg-white relative top-[-50px] shadow-lg rounded-xl py-16 px-2 md:px-6 lg:px-24 text-center">
                 <div>
                     <CommonHeading title={"About the Global Talent Visa"} description={subheading} />
@@ -92,7 +92,7 @@ const GlobalTalentVisa = () => {
                     <CheckVisibilityBtn />
                 </div>
 
-                <div className="mt-10 md:mt-10 mb-4 md:mb-10 px-4 xl:px-0 2xl:px-8 lg:mt-24 flex flex-col gap-16">
+                <div className="mt-10 md:mt-10 mb-4 md:mb-10 px-4 xl:px-0 2xl:px-8 lg:mt-24  4xl:px-28 5xl:px-28 6xl:px-60 flex flex-col gap-16">
                     {
                         cardData.map((card, index) => (
                             <ContentCard key={index} title={card.title} description={card.description} reverse={card.reverse} imgSrc={card.imgSrc} />

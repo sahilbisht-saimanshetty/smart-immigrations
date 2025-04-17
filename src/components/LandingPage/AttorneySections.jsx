@@ -50,8 +50,11 @@ const attorneys = [
     return (
       <section className="bg-[#eff8ff]  md:bg-[#ecf2fa] px-6 md:px-6 lg:px-12">
         <div className="container rounded-xl py-10 md:py-16 lg:py-20 bg-white mx-auto text-center overflow-hidden landingPageAttorneySection">
-          <div className="px-6 mt-8 md:mt-0 md:px-0">
-             <CommonHeading title="Attorney Section" description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
+          <div className="hidden md:block px-6 mt-8 md:mt-0 md:px-0">
+             <CommonHeading title={"We work with top UK Immigration \n Lawyers"} description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
+          </div>
+          <div className="block md:hidden px-6 mt-8 md:mt-0 md:px-0">
+             <CommonHeading title={"We work with top UK Immigration Lawyers"} description="Helping exceptional talent fast-track their UK visa process with expert guidance." />
           </div>
   
           {/* Grid Layout */}
