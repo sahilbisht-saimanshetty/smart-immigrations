@@ -1,7 +1,5 @@
-import PrivacyPolicy from "../Common/PrivcayPolicy";
-import logo from "../../assests/smartImmigrantLogo.webp"
 import RootLayout2 from "../Layout/RootLayout2";
-
+import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
 const PrivacyPage = () => {
     return ( <RootLayout2>
        <PrivacyPolicy/>

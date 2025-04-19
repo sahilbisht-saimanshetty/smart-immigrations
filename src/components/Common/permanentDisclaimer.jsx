@@ -3,7 +3,7 @@ const PermanentDisclaimer = () => {
   return (
     <div className="text-left py-4 px-8  md:px-10 md:py-8 lg:py-6 lg:px-16">
          <h2 className=" text-[18px] md:text-[24px] lg:text-[32px] leading-[35px] md:leading-[45px] lg:leading-[55px] whitespace-pre-line font-bold font-jakarta-sans text-[#2C2C2C]">Disclaimer</h2>
-         <p className="text-[14px] md:text-[16px] text-[#0a142f] font-dm-sans  text-justify font-medium leading-[140%]">
+         <p className="text-[14px] md:text-[16px] text-[#323232] font-dm-sans  text-justify font-medium leading-[140%]">
         Smart Immigrant UK provides informational and educational services,
         including AI-powered tools, to assist individuals in understanding the
         UK immigration process. We are not attorneys, do not provide legal

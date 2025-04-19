@@ -3,11 +3,17 @@ import CommonHeading from "../LandingPage/commonHeading";
 const TermsOfUsComponent = () => {
   const content = `
  `;
+
+ 
+ const SectionHeading = ({ children }) => (
+  <div className="font-jakarta-sans font-medium text-[20px] leading-[150%] text-[#323232] mt-10 mb-2">
+    {children}
+  </div>
+);
+
   return (
     <div className="h-auto">
       <div className="container  w-[88%] md:w-[65%] mx-auto">
-        <div className="header text-[#847AFF] font-jakarta-sans text-[20px] md:text-[40px] leading-[150%] font-semibold ">
-        </div>
         <h1 className="text-3xl font-bold mb-6 text-center font-jakarta-sans">Terms of Use</h1>
         <div className="body md:mt-10 w-full ">
           <div className="title text-[#323232] text-left font-medium text-[20px] leading-[150%]">
@@ -31,7 +37,7 @@ const TermsOfUsComponent = () => {
               also limits the remedies available to you in the event of a
               dispute.  
             </p>
-            <p>1. Acceptance of this Agreement.</p>
+            <SectionHeading>1. Acceptance of this Agreement.</SectionHeading>
             <p>
               1.1 Acceptance Through Using or Accessing the Services. By
               accessing or using the Services, you agree to be bound by the
@@ -72,8 +78,9 @@ const TermsOfUsComponent = () => {
               of such changes. You should check this page frequently so that you
               are aware of any changes since they are binding on you.
             </p>
+            <SectionHeading>2. Access to the Services</SectionHeading>
             <p>
-              2. Access to the Services. The Services may change from time to
+              The Services may change from time to
               time as the Company evolves, refines, or adds more features to the
               Services. The Company reserves the right to modify, withdraw, or
               discontinue the Services, in whole or in part, at any time without
@@ -82,7 +89,7 @@ const TermsOfUsComponent = () => {
               Services not being available, in whole or in part, at any time or
               for any period.
             </p>
-            <p>3. Policy for Using the Services.</p>
+            <SectionHeading>3. Policy for Using the Services.</SectionHeading>
             <p>3.1 Prohibited Uses.</p>
             <p>
               You may use the Services for lawful purposes only and in
@@ -211,7 +218,7 @@ const TermsOfUsComponent = () => {
               use outside of the United States. Access to the Services from
               territories where such access is illegal is strictly prohibited. 
             </p>
-            <p>4. Intellectual Property Rights.</p>
+            <SectionHeading>4. Intellectual Property Rights.</SectionHeading>
             <p>
               4.1 Ownership of Intellectual Property. You acknowledge that all
               intellectual property rights, including copyrights, trademarks,
@@ -235,8 +242,6 @@ const TermsOfUsComponent = () => {
               license will terminate upon your cessation of use of the Services
               or at the termination of this Agreement.
             </p>
-            <br />
-            <br />
             <p>4.3 Certain Restrictions.</p>
             <p>
               The rights granted to you in this Agreement are subject to the
@@ -284,7 +289,7 @@ const TermsOfUsComponent = () => {
               parties. You may not use such trademarks, logos, or service marks
               without the prior written consent of their respective owners.
             </p>
-            <p>5. Assumption of Risk.</p>
+            <SectionHeading>5. Assumption of Risk.</SectionHeading>
             <p>
               The information presented on or through the Services is made
               available for general information purposes only. The Company does
@@ -295,7 +300,7 @@ const TermsOfUsComponent = () => {
               information by you or any other user to the Services, or by anyone
               who may be informed of any of its contents.
             </p>
-            <p>6. Privacy.</p>
+            <SectionHeading>6. Privacy.</SectionHeading>
             <p>
               For information about how the Company collects, uses, and shares
               your information, please review our Privacy Policy. You agree that
@@ -314,8 +319,7 @@ const TermsOfUsComponent = () => {
               under 13 years old may have provided us personal information,
               please contact us.
             </p>
-            <br />
-            <p>7. Third-Party Links and Ads.</p>
+            <SectionHeading>7. Third-Party Links and Ads.</SectionHeading>
             <p>
               The Services may contain links to third-party websites, resources,
               and services, as well as advertisements (collectively,
@@ -332,7 +336,7 @@ const TermsOfUsComponent = () => {
               proceeding with any transaction in connection with any Third-Party
               Link.
             </p>
-            <p>8. Termination.</p>
+            <SectionHeading>8. Termination.</SectionHeading>
             <p>8.1 Termination.</p>
             <p>
               The Company may suspend or terminate your access or rights to use
@@ -358,7 +362,7 @@ const TermsOfUsComponent = () => {
               accruing prior to termination or limit any liability that you
               otherwise may have to the Company or any third party.
             </p>
-            <p>9. No Warranty.</p>
+            <SectionHeading>9. No Warranty.</SectionHeading>
             <p>
               THE SERVICES ARE PROVIDED ON AN “AS-IS” AND “AS AVAILABLE” BASIS.
               USE OF THE SERVICES IS AT YOUR OWN RISK. TO THE MAXIMUM EXTENT
@@ -395,7 +399,7 @@ const TermsOfUsComponent = () => {
               SERVICES, ALL SUCH WARRANTIES ARE LIMITED IN DURATION TO NINETY
               (90) DAYS FROM THE DATE OF FIRST USE.
             </p>
-            <p>10. Limitation of Liability.</p>
+            <SectionHeading>10. Limitation of Liability.</SectionHeading>
             <p>
               TO THE FULLEST EXTENT ALLOWED BY APPLICABLE LAW, IN NO EVENT SHALL
               THE COMPANY OR ITS AFFILIATES, OR THEIR RESPECTIVE LICENSORS,
@@ -424,7 +428,7 @@ const TermsOfUsComponent = () => {
               OR LIMITATION OF CERTAIN DAMAGES, SO THE ABOVE LIMITATION AND
               EXCLUSIONS MAY NOT APPLY TO YOU.
             </p>
-            <p>11. Indemnification.</p>
+            <SectionHeading>11. Indemnification.</SectionHeading>
             <p>
               You agree to indemnify, defend, and hold harmless the Company and
               its affiliates and their respective officers, directors,
@@ -445,7 +449,7 @@ const TermsOfUsComponent = () => {
               to assist and cooperate with our defense or settlement of these
               claims.
             </p>
-            <p>12. Disputes.</p>
+            <SectionHeading>12. Disputes.</SectionHeading>
             <p>12.1 Governing Law.</p>
             <p>
               All matters relating to this Agreement, and all matters arising
@@ -499,7 +503,7 @@ const TermsOfUsComponent = () => {
               OTHERWISE, SUCH CAUSE OF ACTION OR CLAIM IS PERMANENTLY WAIVED AND
               BARRED.
             </p>
-            <p>13. Miscellaneous.</p>
+            <SectionHeading>13. Miscellaneous.</SectionHeading>
             <p>13.1 Waiver.</p>
             <p>
               Except as otherwise set forth in this Agreement, no failure of the
@@ -569,7 +573,7 @@ const TermsOfUsComponent = () => {
               losses, or damages arising from your violation of any export
               control laws or regulations.
             </p>
-            <p>14. Contact Information.</p>
+            <SectionHeading>14. Contact Information.</SectionHeading>
             <p>
               All feedback, comments, requests for technical support, and other
               communications relating to the Services must be directed to

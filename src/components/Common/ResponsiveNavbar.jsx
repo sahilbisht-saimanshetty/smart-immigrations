@@ -17,7 +17,7 @@ const ResponsiveNavbar = () => {
     }, []);
   return (
     <>
-      <div className="w-full z-[2000]">
+      <div className="w-full z-[900]">
         <div
           className={`fixed hidden md:block left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-500 ease-in-out ${
             isSticky
