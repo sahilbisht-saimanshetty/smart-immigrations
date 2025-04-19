@@ -16,6 +16,7 @@ import SimpleStepsMobile from "../LandingPage/SimpleStepsMobile.jsx";
 import Disclaimer from "../Common/Disclaimer.jsx";
 import PrivacyPolicy from "../Common/PrivcayPolicy.jsx";
 import RootLayout from "../Layout/RootLayout.jsx";
+import PermanentDisclaimer from "../Common/permanentDisclaimer.jsx";
 
 const LandingPage = () => {
   const dispatch = useDispatch();
@@ -54,7 +55,10 @@ const LandingPage = () => {
           <div className="footerGradient"></div>
           <FAQ />
           <Footer />
+          <PermanentDisclaimer/>
+
         </div>
+
       </div>
     </div>
    </RootLayout>

@@ -147,8 +147,8 @@
 }
 
 .landingPageFooterWithoutDisc {
-  background-position: right -145px bottom 73px;
-  background-size: 36% 42%
+  background-position: right -145px bottom 380px;
+  background-size: 36% 32%
 }
 
 /* media query */
@@ -177,8 +177,8 @@
   }
 
   .landingPageFooterWithoutDisc {
-    background-position: right -69px bottom 167px;
-    background-size: 71% 35%;
+    background-position: right -69px bottom 554px;
+    background-size: 54% 21%;
   }
 
   .heroPageGradient {
@@ -198,7 +198,7 @@
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1000px) {
 
   .landingPageAttorneySection::before {
     background-position: top 0px left -169px, bottom 0px right -201px;
@@ -211,8 +211,8 @@
   }
 
   .landingPageFooterWithoutDisc {
-    background-position: right -105px bottom 244px;
-    background-size: 71% 35%
+    background-position: right -105px bottom 466px;
+    background-size: 53% 32%
   }
 
 }
